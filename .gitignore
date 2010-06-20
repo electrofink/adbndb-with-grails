@@ -7,4 +7,4 @@
 *.o
 *.so
 
-de.uni_koeln.hki.thaller/grails-app/conf/*
+de.uni_koeln.hki.thaller/grails-app/conf/DataSource.groovy
