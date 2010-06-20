@@ -1,0 +1,10 @@
+Testsuite: de.uni_koeln.hki.thaller.InterfaceTests
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.031 sec
+------------- Standard Output ---------------
+--Output from testQueryPersonFromDbByName--
+------------- ---------------- ---------------
+------------- Standard Error -----------------
+--Output from testQueryPersonFromDbByName--
+------------- ---------------- ---------------
+
+Testcase: testQueryPersonFromDbByName took 0.03 sec
