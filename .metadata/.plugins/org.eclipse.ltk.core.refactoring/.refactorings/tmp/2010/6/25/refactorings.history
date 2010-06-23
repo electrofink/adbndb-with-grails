@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 1 elements(s) to &apos;de.uni_koeln.hki.thaller/grails-app/conf/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;tmp&apos;&#x0D;&#x0A;- Destination element: &apos;de.uni_koeln.hki.thaller/grails-app/conf/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;DataSource.groovy&apos;" description="Copy compilation unit" destination="=de.uni_koeln.hki.thaller/grails-app\/conf&lt;" element1="/grails-app\/conf&lt;{DataSource.groovy" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1277290197406" units="1" version="1.0"/>
+</session>

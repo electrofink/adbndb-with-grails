@@ -12,7 +12,6 @@ class InterfaceTests extends GroovyTestCase {
     }
 
     void testQueryPersonFromDbByName() {
-    	//def p = Person.get(1)‘
 		def c = Person.createCriteria()
 		def results = c.list {
 			eq("id", (Long)2)

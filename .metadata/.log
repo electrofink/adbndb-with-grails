@@ -1,0 +1,639 @@
+!SESSION 2010-06-23 12:43:32.734 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.version=1.6.0_20
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data H:\adbndb-with-grails
+
+!ENTRY org.eclipse.mylyn.tasks.ui 4 0 2010-06-23 12:43:36.843
+!MESSAGE Could not load repository template extension contributed by org.eclipse.mylyn.bugzilla.ide with connectorKind bugzilla
+
+!ENTRY org.eclipse.jface 2 0 2010-06-23 12:43:38.546
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2010-06-23 12:43:38.546
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.ui.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2010-06-23 12:43:38.546
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.ui.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 4 2010-06-23 12:46:43.531
+!MESSAGE Could not create action delegate for id: org.codehaus.groovy.eclipse.refactoring.renameMethodMenu
+
+!ENTRY org.eclipse.equinox.registry 4 1 2010-06-23 12:46:43.531
+!MESSAGE Plug-in "org.codehaus.groovy.eclipse.ui" was unable to instantiate class "org.codehaus.groovy.eclipse.refactoring.actions.RenameDispatcherAction".
+!STACK 0
+java.lang.InstantiationException: org.codehaus.groovy.eclipse.refactoring.actions.RenameDispatcherAction
+	at java.lang.Class.newInstance0(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:170)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:874)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:51)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:259)
+	at org.eclipse.ui.internal.PluginAction.createDelegate(PluginAction.java:122)
+	at org.eclipse.ui.internal.PluginAction.selectionChanged(PluginAction.java:275)
+	at org.eclipse.ui.internal.PluginAction.<init>(PluginAction.java:112)
+	at org.eclipse.ui.internal.PartPluginAction.<init>(PartPluginAction.java:29)
+	at org.eclipse.ui.internal.EditorPluginAction.<init>(EditorPluginAction.java:32)
+	at org.eclipse.ui.internal.ActionDescriptor.createAction(ActionDescriptor.java:262)
+	at org.eclipse.ui.internal.ActionDescriptor.<init>(ActionDescriptor.java:176)
+	at org.eclipse.ui.internal.ActionDescriptor.<init>(ActionDescriptor.java:103)
+	at org.eclipse.ui.internal.EditorActionBuilder.createActionDescriptor(EditorActionBuilder.java:41)
+	at org.eclipse.ui.internal.PluginActionBuilder.readElement(PluginActionBuilder.java:161)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElementChildren(RegistryReader.java:133)
+	at org.eclipse.ui.internal.PluginActionBuilder.readElement(PluginActionBuilder.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readExtension(RegistryReader.java:155)
+	at org.eclipse.ui.internal.registry.RegistryReader.readRegistry(RegistryReader.java:176)
+	at org.eclipse.ui.internal.PluginActionBuilder.readContributions(PluginActionBuilder.java:115)
+	at org.eclipse.ui.internal.EditorActionBuilder.readActionExtensions(EditorActionBuilder.java:58)
+	at org.eclipse.ui.internal.EditorManager.createEditorActionBars(EditorManager.java:328)
+	at org.eclipse.ui.internal.EditorManager.createSite(EditorManager.java:790)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:644)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:462)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.PartPane.setVisible(PartPane.java:313)
+	at org.eclipse.ui.internal.presentations.PresentablePart.setVisible(PresentablePart.java:180)
+	at org.eclipse.ui.internal.presentations.util.PresentablePartFolder.select(PresentablePartFolder.java:270)
+	at org.eclipse.ui.internal.presentations.util.LeftToRightTabOrder.select(LeftToRightTabOrder.java:65)
+	at org.eclipse.ui.internal.presentations.util.TabbedStackPresentation.selectPart(TabbedStackPresentation.java:473)
+	at org.eclipse.ui.internal.PartStack.refreshPresentationSelection(PartStack.java:1256)
+	at org.eclipse.ui.internal.PartStack.setSelection(PartStack.java:1209)
+	at org.eclipse.ui.internal.PartStack.showPart(PartStack.java:1608)
+	at org.eclipse.ui.internal.PartStack.add(PartStack.java:499)
+	at org.eclipse.ui.internal.EditorStack.add(EditorStack.java:103)
+	at org.eclipse.ui.internal.PartStack.add(PartStack.java:485)
+	at org.eclipse.ui.internal.EditorStack.add(EditorStack.java:112)
+	at org.eclipse.ui.internal.EditorSashContainer.addEditor(EditorSashContainer.java:63)
+	at org.eclipse.ui.internal.EditorAreaHelper.addToLayout(EditorAreaHelper.java:225)
+	at org.eclipse.ui.internal.EditorAreaHelper.addEditor(EditorAreaHelper.java:213)
+	at org.eclipse.ui.internal.EditorManager.createEditorTab(EditorManager.java:778)
+	at org.eclipse.ui.internal.EditorManager.openEditorFromDescriptor(EditorManager.java:677)
+	at org.eclipse.ui.internal.EditorManager.openEditor(EditorManager.java:638)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2854)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2762)
+	at org.eclipse.ui.internal.WorkbenchPage.access$11(WorkbenchPage.java:2754)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2705)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2701)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2685)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2676)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:374)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:178)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:229)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:208)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:274)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:250)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerActionGroup.handleOpen(PackageExplorerActionGroup.java:373)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart$4.open(PackageExplorerPart.java:526)
+	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:48)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:842)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:840)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1101)
+	at org.eclipse.jface.viewers.StructuredViewer$6.handleOpen(StructuredViewer.java:1205)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:264)
+	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:258)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:298)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3910)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3503)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+
+!ENTRY com.springsource.sts.grails.core 4 0 2010-06-23 12:49:37.265
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/tmp' already exists.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:298)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:285)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:32)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:252)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:234)
+	at com.springsource.sts.grails.ui.internal.wizard.NewGrailsProjectWizard$GrailsDebugListener.modifyProject(NewGrailsProjectWizard.java:198)
+	at com.springsource.sts.grails.ui.internal.wizard.NewGrailsProjectWizard$GrailsDebugListener.access$0(NewGrailsProjectWizard.java:169)
+	at com.springsource.sts.grails.ui.internal.wizard.NewGrailsProjectWizard$GrailsDebugListener$1.execute(NewGrailsProjectWizard.java:144)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 374 2010-06-23 12:49:37.265
+!MESSAGE Resource '/tmp' already exists.
+
+!ENTRY com.springsource.sts.grails.core 4 0 2010-06-23 12:49:37.265
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/tmp' already exists.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:298)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:285)
+	at org.eclipse.core.internal.resources.Project.assertCreateRequirements(Project.java:32)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:252)
+	at org.eclipse.core.internal.resources.Project.create(Project.java:234)
+	at com.springsource.sts.grails.ui.internal.wizard.NewGrailsProjectWizard$GrailsDebugListener.modifyProject(NewGrailsProjectWizard.java:198)
+	at com.springsource.sts.grails.ui.internal.wizard.NewGrailsProjectWizard$GrailsDebugListener.access$0(NewGrailsProjectWizard.java:169)
+	at com.springsource.sts.grails.ui.internal.wizard.NewGrailsProjectWizard$GrailsDebugListener$1.execute(NewGrailsProjectWizard.java:144)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation$1.run(WorkspaceModifyOperation.java:106)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.ui.actions.WorkspaceModifyOperation.run(WorkspaceModifyOperation.java:118)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 374 2010-06-23 12:49:37.265
+!MESSAGE Resource '/tmp' already exists.
+
+!ENTRY org.codehaus.groovy 1 0 2010-06-23 13:18:04.828
+!MESSAGE Stopping Groovy compiler version 1.7.0.20100319-1100-e35-RELEASE
+!SESSION 2010-06-23 13:34:34.406 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.version=1.6.0_20
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2010-06-23 13:34:40.421
+!MESSAGE Could not create action delegate for id: org.codehaus.groovy.eclipse.refactoring.renameMethodMenu
+
+!ENTRY org.eclipse.equinox.registry 4 1 2010-06-23 13:34:40.437
+!MESSAGE Plug-in "org.codehaus.groovy.eclipse.ui" was unable to instantiate class "org.codehaus.groovy.eclipse.refactoring.actions.RenameDispatcherAction".
+!STACK 0
+java.lang.InstantiationException: org.codehaus.groovy.eclipse.refactoring.actions.RenameDispatcherAction
+	at java.lang.Class.newInstance0(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:170)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:874)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:51)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:259)
+	at org.eclipse.ui.internal.PluginAction.createDelegate(PluginAction.java:122)
+	at org.eclipse.ui.internal.PluginAction.selectionChanged(PluginAction.java:275)
+	at org.eclipse.ui.internal.PluginAction.<init>(PluginAction.java:112)
+	at org.eclipse.ui.internal.PartPluginAction.<init>(PartPluginAction.java:29)
+	at org.eclipse.ui.internal.EditorPluginAction.<init>(EditorPluginAction.java:32)
+	at org.eclipse.ui.internal.ActionDescriptor.createAction(ActionDescriptor.java:262)
+	at org.eclipse.ui.internal.ActionDescriptor.<init>(ActionDescriptor.java:176)
+	at org.eclipse.ui.internal.ActionDescriptor.<init>(ActionDescriptor.java:103)
+	at org.eclipse.ui.internal.EditorActionBuilder.createActionDescriptor(EditorActionBuilder.java:41)
+	at org.eclipse.ui.internal.PluginActionBuilder.readElement(PluginActionBuilder.java:161)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElementChildren(RegistryReader.java:133)
+	at org.eclipse.ui.internal.PluginActionBuilder.readElement(PluginActionBuilder.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readExtension(RegistryReader.java:155)
+	at org.eclipse.ui.internal.registry.RegistryReader.readRegistry(RegistryReader.java:176)
+	at org.eclipse.ui.internal.PluginActionBuilder.readContributions(PluginActionBuilder.java:115)
+	at org.eclipse.ui.internal.EditorActionBuilder.readActionExtensions(EditorActionBuilder.java:58)
+	at org.eclipse.ui.internal.EditorManager.createEditorActionBars(EditorManager.java:328)
+	at org.eclipse.ui.internal.EditorManager.createSite(EditorManager.java:790)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:644)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:462)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.EditorAreaHelper.setVisibleEditor(EditorAreaHelper.java:271)
+	at org.eclipse.ui.internal.EditorManager.setVisibleEditor(EditorManager.java:1417)
+	at org.eclipse.ui.internal.EditorManager$5.runWithException(EditorManager.java:942)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3885)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3506)
+	at org.eclipse.ui.application.WorkbenchAdvisor.openWindows(WorkbenchAdvisor.java:803)
+	at org.eclipse.ui.internal.Workbench$28.runWithException(Workbench.java:1384)
+	at org.eclipse.ui.internal.StartupThreading$StartupRunnable.run(StartupThreading.java:31)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:134)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:3885)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3506)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2316)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+
+!ENTRY org.eclipse.mylyn.tasks.ui 4 0 2010-06-23 13:34:43.781
+!MESSAGE Could not load repository template extension contributed by org.eclipse.mylyn.bugzilla.ide with connectorKind bugzilla
+
+!ENTRY org.eclipse.jface 2 0 2010-06-23 13:34:44.703
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2010-06-23 13:34:44.703
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.rap.ui.launch.RAPLaunchShortcut.debug,Debug RAP Application,
+		Debug RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2010-06-23 13:34:44.703
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.rap.ui.launch.RAPLaunchShortcut.run,Run RAP Application,
+		Run RAP Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY com.springsource.sts.ide.ui 4 0 2010-06-23 13:34:47.296
+!MESSAGE An unexpected error occurred while retrieving feed content.
+!STACK 1
+org.eclipse.core.runtime.CoreException: Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.toException(HttpClientTransportService.java:205)
+	at com.springsource.sts.internal.core.net.HttpClientTransportService.stream(HttpClientTransportService.java:187)
+	at com.springsource.sts.core.HttpUtil.stream(HttpUtil.java:112)
+	at com.springsource.sts.internal.ide.ui.editors.AggregateFeedJob.run(AggregateFeedJob.java:76)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 com.springsource.sts.core 4 0 2010-06-23 13:34:47.296
+!MESSAGE Download of http://springide.org/blog/feed/ failed: Unexpected HTTP response 404
+
+!ENTRY org.eclipse.ui 4 4 2010-06-23 13:46:40.203
+!MESSAGE Could not create action delegate for id: org.codehaus.groovy.eclipse.refactoring.renameMethodMenu
+
+!ENTRY org.eclipse.equinox.registry 4 1 2010-06-23 13:46:40.203
+!MESSAGE Plug-in "org.codehaus.groovy.eclipse.ui" was unable to instantiate class "org.codehaus.groovy.eclipse.refactoring.actions.RenameDispatcherAction".
+!STACK 0
+java.lang.InstantiationException: org.codehaus.groovy.eclipse.refactoring.actions.RenameDispatcherAction
+	at java.lang.Class.newInstance0(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:170)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:874)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:51)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:259)
+	at org.eclipse.ui.internal.PluginAction.createDelegate(PluginAction.java:122)
+	at org.eclipse.ui.internal.PluginAction.selectionChanged(PluginAction.java:275)
+	at org.eclipse.ui.internal.PluginAction.<init>(PluginAction.java:112)
+	at org.eclipse.ui.internal.PartPluginAction.<init>(PartPluginAction.java:29)
+	at org.eclipse.ui.internal.EditorPluginAction.<init>(EditorPluginAction.java:32)
+	at org.eclipse.ui.internal.ActionDescriptor.createAction(ActionDescriptor.java:262)
+	at org.eclipse.ui.internal.ActionDescriptor.<init>(ActionDescriptor.java:176)
+	at org.eclipse.ui.internal.ActionDescriptor.<init>(ActionDescriptor.java:103)
+	at org.eclipse.ui.internal.EditorActionBuilder.createActionDescriptor(EditorActionBuilder.java:41)
+	at org.eclipse.ui.internal.PluginActionBuilder.readElement(PluginActionBuilder.java:161)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElementChildren(RegistryReader.java:133)
+	at org.eclipse.ui.internal.PluginActionBuilder.readElement(PluginActionBuilder.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readExtension(RegistryReader.java:155)
+	at org.eclipse.ui.internal.registry.RegistryReader.readRegistry(RegistryReader.java:176)
+	at org.eclipse.ui.internal.PluginActionBuilder.readContributions(PluginActionBuilder.java:115)
+	at org.eclipse.ui.internal.EditorActionBuilder.readActionExtensions(EditorActionBuilder.java:58)
+	at org.eclipse.ui.internal.EditorManager.createEditorActionBars(EditorManager.java:328)
+	at org.eclipse.ui.internal.EditorManager.createSite(EditorManager.java:790)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:644)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:462)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.EditorReference.getEditor(EditorReference.java:286)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2857)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2762)
+	at org.eclipse.ui.internal.WorkbenchPage.access$11(WorkbenchPage.java:2754)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2705)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2701)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2685)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2676)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:374)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:178)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:229)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:208)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:274)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:250)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerActionGroup.handleOpen(PackageExplorerActionGroup.java:373)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart$4.open(PackageExplorerPart.java:526)
+	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:48)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:842)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:840)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1101)
+	at org.eclipse.jface.viewers.StructuredViewer$6.handleOpen(StructuredViewer.java:1205)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:264)
+	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:258)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:298)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3910)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3503)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+
+!ENTRY org.eclipse.ui 4 4 2010-06-23 13:47:55.500
+!MESSAGE Could not create action delegate for id: org.codehaus.groovy.eclipse.refactoring.renameMethodMenu
+
+!ENTRY org.eclipse.equinox.registry 4 1 2010-06-23 13:47:55.515
+!MESSAGE Plug-in "org.codehaus.groovy.eclipse.ui" was unable to instantiate class "org.codehaus.groovy.eclipse.refactoring.actions.RenameDispatcherAction".
+!STACK 0
+java.lang.InstantiationException: org.codehaus.groovy.eclipse.refactoring.actions.RenameDispatcherAction
+	at java.lang.Class.newInstance0(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:170)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:874)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:51)
+	at org.eclipse.ui.internal.WorkbenchPlugin.createExtension(WorkbenchPlugin.java:259)
+	at org.eclipse.ui.internal.PluginAction.createDelegate(PluginAction.java:122)
+	at org.eclipse.ui.internal.PluginAction.selectionChanged(PluginAction.java:275)
+	at org.eclipse.ui.internal.PluginAction.<init>(PluginAction.java:112)
+	at org.eclipse.ui.internal.PartPluginAction.<init>(PartPluginAction.java:29)
+	at org.eclipse.ui.internal.EditorPluginAction.<init>(EditorPluginAction.java:32)
+	at org.eclipse.ui.internal.ActionDescriptor.createAction(ActionDescriptor.java:262)
+	at org.eclipse.ui.internal.ActionDescriptor.<init>(ActionDescriptor.java:176)
+	at org.eclipse.ui.internal.ActionDescriptor.<init>(ActionDescriptor.java:103)
+	at org.eclipse.ui.internal.EditorActionBuilder.createActionDescriptor(EditorActionBuilder.java:41)
+	at org.eclipse.ui.internal.PluginActionBuilder.readElement(PluginActionBuilder.java:161)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElementChildren(RegistryReader.java:133)
+	at org.eclipse.ui.internal.PluginActionBuilder.readElement(PluginActionBuilder.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readElements(RegistryReader.java:144)
+	at org.eclipse.ui.internal.registry.RegistryReader.readExtension(RegistryReader.java:155)
+	at org.eclipse.ui.internal.registry.RegistryReader.readRegistry(RegistryReader.java:176)
+	at org.eclipse.ui.internal.PluginActionBuilder.readContributions(PluginActionBuilder.java:115)
+	at org.eclipse.ui.internal.EditorActionBuilder.readActionExtensions(EditorActionBuilder.java:58)
+	at org.eclipse.ui.internal.EditorManager.createEditorActionBars(EditorManager.java:328)
+	at org.eclipse.ui.internal.EditorManager.createSite(EditorManager.java:790)
+	at org.eclipse.ui.internal.EditorReference.createPartHelper(EditorReference.java:644)
+	at org.eclipse.ui.internal.EditorReference.createPart(EditorReference.java:462)
+	at org.eclipse.ui.internal.WorkbenchPartReference.getPart(WorkbenchPartReference.java:595)
+	at org.eclipse.ui.internal.PartPane.setVisible(PartPane.java:313)
+	at org.eclipse.ui.internal.presentations.PresentablePart.setVisible(PresentablePart.java:180)
+	at org.eclipse.ui.internal.presentations.util.PresentablePartFolder.select(PresentablePartFolder.java:270)
+	at org.eclipse.ui.internal.presentations.util.LeftToRightTabOrder.select(LeftToRightTabOrder.java:65)
+	at org.eclipse.ui.internal.presentations.util.TabbedStackPresentation.selectPart(TabbedStackPresentation.java:473)
+	at org.eclipse.ui.internal.PartStack.refreshPresentationSelection(PartStack.java:1256)
+	at org.eclipse.ui.internal.PartStack.setSelection(PartStack.java:1209)
+	at org.eclipse.ui.internal.PartStack.showPart(PartStack.java:1608)
+	at org.eclipse.ui.internal.PartStack.add(PartStack.java:499)
+	at org.eclipse.ui.internal.EditorStack.add(EditorStack.java:103)
+	at org.eclipse.ui.internal.PartStack.add(PartStack.java:485)
+	at org.eclipse.ui.internal.EditorStack.add(EditorStack.java:112)
+	at org.eclipse.ui.internal.EditorSashContainer.addEditor(EditorSashContainer.java:63)
+	at org.eclipse.ui.internal.EditorAreaHelper.addToLayout(EditorAreaHelper.java:225)
+	at org.eclipse.ui.internal.EditorAreaHelper.addEditor(EditorAreaHelper.java:213)
+	at org.eclipse.ui.internal.EditorManager.createEditorTab(EditorManager.java:778)
+	at org.eclipse.ui.internal.EditorManager.openEditorFromDescriptor(EditorManager.java:677)
+	at org.eclipse.ui.internal.EditorManager.openEditor(EditorManager.java:638)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditorBatched(WorkbenchPage.java:2854)
+	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:2762)
+	at org.eclipse.ui.internal.WorkbenchPage.access$11(WorkbenchPage.java:2754)
+	at org.eclipse.ui.internal.WorkbenchPage$10.run(WorkbenchPage.java:2705)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2701)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2685)
+	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:2676)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:374)
+	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:178)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:229)
+	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:208)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:274)
+	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:250)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerActionGroup.handleOpen(PackageExplorerActionGroup.java:373)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart$4.open(PackageExplorerPart.java:526)
+	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:48)
+	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:842)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.runtime.Platform.run(Platform.java:888)
+	at org.eclipse.ui.internal.JFaceUtil$1.run(JFaceUtil.java:48)
+	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:175)
+	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:840)
+	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1101)
+	at org.eclipse.jface.viewers.StructuredViewer$6.handleOpen(StructuredViewer.java:1205)
+	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:264)
+	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:258)
+	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:298)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:3910)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3503)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+
+!ENTRY org.eclipse.ui 4 0 2010-06-23 13:48:18.000
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NoClassDefFoundError: org/hibernate/criterion/Criterion
+	at java.lang.Class.getDeclaredFields0(Native Method)
+	at java.lang.Class.privateGetDeclaredFields(Unknown Source)
+	at java.lang.Class.getDeclaredFields(Unknown Source)
+	at org.codehaus.groovy.vmplugin.v5.Java5.configureClassNode(Java5.java:334)
+	at org.codehaus.groovy.ast.ClassNode.lazyClassInit(ClassNode.java:307)
+	at org.codehaus.groovy.ast.ClassNode.getUnresolvedSuperClass(ClassNode.java:1015)
+	at org.codehaus.groovy.ast.ClassNode.getUnresolvedSuperClass(ClassNode.java:1010)
+	at org.codehaus.groovy.ast.ClassNode.getSuperClass(ClassNode.java:1004)
+	at org.eclipse.jdt.groovy.search.SimpleTypeLookup.findAllClasses(SimpleTypeLookup.java:517)
+	at org.eclipse.jdt.groovy.search.SimpleTypeLookup.findDeclaration(SimpleTypeLookup.java:420)
+	at org.eclipse.jdt.groovy.search.SimpleTypeLookup.findTypeForNameWithKnownObjectExpression(SimpleTypeLookup.java:309)
+	at org.eclipse.jdt.groovy.search.SimpleTypeLookup.findType(SimpleTypeLookup.java:185)
+	at org.eclipse.jdt.groovy.search.SimpleTypeLookup.lookupType(SimpleTypeLookup.java:87)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.handleExpression(TypeInferencingVisitorWithRequestor.java:567)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitConstantExpression(TypeInferencingVisitorWithRequestor.java:799)
+	at org.codehaus.groovy.ast.expr.ConstantExpression.visit(ConstantExpression.java:55)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitMethodCallExpression(TypeInferencingVisitorWithRequestor.java:867)
+	at org.codehaus.groovy.ast.expr.MethodCallExpression.visit(MethodCallExpression.java:63)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitBinaryExpression(TypeInferencingVisitorWithRequestor.java:680)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitDeclarationExpression(TypeInferencingVisitorWithRequestor.java:817)
+	at org.codehaus.groovy.ast.expr.DeclarationExpression.visit(DeclarationExpression.java:53)
+	at org.codehaus.groovy.ast.CodeVisitorSupport.visitExpressionStatement(CodeVisitorSupport.java:69)
+	at org.codehaus.groovy.ast.ClassCodeVisitorSupport.visitExpressionStatement(ClassCodeVisitorSupport.java:206)
+	at org.codehaus.groovy.ast.stmt.ExpressionStatement.visit(ExpressionStatement.java:40)
+	at org.codehaus.groovy.ast.CodeVisitorSupport.visitBlockStatement(CodeVisitorSupport.java:35)
+	at org.codehaus.groovy.ast.ClassCodeVisitorSupport.visitBlockStatement(ClassCodeVisitorSupport.java:176)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitBlockStatement(TypeInferencingVisitorWithRequestor.java:765)
+	at org.codehaus.groovy.ast.stmt.BlockStatement.visit(BlockStatement.java:51)
+	at org.codehaus.groovy.ast.ClassCodeVisitorSupport.visitClassCodeContainer(ClassCodeVisitorSupport.java:98)
+	at org.codehaus.groovy.ast.ClassCodeVisitorSupport.visitConstructorOrMethod(ClassCodeVisitorSupport.java:109)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitConstructorOrMethod(TypeInferencingVisitorWithRequestor.java:499)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitJDT(TypeInferencingVisitorWithRequestor.java:322)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitJDT(TypeInferencingVisitorWithRequestor.java:212)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitCompilationUnit(TypeInferencingVisitorWithRequestor.java:171)
+	at org.codehaus.groovy.eclipse.codeassist.processors.StatementAndExpressionCompletionProcessor.generateProposals(StatementAndExpressionCompletionProcessor.java:134)
+	at org.codehaus.groovy.eclipse.codeassist.requestor.GroovyCompletionProposalComputer.computeCompletionProposals(GroovyCompletionProposalComputer.java:124)
+	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:316)
+	at org.eclipse.jdt.internal.ui.text.java.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:264)
+	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.collectProposals(ContentAssistProcessor.java:286)
+	at org.eclipse.jdt.internal.ui.text.java.ContentAssistProcessor.computeCompletionProposals(ContentAssistProcessor.java:246)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:1832)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:556)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.access$16(CompletionProposalPopup.java:553)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup$2.run(CompletionProposalPopup.java:488)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.showProposals(CompletionProposalPopup.java:482)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.showPossibleCompletions(ContentAssistant.java:1660)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor$AdaptedSourceViewer.doOperation(CompilationUnitEditor.java:182)
+	at org.eclipse.ui.texteditor.ContentAssistAction$1.run(ContentAssistAction.java:82)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.texteditor.ContentAssistAction.run(ContentAssistAction.java:80)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.ui.commands.ActionHandler.execute(ActionHandler.java:185)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerWrapper.execute(LegacyHandlerWrapper.java:109)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:470)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:824)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:880)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:569)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:510)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:125)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1208)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1002)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1027)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1012)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1040)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1036)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1368)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4053)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:346)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3946)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:342)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4619)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2411)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3501)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+Caused by: java.lang.ClassNotFoundException: org.hibernate.criterion.Criterion
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:494)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:410)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:398)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:105)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	... 99 more
