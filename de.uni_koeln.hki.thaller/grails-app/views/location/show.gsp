@@ -30,16 +30,16 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="location.person.label" default="Person" /></td>
+                            <td valign="top" class="name"><g:message code="location.start.label" default="Start" /></td>
                             
-                            <td valign="top" class="value"><g:link controller="person" action="show" id="${locationInstance?.person?.id}">${locationInstance?.person?.encodeAsHTML()}</g:link></td>
+                            <td valign="top" class="value">${fieldValue(bean: locationInstance, field: "start")}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="location.start.label" default="Start" /></td>
+                            <td valign="top" class="name"><g:message code="location.end.label" default="End" /></td>
                             
-                            <td valign="top" class="value"><g:formatDate date="${locationInstance?.start}" /></td>
+                            <td valign="top" class="value">${fieldValue(bean: locationInstance, field: "end")}</td>
                             
                         </tr>
                     
@@ -51,9 +51,9 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="location.name.label" default="Name" /></td>
+                            <td valign="top" class="name"><g:message code="location.latitude.label" default="Latitude" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: locationInstance, field: "name")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: locationInstance, field: "latitude")}</td>
                             
                         </tr>
                     
@@ -65,16 +65,16 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="location.latitude.label" default="Latitude" /></td>
+                            <td valign="top" class="name"><g:message code="location.name.label" default="Name" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: locationInstance, field: "latitude")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: locationInstance, field: "name")}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="location.end.label" default="End" /></td>
+                            <td valign="top" class="name"><g:message code="location.person.label" default="Person" /></td>
                             
-                            <td valign="top" class="value"><g:formatDate date="${locationInstance?.end}" /></td>
+                            <td valign="top" class="value"><g:link controller="person" action="show" id="${locationInstance?.person?.id}">${locationInstance?.person?.encodeAsHTML()}</g:link></td>
                             
                         </tr>
                     

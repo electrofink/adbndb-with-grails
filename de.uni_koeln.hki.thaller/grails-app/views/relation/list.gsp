@@ -25,14 +25,14 @@
                             <g:sortableColumn property="id" title="${message(code: 'relation.id.label', default: 'Id')}" />
                         
                             <th><g:message code="relation.relatedPerson.label" default="Related Person" /></th>
-                   	    
-                            <g:sortableColumn property="directRelation" title="${message(code: 'relation.directRelation.label', default: 'Direct Relation')}" />
                         
-                            <th><g:message code="relation.person.label" default="Person" /></th>
-                   	    
                             <g:sortableColumn property="start" title="${message(code: 'relation.start.label', default: 'Start')}" />
                         
                             <g:sortableColumn property="end" title="${message(code: 'relation.end.label', default: 'End')}" />
+                        
+                            <g:sortableColumn property="directRelation" title="${message(code: 'relation.directRelation.label', default: 'Direct Relation')}" />
+                        
+                            <th><g:message code="relation.person.label" default="Person" /></th>
                         
                         </tr>
                     </thead>
@@ -44,13 +44,13 @@
                         
                             <td>${fieldValue(bean: relationInstance, field: "relatedPerson")}</td>
                         
+                            <td>${fieldValue(bean: relationInstance, field: "start")}</td>
+                        
+                            <td>${fieldValue(bean: relationInstance, field: "end")}</td>
+                        
                             <td><g:formatBoolean boolean="${relationInstance.directRelation}" /></td>
                         
                             <td>${fieldValue(bean: relationInstance, field: "person")}</td>
-                        
-                            <td><g:formatDate date="${relationInstance.start}" /></td>
-                        
-                            <td><g:formatDate date="${relationInstance.end}" /></td>
                         
                         </tr>
                     </g:each>

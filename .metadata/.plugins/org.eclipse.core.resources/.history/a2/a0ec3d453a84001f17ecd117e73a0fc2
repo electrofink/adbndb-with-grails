@@ -1,0 +1,40 @@
+package de.uni_koeln.hki.thaller
+
+import java.util.StringTokenizer;
+
+import validator.DateValidator;
+
+class Person {
+	
+	String bio
+	String  dateOfBirth
+	String  dateOfDeath
+	boolean gender
+	
+	String year
+	String month
+	String day
+	
+	
+	static transients = [ "year", "month", "day" ]
+	
+	
+	static hasMany = [names:Name, relations:Relation, confessions:Confession,
+	locations:Location, works:Work]
+	
+	static constraints = {
+		dateOfBirth(validator:{val, obj ->
+			return DateValidator.validate(val)
+		})
+		
+		dateOfDeath(validator:{val, obj ->
+			return DateValidator.validate(val)
+		})
+		
+		dateOfDeath(nullable:true)
+		bio(maxSize:10000)
+	}
+	
+	
+	
+}

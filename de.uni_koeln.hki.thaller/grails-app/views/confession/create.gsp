@@ -1,4 +1,5 @@
 
+
 <%@ page import="de.uni_koeln.hki.thaller.Confession" %>
 <html>
     <head>
@@ -29,10 +30,19 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="title"><g:message code="confession.title.label" default="Title" /></label>
+                                    <label for="start"><g:message code="confession.start.label" default="Start" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: confessionInstance, field: 'title', 'errors')}">
-                                    <g:textField name="title" value="${confessionInstance?.title}" />
+                                <td valign="top" class="value ${hasErrors(bean: confessionInstance, field: 'start', 'errors')}">
+                                    <g:textField name="start" value="${confessionInstance?.start}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="end"><g:message code="confession.end.label" default="End" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: confessionInstance, field: 'end', 'errors')}">
+                                    <g:textField name="end" value="${confessionInstance?.end}" />
                                 </td>
                             </tr>
                         
@@ -47,19 +57,10 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="start"><g:message code="confession.start.label" default="Start" /></label>
+                                    <label for="title"><g:message code="confession.title.label" default="Title" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: confessionInstance, field: 'start', 'errors')}">
-                                    <g:datePicker name="start" precision="day" value="${confessionInstance?.start}"  />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="end"><g:message code="confession.end.label" default="End" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: confessionInstance, field: 'end', 'errors')}">
-                                    <g:datePicker name="end" precision="day" value="${confessionInstance?.end}"  />
+                                <td valign="top" class="value ${hasErrors(bean: confessionInstance, field: 'title', 'errors')}">
+                                    <g:textField name="title" value="${confessionInstance?.title}" />
                                 </td>
                             </tr>
                         

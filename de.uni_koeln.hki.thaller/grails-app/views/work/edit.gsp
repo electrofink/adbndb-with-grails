@@ -1,4 +1,5 @@
 
+
 <%@ page import="de.uni_koeln.hki.thaller.Work" %>
 <html>
     <head>
@@ -32,19 +33,19 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="title"><g:message code="work.title.label" default="Title" /></label>
+                                  <label for="releaseDate"><g:message code="work.releaseDate.label" default="Release Date" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: workInstance, field: 'title', 'errors')}">
-                                    <g:textField name="title" value="${workInstance?.title}" />
+                                <td valign="top" class="value ${hasErrors(bean: workInstance, field: 'releaseDate', 'errors')}">
+                                    <g:textField name="releaseDate" value="${workInstance?.releaseDate}" />
                                 </td>
                             </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="releaseDate"><g:message code="work.releaseDate.label" default="Release Date" /></label>
+                                  <label for="persons"><g:message code="work.persons.label" default="Persons" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: workInstance, field: 'releaseDate', 'errors')}">
-                                    <g:datePicker name="releaseDate" precision="day" value="${workInstance?.releaseDate}"  />
+                                <td valign="top" class="value ${hasErrors(bean: workInstance, field: 'persons', 'errors')}">
+                                    
                                 </td>
                             </tr>
                         
@@ -59,10 +60,10 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="persons"><g:message code="work.persons.label" default="Persons" /></label>
+                                  <label for="title"><g:message code="work.title.label" default="Title" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: workInstance, field: 'persons', 'errors')}">
-                                    
+                                <td valign="top" class="value ${hasErrors(bean: workInstance, field: 'title', 'errors')}">
+                                    <g:textField name="title" value="${workInstance?.title}" />
                                 </td>
                             </tr>
                         

@@ -37,6 +37,20 @@
                         </tr>
                     
                         <tr class="prop">
+                            <td valign="top" class="name"><g:message code="relation.start.label" default="Start" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: relationInstance, field: "start")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="relation.end.label" default="End" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: relationInstance, field: "end")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="relation.directRelation.label" default="Direct Relation" /></td>
                             
                             <td valign="top" class="value"><g:formatBoolean boolean="${relationInstance?.directRelation}" /></td>
@@ -47,20 +61,6 @@
                             <td valign="top" class="name"><g:message code="relation.person.label" default="Person" /></td>
                             
                             <td valign="top" class="value"><g:link controller="person" action="show" id="${relationInstance?.person?.id}">${relationInstance?.person?.encodeAsHTML()}</g:link></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="relation.start.label" default="Start" /></td>
-                            
-                            <td valign="top" class="value"><g:formatDate date="${relationInstance?.start}" /></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="relation.end.label" default="End" /></td>
-                            
-                            <td valign="top" class="value"><g:formatDate date="${relationInstance?.end}" /></td>
                             
                         </tr>
                     

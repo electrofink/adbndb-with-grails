@@ -1,3 +1,4 @@
+<%@ page import="de.uni_koeln.hki.thaller.Person" %>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -73,10 +74,6 @@
 					class="value ${hasErrors(bean: personInstance, field: 'dateOfBirth', 'errors')}">
 				<g:textField name="dateOfBirth"
 					value="${personInstance?.dateOfBirth}" /></td>
-					<g:textField name="dateOfBirth"
-					value="${personInstance?.dateOfBirth}" /></td>
-					<g:textField name="dateOfBirth"
-					value="${personInstance?.dateOfBirth}" /></td>
 			</tr>
 
 			<tr class="prop">
@@ -122,18 +119,15 @@
 					code="confession.start.label" default="Start" /></label></td>
 				<td valign="top"
 					class="value ${hasErrors(bean: confessionInstance, field: 'start', 'errors')}">
-				<g:datePicker name="start" precision="day"
-					value="${confessionInstance?.start}" /></td>
+				<g:textField name="startConfession" value="${confessionInstance?.startConfession}" /></td>
 			</tr>
-
 
 			<tr class="prop">
 				<td valign="top" class="name"><label for="end"><g:message
 					code="confession.end.label" default="End" /></label></td>
 				<td valign="top"
 					class="value ${hasErrors(bean: confessionInstance, field: 'end', 'errors')}">
-				<g:datePicker name="end" precision="day"
-					value="${confessionInstance?.end}" /></td>
+				<g:textField name="endConfession" value="${confessionInstance?.endConfession}" /></td>
 			</tr>
 			<tr>
 				<td>
@@ -182,8 +176,7 @@
 					code="location.start.label" default="Start" /></label></td>
 				<td valign="top"
 					class="value ${hasErrors(bean: locationInstance, field: 'start', 'errors')}">
-				<g:datePicker name="start" precision="day"
-					value="${locationInstance?.start}" /></td>
+				<g:textField name="startLocation" value="${locationInstance?.startLocation}" /></td>
 			</tr>
 
 			<tr class="prop">
@@ -191,8 +184,7 @@
 					code="location.end.label" default="End" /></label></td>
 				<td valign="top"
 					class="value ${hasErrors(bean: locationInstance, field: 'end', 'errors')}">
-				<g:datePicker name="end" precision="day"
-					value="${locationInstance?.end}" /></td>
+				<g:textField name="endLocation" value="${locationInstance?.endLocation}" /></td>
 			</tr>
 			<tr>
 				<td>
@@ -225,8 +217,7 @@
 					code="relation.start.label" default="Start" /></label></td>
 				<td valign="top"
 					class="value ${hasErrors(bean: relationInstance, field: 'start', 'errors')}">
-				<g:datePicker name="start" precision="day"
-					value="${relationInstance?.start}" /></td>
+				<g:textField name="startRelation" value="${relationInstance?.startRelation}" /></td>
 			</tr>
 
 			<tr class="prop">
@@ -234,8 +225,7 @@
 					code="relation.end.label" default="End" /></label></td>
 				<td valign="top"
 					class="value ${hasErrors(bean: relationInstance, field: 'end', 'errors')}">
-				<g:datePicker name="end" precision="day"
-					value="${relationInstance?.end}" /></td>
+				<g:textField name="endRelation" value="${relationInstance?.endRelation}" /></td>
 			</tr>
 			<tr>
 				<td>
@@ -262,8 +252,7 @@
 					code="work.releaseDate.label" default="Release Date" /></label></td>
 				<td valign="top"
 					class="value ${hasErrors(bean: workInstance, field: 'releaseDate', 'errors')}">
-				<g:datePicker name="releaseDate" precision="day"
-					value="${workInstance?.releaseDate}" /></td>
+				<g:textField name="releaseDate" value="${workInstance?.releaseDate}" /></td>
 			</tr>
 
 		</tbody>

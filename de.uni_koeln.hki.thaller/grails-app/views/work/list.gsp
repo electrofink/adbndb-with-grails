@@ -24,11 +24,11 @@
                         
                             <g:sortableColumn property="id" title="${message(code: 'work.id.label', default: 'Id')}" />
                         
-                            <g:sortableColumn property="title" title="${message(code: 'work.title.label', default: 'Title')}" />
-                        
                             <g:sortableColumn property="releaseDate" title="${message(code: 'work.releaseDate.label', default: 'Release Date')}" />
                         
                             <g:sortableColumn property="subtitle" title="${message(code: 'work.subtitle.label', default: 'Subtitle')}" />
+                        
+                            <g:sortableColumn property="title" title="${message(code: 'work.title.label', default: 'Title')}" />
                         
                         </tr>
                     </thead>
@@ -38,11 +38,11 @@
                         
                             <td><g:link action="show" id="${workInstance.id}">${fieldValue(bean: workInstance, field: "id")}</g:link></td>
                         
-                            <td>${fieldValue(bean: workInstance, field: "title")}</td>
-                        
-                            <td><g:formatDate date="${workInstance.releaseDate}" /></td>
+                            <td>${fieldValue(bean: workInstance, field: "releaseDate")}</td>
                         
                             <td>${fieldValue(bean: workInstance, field: "subtitle")}</td>
+                        
+                            <td>${fieldValue(bean: workInstance, field: "title")}</td>
                         
                         </tr>
                     </g:each>

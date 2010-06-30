@@ -30,9 +30,16 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="confession.title.label" default="Title" /></td>
+                            <td valign="top" class="name"><g:message code="confession.start.label" default="Start" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: confessionInstance, field: "title")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: confessionInstance, field: "start")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="confession.end.label" default="End" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: confessionInstance, field: "end")}</td>
                             
                         </tr>
                     
@@ -44,16 +51,9 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="confession.start.label" default="Start" /></td>
+                            <td valign="top" class="name"><g:message code="confession.title.label" default="Title" /></td>
                             
-                            <td valign="top" class="value"><g:formatDate date="${confessionInstance?.start}" /></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="confession.end.label" default="End" /></td>
-                            
-                            <td valign="top" class="value"><g:formatDate date="${confessionInstance?.end}" /></td>
+                            <td valign="top" class="value">${fieldValue(bean: confessionInstance, field: "title")}</td>
                             
                         </tr>
                     

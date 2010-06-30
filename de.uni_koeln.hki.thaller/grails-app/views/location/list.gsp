@@ -24,13 +24,13 @@
                         
                             <g:sortableColumn property="id" title="${message(code: 'location.id.label', default: 'Id')}" />
                         
-                            <th><g:message code="location.person.label" default="Person" /></th>
-                   	    
                             <g:sortableColumn property="start" title="${message(code: 'location.start.label', default: 'Start')}" />
+                        
+                            <g:sortableColumn property="end" title="${message(code: 'location.end.label', default: 'End')}" />
                         
                             <g:sortableColumn property="description" title="${message(code: 'location.description.label', default: 'Description')}" />
                         
-                            <g:sortableColumn property="name" title="${message(code: 'location.name.label', default: 'Name')}" />
+                            <g:sortableColumn property="latitude" title="${message(code: 'location.latitude.label', default: 'Latitude')}" />
                         
                             <g:sortableColumn property="longitude" title="${message(code: 'location.longitude.label', default: 'Longitude')}" />
                         
@@ -42,13 +42,13 @@
                         
                             <td><g:link action="show" id="${locationInstance.id}">${fieldValue(bean: locationInstance, field: "id")}</g:link></td>
                         
-                            <td>${fieldValue(bean: locationInstance, field: "person")}</td>
+                            <td>${fieldValue(bean: locationInstance, field: "start")}</td>
                         
-                            <td><g:formatDate date="${locationInstance.start}" /></td>
+                            <td>${fieldValue(bean: locationInstance, field: "end")}</td>
                         
                             <td>${fieldValue(bean: locationInstance, field: "description")}</td>
                         
-                            <td>${fieldValue(bean: locationInstance, field: "name")}</td>
+                            <td>${fieldValue(bean: locationInstance, field: "latitude")}</td>
                         
                             <td>${fieldValue(bean: locationInstance, field: "longitude")}</td>
                         

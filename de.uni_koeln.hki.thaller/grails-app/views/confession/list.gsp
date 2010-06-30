@@ -24,13 +24,13 @@
                         
                             <g:sortableColumn property="id" title="${message(code: 'confession.id.label', default: 'Id')}" />
                         
-                            <g:sortableColumn property="title" title="${message(code: 'confession.title.label', default: 'Title')}" />
-                        
-                            <th><g:message code="confession.person.label" default="Person" /></th>
-                   	    
                             <g:sortableColumn property="start" title="${message(code: 'confession.start.label', default: 'Start')}" />
                         
                             <g:sortableColumn property="end" title="${message(code: 'confession.end.label', default: 'End')}" />
+                        
+                            <th><g:message code="confession.person.label" default="Person" /></th>
+                        
+                            <g:sortableColumn property="title" title="${message(code: 'confession.title.label', default: 'Title')}" />
                         
                         </tr>
                     </thead>
@@ -40,13 +40,13 @@
                         
                             <td><g:link action="show" id="${confessionInstance.id}">${fieldValue(bean: confessionInstance, field: "id")}</g:link></td>
                         
-                            <td>${fieldValue(bean: confessionInstance, field: "title")}</td>
+                            <td>${fieldValue(bean: confessionInstance, field: "start")}</td>
+                        
+                            <td>${fieldValue(bean: confessionInstance, field: "end")}</td>
                         
                             <td>${fieldValue(bean: confessionInstance, field: "person")}</td>
                         
-                            <td><g:formatDate date="${confessionInstance.start}" /></td>
-                        
-                            <td><g:formatDate date="${confessionInstance.end}" /></td>
+                            <td>${fieldValue(bean: confessionInstance, field: "title")}</td>
                         
                         </tr>
                     </g:each>

@@ -30,23 +30,9 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="work.title.label" default="Title" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: workInstance, field: "title")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
                             <td valign="top" class="name"><g:message code="work.releaseDate.label" default="Release Date" /></td>
                             
-                            <td valign="top" class="value"><g:formatDate date="${workInstance?.releaseDate}" /></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="work.subtitle.label" default="Subtitle" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: workInstance, field: "subtitle")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: workInstance, field: "releaseDate")}</td>
                             
                         </tr>
                     
@@ -60,6 +46,20 @@
                                 </g:each>
                                 </ul>
                             </td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="work.subtitle.label" default="Subtitle" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: workInstance, field: "subtitle")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="work.title.label" default="Title" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: workInstance, field: "title")}</td>
                             
                         </tr>
                     

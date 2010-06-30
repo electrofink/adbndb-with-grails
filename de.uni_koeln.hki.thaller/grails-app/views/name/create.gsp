@@ -1,4 +1,5 @@
 
+
 <%@ page import="de.uni_koeln.hki.thaller.Name" %>
 <html>
     <head>
@@ -29,6 +30,15 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                    <label for="birthName"><g:message code="name.birthName.label" default="Birth Name" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: nameInstance, field: 'birthName', 'errors')}">
+                                    <g:textField name="birthName" value="${nameInstance?.birthName}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                     <label for="firstNames"><g:message code="name.firstNames.label" default="First Names" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: nameInstance, field: 'firstNames', 'errors')}">
@@ -42,15 +52,6 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: nameInstance, field: 'lastName', 'errors')}">
                                     <g:textField name="lastName" value="${nameInstance?.lastName}" />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="birthName"><g:message code="name.birthName.label" default="Birth Name" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: nameInstance, field: 'birthName', 'errors')}">
-                                    <g:textField name="birthName" value="${nameInstance?.birthName}" />
                                 </td>
                             </tr>
                         

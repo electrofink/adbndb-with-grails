@@ -1,4 +1,5 @@
 
+
 <%@ page import="de.uni_koeln.hki.thaller.Relation" %>
 <html>
     <head>
@@ -41,6 +42,24 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                  <label for="start"><g:message code="relation.start.label" default="Start" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'start', 'errors')}">
+                                    <g:textField name="start" value="${relationInstance?.start}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="end"><g:message code="relation.end.label" default="End" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'end', 'errors')}">
+                                    <g:textField name="end" value="${relationInstance?.end}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                   <label for="directRelation"><g:message code="relation.directRelation.label" default="Direct Relation" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'directRelation', 'errors')}">
@@ -54,24 +73,6 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'person', 'errors')}">
                                     <g:select name="person.id" from="${de.uni_koeln.hki.thaller.Person.list()}" optionKey="id" value="${relationInstance?.person?.id}"  />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                  <label for="start"><g:message code="relation.start.label" default="Start" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'start', 'errors')}">
-                                    <g:datePicker name="start" precision="day" value="${relationInstance?.start}"  />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                  <label for="end"><g:message code="relation.end.label" default="End" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'end', 'errors')}">
-                                    <g:datePicker name="end" precision="day" value="${relationInstance?.end}"  />
                                 </td>
                             </tr>
                         

@@ -1,4 +1,5 @@
 
+
 <%@ page import="de.uni_koeln.hki.thaller.Location" %>
 <html>
     <head>
@@ -29,19 +30,19 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="person"><g:message code="location.person.label" default="Person" /></label>
+                                    <label for="start"><g:message code="location.start.label" default="Start" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'person', 'errors')}">
-                                    <g:select name="person.id" from="${de.uni_koeln.hki.thaller.Person.list()}" optionKey="id" value="${locationInstance?.person?.id}"  />
+                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'start', 'errors')}">
+                                    <g:textField name="start" value="${locationInstance?.start}" />
                                 </td>
                             </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="start"><g:message code="location.start.label" default="Start" /></label>
+                                    <label for="end"><g:message code="location.end.label" default="End" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'start', 'errors')}">
-                                    <g:datePicker name="start" precision="day" value="${locationInstance?.start}"  />
+                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'end', 'errors')}">
+                                    <g:textField name="end" value="${locationInstance?.end}" />
                                 </td>
                             </tr>
                         
@@ -56,10 +57,10 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="name"><g:message code="location.name.label" default="Name" /></label>
+                                    <label for="latitude"><g:message code="location.latitude.label" default="Latitude" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'name', 'errors')}">
-                                    <g:textField name="name" value="${locationInstance?.name}" />
+                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'latitude', 'errors')}">
+                                    <g:textField name="latitude" value="${fieldValue(bean: locationInstance, field: 'latitude')}" />
                                 </td>
                             </tr>
                         
@@ -74,19 +75,19 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="latitude"><g:message code="location.latitude.label" default="Latitude" /></label>
+                                    <label for="name"><g:message code="location.name.label" default="Name" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'latitude', 'errors')}">
-                                    <g:textField name="latitude" value="${fieldValue(bean: locationInstance, field: 'latitude')}" />
+                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'name', 'errors')}">
+                                    <g:textField name="name" value="${locationInstance?.name}" />
                                 </td>
                             </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="end"><g:message code="location.end.label" default="End" /></label>
+                                    <label for="person"><g:message code="location.person.label" default="Person" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'end', 'errors')}">
-                                    <g:datePicker name="end" precision="day" value="${locationInstance?.end}"  />
+                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'person', 'errors')}">
+                                    <g:select name="person.id" from="${de.uni_koeln.hki.thaller.Person.list()}" optionKey="id" value="${locationInstance?.person?.id}"  />
                                 </td>
                             </tr>
                         
