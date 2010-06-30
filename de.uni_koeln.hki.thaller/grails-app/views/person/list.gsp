@@ -40,9 +40,9 @@
                         
                             <td><g:link action="show" id="${personInstance.id}">${fieldValue(bean: personInstance, field: "id")}</g:link></td>
                         
-                            <td><g:formatDate date="${personInstance.dateOfBirth}" /></td>
+                            <td>${fieldValue(bean: personInstance, field: "dateOfBirth")}</td>
                         
-                            <td><g:formatDate date="${personInstance.dateOfDeath}" /></td>
+                            <td>${fieldValue(bean: personInstance, field: "dateOfDeath")}</td>
                         
                             <td>${fieldValue(bean: personInstance, field: "bio")}</td>
                         

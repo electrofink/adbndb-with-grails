@@ -1,4 +1,5 @@
 
+
 <%@ page import="de.uni_koeln.hki.thaller.Person" %>
 <html>
     <head>
@@ -35,7 +36,7 @@
                                   <label for="dateOfBirth"><g:message code="person.dateOfBirth.label" default="Date Of Birth" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'dateOfBirth', 'errors')}">
-                                    <g:datePicker name="dateOfBirth" precision="day" value="${personInstance?.dateOfBirth}"  />
+                                    <g:textField name="dateOfBirth" value="${personInstance?.dateOfBirth}" />
                                 </td>
                             </tr>
                         
@@ -44,7 +45,7 @@
                                   <label for="dateOfDeath"><g:message code="person.dateOfDeath.label" default="Date Of Death" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'dateOfDeath', 'errors')}">
-                                    <g:datePicker name="dateOfDeath" precision="day" value="${personInstance?.dateOfDeath}" noSelection="['': '']" />
+                                    <g:textField name="dateOfDeath" value="${personInstance?.dateOfDeath}" />
                                 </td>
                             </tr>
                         
@@ -59,17 +60,26 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="relations"><g:message code="person.relations.label" default="Relations" /></label>
+                                  <label for="confessions"><g:message code="person.confessions.label" default="Confessions" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'relations', 'errors')}">
+                                <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'confessions', 'errors')}">
                                     
 <ul>
-<g:each in="${personInstance?.relations?}" var="r">
-    <li><g:link controller="relation" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></li>
+<g:each in="${personInstance?.confessions?}" var="c">
+    <li><g:link controller="confession" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></li>
 </g:each>
 </ul>
-<g:link controller="relation" action="create" params="['person.id': personInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'relation.label', default: 'Relation')])}</g:link>
+<g:link controller="confession" action="create" params="['person.id': personInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'confession.label', default: 'Confession')])}</g:link>
 
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="gender"><g:message code="person.gender.label" default="Gender" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'gender', 'errors')}">
+                                    <g:checkBox name="gender" value="${personInstance?.gender}" />
                                 </td>
                             </tr>
                         
@@ -107,25 +117,16 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="gender"><g:message code="person.gender.label" default="Gender" /></label>
+                                  <label for="relations"><g:message code="person.relations.label" default="Relations" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'gender', 'errors')}">
-                                    <g:checkBox name="gender" value="${personInstance?.gender}" />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                  <label for="confessions"><g:message code="person.confessions.label" default="Confessions" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'confessions', 'errors')}">
+                                <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'relations', 'errors')}">
                                     
 <ul>
-<g:each in="${personInstance?.confessions?}" var="c">
-    <li><g:link controller="confession" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></li>
+<g:each in="${personInstance?.relations?}" var="r">
+    <li><g:link controller="relation" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></li>
 </g:each>
 </ul>
-<g:link controller="confession" action="create" params="['person.id': personInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'confession.label', default: 'Confession')])}</g:link>
+<g:link controller="relation" action="create" params="['person.id': personInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'relation.label', default: 'Relation')])}</g:link>
 
                                 </td>
                             </tr>

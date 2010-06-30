@@ -1,4 +1,5 @@
 
+
 <%@ page import="de.uni_koeln.hki.thaller.Person" %>
 <html>
     <head>
@@ -32,7 +33,7 @@
                                     <label for="dateOfBirth"><g:message code="person.dateOfBirth.label" default="Date Of Birth" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'dateOfBirth', 'errors')}">
-                                    <g:datePicker name="dateOfBirth" precision="day" value="${personInstance?.dateOfBirth}"  />
+                                    <g:textField name="dateOfBirth" value="${personInstance?.dateOfBirth}" />
                                 </td>
                             </tr>
                         
@@ -41,7 +42,7 @@
                                     <label for="dateOfDeath"><g:message code="person.dateOfDeath.label" default="Date Of Death" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'dateOfDeath', 'errors')}">
-                                    <g:datePicker name="dateOfDeath" precision="day" value="${personInstance?.dateOfDeath}" noSelection="['': '']" />
+                                    <g:textField name="dateOfDeath" value="${personInstance?.dateOfDeath}" />
                                 </td>
                             </tr>
                         

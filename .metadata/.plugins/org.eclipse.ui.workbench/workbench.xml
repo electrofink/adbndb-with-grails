@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="37" version="2.0">
+<workbench progressCount="57" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="154" y="154">
+<window height="768" maximized="true" width="1024" x="1438" y="100">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="130" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="98" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.springsource.sts.ide.ui.actionSet.workbench" itemType="typeToolBarContribution" x="37" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="124" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="146" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="146" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="133" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.springsource.sts.config.ui.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="185" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.springsource.sts.grails.editor.gsp.editor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.springsource.sts.internal.ide.ui.editors.MultiPageDashboardEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.codehaus.groovy.eclipse.editor.GroovyEditor" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -32,17 +37,42 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="resources.groovy" partName="resources.groovy" path="H:/adbndb-with-grails/de.uni_koeln.hki.thaller/grails-app/conf/spring/resources.groovy" title="resources.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/conf/spring/resources.groovy" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/de.uni_koeln.hki.thaller/grails-app/conf/spring/resources.groovy"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="51" selectionTopPixel="0"/>
+<editor id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="InterfaceTests.groovy" partName="InterfaceTests.groovy" path="H:/adbndb-with-grails/de.uni_koeln.hki.thaller/test/integration/de/uni_koeln/hki/thaller/InterfaceTests.groovy" title="InterfaceTests.groovy" tooltip="de.uni_koeln.hki.thaller/test/integration/de/uni_koeln/hki/thaller/InterfaceTests.groovy" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/de.uni_koeln.hki.thaller/test/integration/de/uni_koeln/hki/thaller/InterfaceTests.groovy"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="265" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="DataSource.groovy" partName="DataSource.groovy" path="H:/adbndb-with-grails/de.uni_koeln.hki.thaller/grails-app/conf/DataSource.groovy" title="DataSource.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/conf/DataSource.groovy" workbook="DefaultEditorWorkbook">
+<editor id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Confession.groovy" partName="Confession.groovy" path="H:/adbndb-with-grails/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Confession.groovy" title="Confession.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Confession.groovy" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Confession.groovy"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="187" selectionTopPixel="0"/>
+</editor>
+<editor id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Relation.groovy" partName="Relation.groovy" path="H:/adbndb-with-grails/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Relation.groovy" title="Relation.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Relation.groovy" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Relation.groovy"/>
+<editorState selectionHorizontalPixel="0" selectionLength="20" selectionOffset="130" selectionTopPixel="0"/>
+</editor>
+<editor id="com.springsource.sts.grails.editor.gsp.editor" name="create.gsp" partName="create.gsp" path="H:/adbndb-with-grails/de.uni_koeln.hki.thaller/grails-app/views/interface/create.gsp" title="create.gsp" tooltip="de.uni_koeln.hki.thaller/grails-app/views/interface/create.gsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/de.uni_koeln.hki.thaller/grails-app/views/interface/create.gsp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="264" selectionOffset="2561" selectionTopPixel="867"/>
+</editor>
+<editor activePart="true" focus="true" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Person.groovy" partName="Person.groovy" path="H:/adbndb-with-grails/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Person.groovy" title="Person.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Person.groovy" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Person.groovy"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="812" selectionTopPixel="289"/>
+</editor>
+<editor id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="DataSource.groovy" partName="DataSource.groovy" path="H:/adbndb-with-grails/de.uni_koeln.hki.thaller/grails-app/conf/DataSource.groovy" title="DataSource.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/conf/DataSource.groovy" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/de.uni_koeln.hki.thaller/grails-app/conf/DataSource.groovy"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="357" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="362" selectionTopPixel="0"/>
+</editor>
+<editor id="com.springsource.sts.grails.editor.gsp.editor" name="show.gsp" partName="show.gsp" path="H:/adbndb-with-grails/de.uni_koeln.hki.thaller/grails-app/views/interface/show.gsp" title="show.gsp" tooltip="de.uni_koeln.hki.thaller/grails-app/views/interface/show.gsp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/de.uni_koeln.hki.thaller/grails-app/views/interface/show.gsp"/>
+<editorState selectionHorizontalPixel="56" selectionLength="0" selectionOffset="2371" selectionTopPixel="408"/>
 </editor>
 </editors>
 <views>
@@ -53,7 +83,6 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (5 items)"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="54" org.eclipse.ui.ide.markerType="79" org.eclipse.ui.ide.pathField="104" org.eclipse.ui.ide.resourceField="222" org.eclipse.ui.ide.severityAndDescriptionField="873"/>
@@ -247,7 +276,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="252" ratioRight="756" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7496206" ratioLeft="494" ratioRight="165" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.54130435" ratioLeft="498" ratioRight="422" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -301,6 +330,21 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/de.uni_koeln.hki.thaller/grails-app/conf/spring/resources.groovy"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/de.uni_koeln.hki.thaller/grails-app/conf/DataSource.groovy"/>
+<editor factoryID="com.springsource.sts.ide.ui.dashboard.elementFactory" id="com.springsource.sts.internal.ide.ui.editors.MultiPageDashboardEditor" openDashboard="true"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/de.uni_koeln.hki.thaller/test/integration/de/uni_koeln/hki/thaller/InterfaceTests.groovy"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/de.uni_koeln.hki.thaller/test/unit/de/uni_koeln/hki/thaller/InterfaceControllerTests.groovy"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/de.uni_koeln.hki.thaller/test/unit/de/uni_koeln/hki/thaller/ConfessionControllerTests.groovy"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/de.uni_koeln.hki.thaller/test/unit/de/uni_koeln/hki/thaller/ConfessionTests.groovy"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/de.uni_koeln.hki.thaller/test/unit/de/uni_koeln/hki/thaller/ConfessionTypeTests.groovy"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/de.uni_koeln.hki.thaller/test/integration/de/uni_koeln/hki/thaller/InterfaceTests.groovy"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Confession.groovy"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Relation.groovy"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.springsource.sts.grails.editor.gsp.editor" path="/de.uni_koeln.hki.thaller/grails-app/views/interface/create.gsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Person.groovy"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.springsource.sts.grails.editor.gsp.editor" path="/de.uni_koeln.hki.thaller/grails-app/views/person/create.gsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.springsource.sts.grails.editor.gsp.editor" path="/de.uni_koeln.hki.thaller/grails-app/views/interface/show.gsp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.springsource.sts.grails.editor.gsp.editor" path="/de.uni_koeln.hki.thaller/grails-app/views/person/show.gsp"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=de.uni_koeln.hki.thaller/C:\/Programme\/Java\/jdk1.6.0_18\/jre\/lib\/rt.jar&lt;java.util(StringTokenizer.class"/>
 </editors>
 <item historyLabel="resources.groovy" index="0">
 <position info="not_deleted" x="0" y="0"/>
@@ -311,8 +355,132 @@
 <item historyLabel="resources.groovy" index="0">
 <position info="not_deleted" x="51" y="0"/>
 </item>
-<item active="true" historyLabel="DataSource.groovy" index="1">
-<position info="not_deleted" x="651" y="0"/>
+<item historyLabel="DataSource.groovy" index="1">
+<position info="not_deleted" x="357" y="0"/>
+</item>
+<item historyLabel="Dashboard" index="2"/>
+<item historyLabel="DataSource.groovy" index="1">
+<position info="not_deleted" x="357" y="0"/>
+</item>
+<item historyLabel="InterfaceTests.groovy" index="3">
+<position info="not_deleted" x="380" y="0"/>
+</item>
+<item historyLabel="InterfaceControllerTests.groovy" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="InterfaceTests.groovy" index="3">
+<position info="not_deleted" x="216" y="0"/>
+</item>
+<item historyLabel="ConfessionControllerTests.groovy" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ConfessionTests.groovy" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ConfessionTypeTests.groovy" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ConfessionTests.groovy" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ConfessionTypeTests.groovy" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ConfessionTests.groovy" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="InterfaceTests.groovy" index="3">
+<position info="not_deleted" x="216" y="0"/>
+</item>
+<item historyLabel="ConfessionControllerTests.groovy" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="InterfaceTests.groovy" index="8">
+<position/>
+</item>
+<item historyLabel="Confession.groovy" index="9">
+<position info="not_deleted" x="187" y="0"/>
+</item>
+<item historyLabel="InterfaceTests.groovy" index="8">
+<position info="not_deleted" x="265" y="0"/>
+</item>
+<item historyLabel="Relation.groovy" index="10">
+<position info="not_deleted" x="130" y="20"/>
+</item>
+<item historyLabel="create.gsp" index="11">
+<position info="not_deleted" x="8983" y="0"/>
+</item>
+<item historyLabel="Person.groovy" index="12">
+<position info="not_deleted" x="0" y="1366"/>
+</item>
+<item historyLabel="Person.groovy" index="12">
+<position info="not_deleted" x="393" y="0"/>
+</item>
+<item historyLabel="create.gsp" index="13">
+<position info="not_deleted" x="1352" y="1194"/>
+</item>
+<item historyLabel="Person.groovy" index="12">
+<position/>
+</item>
+<item historyLabel="create.gsp" index="11">
+<position info="not_deleted" x="3208" y="0"/>
+</item>
+<item historyLabel="DataSource.groovy" index="1">
+<position info="not_deleted" x="362" y="0"/>
+</item>
+<item historyLabel="Person.groovy" index="12">
+<position info="not_deleted" x="345" y="0"/>
+</item>
+<item historyLabel="create.gsp" index="11">
+<position info="not_deleted" x="302" y="0"/>
+</item>
+<item historyLabel="show.gsp" index="14">
+<position/>
+</item>
+<item historyLabel="show.gsp" index="15">
+<position info="not_deleted" x="1605" y="766"/>
+</item>
+<item historyLabel="show.gsp" index="14">
+<position info="not_deleted" x="2371" y="0"/>
+</item>
+<item historyLabel="Person.groovy" index="12">
+<position info="not_deleted" x="428" y="0"/>
+</item>
+<item historyLabel="create.gsp" index="11">
+<position info="not_deleted" x="2561" y="264"/>
+</item>
+<item historyLabel="Person.groovy" index="12">
+<position/>
+</item>
+<item historyLabel="Person.groovy" index="12">
+<position/>
+</item>
+<item historyLabel="Person.groovy" index="12">
+<position info="not_deleted" x="489" y="0"/>
+</item>
+<item historyLabel="StringTokenizer.class" index="16">
+<position info="not_deleted" x="3048" y="0"/>
+</item>
+<item historyLabel="Person.groovy" index="12">
+<position/>
+</item>
+<item historyLabel="Person.groovy" index="12">
+<position info="not_deleted" x="463" y="0"/>
+</item>
+<item historyLabel="Person.groovy" index="12">
+<position info="not_deleted" x="539" y="0"/>
+</item>
+<item historyLabel="Person.groovy" index="12">
+<position info="not_deleted" x="755" y="0"/>
+</item>
+<item historyLabel="Person.groovy" index="12">
+<position/>
+</item>
+<item historyLabel="Person.groovy" index="12">
+<position/>
+</item>
+<item active="true" historyLabel="Person.groovy" index="12">
+<position info="not_deleted" x="812" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -320,6 +488,14 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="16384">
+<trimItem IMemento.internal.id="left"/>
+</trimArea>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="right"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@1341e11"/>
+<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@a20232"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -327,15 +503,43 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="StringTokenizer.class" tooltip="java.util.StringTokenizer">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=de.uni_koeln.hki.thaller/C:\/Programme\/Java\/jdk1.6.0_18\/jre\/lib\/rt.jar&lt;java.util(StringTokenizer.class"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.springsource.sts.grails.editor.gsp.editor" name="show.gsp" tooltip="de.uni_koeln.hki.thaller/grails-app/views/person/show.gsp">
+<persistable path="/de.uni_koeln.hki.thaller/grails-app/views/person/show.gsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.springsource.sts.grails.editor.gsp.editor" name="show.gsp" tooltip="de.uni_koeln.hki.thaller/grails-app/views/interface/show.gsp">
+<persistable path="/de.uni_koeln.hki.thaller/grails-app/views/interface/show.gsp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="DataSource.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/conf/DataSource.groovy">
 <persistable path="/de.uni_koeln.hki.thaller/grails-app/conf/DataSource.groovy"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="resources.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/conf/spring/resources.groovy">
-<persistable path="/de.uni_koeln.hki.thaller/grails-app/conf/spring/resources.groovy"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.springsource.sts.grails.editor.gsp.editor" name="create.gsp" tooltip="de.uni_koeln.hki.thaller/grails-app/views/person/create.gsp">
+<persistable path="/de.uni_koeln.hki.thaller/grails-app/views/person/create.gsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Person.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Person.groovy">
+<persistable path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Person.groovy"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.springsource.sts.grails.editor.gsp.editor" name="create.gsp" tooltip="de.uni_koeln.hki.thaller/grails-app/views/interface/create.gsp">
+<persistable path="/de.uni_koeln.hki.thaller/grails-app/views/interface/create.gsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Relation.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Relation.groovy">
+<persistable path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Relation.groovy"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Confession.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Confession.groovy">
+<persistable path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Confession.groovy"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="InterfaceTests.groovy" tooltip="de.uni_koeln.hki.thaller/test/integration/de/uni_koeln/hki/thaller/InterfaceTests.groovy">
+<persistable path="/de.uni_koeln.hki.thaller/test/integration/de/uni_koeln/hki/thaller/InterfaceTests.groovy"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="ConfessionTypeTests.groovy" tooltip="de.uni_koeln.hki.thaller/test/unit/de/uni_koeln/hki/thaller/ConfessionTypeTests.groovy">
+<persistable path="/de.uni_koeln.hki.thaller/test/unit/de/uni_koeln/hki/thaller/ConfessionTypeTests.groovy"/>
 </file>
 </mruList>
 </workbench>

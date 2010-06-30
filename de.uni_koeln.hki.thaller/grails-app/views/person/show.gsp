@@ -32,14 +32,14 @@
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="person.dateOfBirth.label" default="Date Of Birth" /></td>
                             
-                            <td valign="top" class="value"><g:formatDate date="${personInstance?.dateOfBirth}" /></td>
+                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "dateOfBirth")}</td>
                             
                         </tr>
                     
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="person.dateOfDeath.label" default="Date Of Death" /></td>
                             
-                            <td valign="top" class="value"><g:formatDate date="${personInstance?.dateOfDeath}" /></td>
+                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "dateOfDeath")}</td>
                             
                         </tr>
                     
@@ -51,15 +51,22 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.relations.label" default="Relations" /></td>
+                            <td valign="top" class="name"><g:message code="person.confessions.label" default="Confessions" /></td>
                             
                             <td valign="top" style="text-align: left;" class="value">
                                 <ul>
-                                <g:each in="${personInstance.relations}" var="r">
-                                    <li><g:link controller="relation" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></li>
+                                <g:each in="${personInstance.confessions}" var="c">
+                                    <li><g:link controller="confession" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></li>
                                 </g:each>
                                 </ul>
                             </td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="person.gender.label" default="Gender" /></td>
+                            
+                            <td valign="top" class="value"><g:formatBoolean boolean="${personInstance?.gender}" /></td>
                             
                         </tr>
                     
@@ -90,19 +97,12 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.gender.label" default="Gender" /></td>
-                            
-                            <td valign="top" class="value"><g:formatBoolean boolean="${personInstance?.gender}" /></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.confessions.label" default="Confessions" /></td>
+                            <td valign="top" class="name"><g:message code="person.relations.label" default="Relations" /></td>
                             
                             <td valign="top" style="text-align: left;" class="value">
                                 <ul>
-                                <g:each in="${personInstance.confessions}" var="c">
-                                    <li><g:link controller="confession" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></li>
+                                <g:each in="${personInstance.relations}" var="r">
+                                    <li><g:link controller="relation" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></li>
                                 </g:each>
                                 </ul>
                             </td>

@@ -32,14 +32,14 @@
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="person.dateOfBirth.label" default="Date Of Birth" /></td>
                             
-                            <td valign="top" class="value"><g:formatDate date="${personInstance?.dateOfBirth}" /></td>
+                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "dateOfBirth")}</td>
                             
                         </tr>
                     
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="person.dateOfDeath.label" default="Date Of Death" /></td>
                             
-                            <td valign="top" class="value"><g:formatDate date="${personInstance?.dateOfDeath}" /></td>
+                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "dateOfDeath")}</td>
                             
                         </tr>
                     
