@@ -16,11 +16,11 @@ class Person {
 		dateOfBirth(validator:{val, obj ->
 			return DateValidator.validate(val, false)
 		})
-		
-		
+				
 		dateOfDeath(nullable: true, validator:{val, obj ->
 			return DateValidator.validate(val, true)
 		})
+		
 		bio(maxSize:10000)
 	}
 	

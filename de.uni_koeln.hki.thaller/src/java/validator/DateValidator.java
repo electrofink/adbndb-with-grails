@@ -20,7 +20,7 @@ public class DateValidator {
 		if (nullable)
 			return (date == null) || validate(date);
 		else
-			return (date != null) || validate(date);
+			return (date != null) && validate(date);
 	}
 
 	private static boolean validate(String date) {

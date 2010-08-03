@@ -5,7 +5,6 @@ import validator.DateValidator;
 
 class Confession {
 	
-	
 	String title
 	String startConfession
 	String endConfession
