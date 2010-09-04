@@ -30,19 +30,19 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="start"><g:message code="location.start.label" default="Start" /></label>
+                                    <label for="startLocation"><g:message code="location.startLocation.label" default="Start Location" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'start', 'errors')}">
-                                    <g:textField name="start" value="${locationInstance?.start}" />
+                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'startLocation', 'errors')}">
+                                    <g:textField name="startLocation" value="${locationInstance?.startLocation}" />
                                 </td>
                             </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="end"><g:message code="location.end.label" default="End" /></label>
+                                    <label for="endLocation"><g:message code="location.endLocation.label" default="End Location" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'end', 'errors')}">
-                                    <g:textField name="end" value="${locationInstance?.end}" />
+                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'endLocation', 'errors')}">
+                                    <g:textField name="endLocation" value="${locationInstance?.endLocation}" />
                                 </td>
                             </tr>
                         

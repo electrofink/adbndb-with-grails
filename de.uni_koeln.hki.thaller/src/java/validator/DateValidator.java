@@ -26,7 +26,8 @@ public class DateValidator {
 	private static boolean validate(String date) {
 
 		boolean a = false, b = false, c = false;
-
+		
+		// YYYY-MM-DD
 		if (date.matches("[0-9]{3,4}(-[0-9]{2})?(-[0-9]{2})?")) {
 			
 			String[] str = date.split("-");

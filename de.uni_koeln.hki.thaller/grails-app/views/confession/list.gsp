@@ -24,9 +24,9 @@
                         
                             <g:sortableColumn property="id" title="${message(code: 'confession.id.label', default: 'Id')}" />
                         
-                            <g:sortableColumn property="start" title="${message(code: 'confession.start.label', default: 'Start')}" />
+                            <g:sortableColumn property="startConfession" title="${message(code: 'confession.startConfession.label', default: 'Start Confession')}" />
                         
-                            <g:sortableColumn property="end" title="${message(code: 'confession.end.label', default: 'End')}" />
+                            <g:sortableColumn property="endConfession" title="${message(code: 'confession.endConfession.label', default: 'End Confession')}" />
                         
                             <th><g:message code="confession.person.label" default="Person" /></th>
                         
@@ -40,9 +40,9 @@
                         
                             <td><g:link action="show" id="${confessionInstance.id}">${fieldValue(bean: confessionInstance, field: "id")}</g:link></td>
                         
-                            <td>${fieldValue(bean: confessionInstance, field: "start")}</td>
+                            <td>${fieldValue(bean: confessionInstance, field: "startConfession")}</td>
                         
-                            <td>${fieldValue(bean: confessionInstance, field: "end")}</td>
+                            <td>${fieldValue(bean: confessionInstance, field: "endConfession")}</td>
                         
                             <td>${fieldValue(bean: confessionInstance, field: "person")}</td>
                         

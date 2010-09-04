@@ -39,19 +39,19 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="start"><g:message code="relation.start.label" default="Start" /></label>
+                                    <label for="startRelation"><g:message code="relation.startRelation.label" default="Start Relation" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'start', 'errors')}">
-                                    <g:textField name="start" value="${relationInstance?.start}" />
+                                <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'startRelation', 'errors')}">
+                                    <g:textField name="startRelation" value="${relationInstance?.startRelation}" />
                                 </td>
                             </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="end"><g:message code="relation.end.label" default="End" /></label>
+                                    <label for="endRelation"><g:message code="relation.endRelation.label" default="End Relation" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'end', 'errors')}">
-                                    <g:textField name="end" value="${relationInstance?.end}" />
+                                <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'endRelation', 'errors')}">
+                                    <g:textField name="endRelation" value="${relationInstance?.endRelation}" />
                                 </td>
                             </tr>
                         

@@ -30,16 +30,16 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="confession.start.label" default="Start" /></td>
+                            <td valign="top" class="name"><g:message code="confession.startConfession.label" default="Start Confession" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: confessionInstance, field: "start")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: confessionInstance, field: "startConfession")}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="confession.end.label" default="End" /></td>
+                            <td valign="top" class="name"><g:message code="confession.endConfession.label" default="End Confession" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: confessionInstance, field: "end")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: confessionInstance, field: "endConfession")}</td>
                             
                         </tr>
                     

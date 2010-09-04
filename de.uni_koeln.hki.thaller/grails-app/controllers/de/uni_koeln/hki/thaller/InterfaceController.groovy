@@ -10,7 +10,22 @@ class InterfaceController {
 	
     def list = {
         params.max = Math.min(params.max ? params.int('max') : 10, 100)
-        [personInstanceList: Person.list(params), personInstanceTotal: Person.count()]
+        
+        if (!params.sort) params.sort = "id"
+        if (!params.order) params.order = "asc"
+        
+        def persons = Person.withCriteria() {
+        	if (params.sort == 'personFirstnames') {
+        		names {
+        			order('firstNames', params.order)
+        		}
+        	} else {
+        		order(params.sort, params.order)
+        	}
+        }
+        
+        [personInstanceList: persons, personInstanceTotal: Person.count()]
+        //[personInstanceList: Person.list(params), personInstanceTotal: Person.count()]
     }
 	
 	def create = {

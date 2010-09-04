@@ -30,16 +30,16 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="location.start.label" default="Start" /></td>
+                            <td valign="top" class="name"><g:message code="location.startLocation.label" default="Start Location" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: locationInstance, field: "start")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: locationInstance, field: "startLocation")}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="location.end.label" default="End" /></td>
+                            <td valign="top" class="name"><g:message code="location.endLocation.label" default="End Location" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: locationInstance, field: "end")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: locationInstance, field: "endLocation")}</td>
                             
                         </tr>
                     

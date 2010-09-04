@@ -37,16 +37,16 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="relation.start.label" default="Start" /></td>
+                            <td valign="top" class="name"><g:message code="relation.startRelation.label" default="Start Relation" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: relationInstance, field: "start")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: relationInstance, field: "startRelation")}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="relation.end.label" default="End" /></td>
+                            <td valign="top" class="name"><g:message code="relation.endRelation.label" default="End Relation" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: relationInstance, field: "end")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: relationInstance, field: "endRelation")}</td>
                             
                         </tr>
                     

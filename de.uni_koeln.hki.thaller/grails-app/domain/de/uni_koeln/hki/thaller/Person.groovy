@@ -5,8 +5,9 @@ import validator.DateValidator;
 class Person {
 	
 	String bio
-	String  dateOfBirth
-	String  dateOfDeath
+	String dateOfBirth
+	String dateOfDeath
+	
 	boolean gender
 	
 	static hasMany = [names:Name, relations:Relation, confessions:Confession,

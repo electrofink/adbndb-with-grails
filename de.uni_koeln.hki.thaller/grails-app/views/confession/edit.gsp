@@ -33,19 +33,19 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="start"><g:message code="confession.start.label" default="Start" /></label>
+                                  <label for="startConfession"><g:message code="confession.startConfession.label" default="Start Confession" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: confessionInstance, field: 'start', 'errors')}">
-                                    <g:textField name="start" value="${confessionInstance?.start}" />
+                                <td valign="top" class="value ${hasErrors(bean: confessionInstance, field: 'startConfession', 'errors')}">
+                                    <g:textField name="startConfession" value="${confessionInstance?.startConfession}" />
                                 </td>
                             </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="end"><g:message code="confession.end.label" default="End" /></label>
+                                  <label for="endConfession"><g:message code="confession.endConfession.label" default="End Confession" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: confessionInstance, field: 'end', 'errors')}">
-                                    <g:textField name="end" value="${confessionInstance?.end}" />
+                                <td valign="top" class="value ${hasErrors(bean: confessionInstance, field: 'endConfession', 'errors')}">
+                                    <g:textField name="endConfession" value="${confessionInstance?.endConfession}" />
                                 </td>
                             </tr>
                         

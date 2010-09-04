@@ -24,9 +24,9 @@
                         
                             <g:sortableColumn property="id" title="${message(code: 'location.id.label', default: 'Id')}" />
                         
-                            <g:sortableColumn property="start" title="${message(code: 'location.start.label', default: 'Start')}" />
+                            <g:sortableColumn property="startLocation" title="${message(code: 'location.startLocation.label', default: 'Start Location')}" />
                         
-                            <g:sortableColumn property="end" title="${message(code: 'location.end.label', default: 'End')}" />
+                            <g:sortableColumn property="endLocation" title="${message(code: 'location.endLocation.label', default: 'End Location')}" />
                         
                             <g:sortableColumn property="description" title="${message(code: 'location.description.label', default: 'Description')}" />
                         
@@ -42,9 +42,9 @@
                         
                             <td><g:link action="show" id="${locationInstance.id}">${fieldValue(bean: locationInstance, field: "id")}</g:link></td>
                         
-                            <td>${fieldValue(bean: locationInstance, field: "start")}</td>
+                            <td>${fieldValue(bean: locationInstance, field: "startLocation")}</td>
                         
-                            <td>${fieldValue(bean: locationInstance, field: "end")}</td>
+                            <td>${fieldValue(bean: locationInstance, field: "endLocation")}</td>
                         
                             <td>${fieldValue(bean: locationInstance, field: "description")}</td>
                         
