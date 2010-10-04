@@ -1,1 +1,4 @@
-Tolles Zeug
+//TODO
+
+- Search function: create Controller and View for search functionallity (hibernate: withCriteria)
+- Build interface for person instance (redirect or allInOne???) 
