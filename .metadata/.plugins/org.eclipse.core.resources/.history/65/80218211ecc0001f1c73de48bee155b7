@@ -1,0 +1,12 @@
+package simpleapp
+
+class Topic {
+	
+	String subject
+	SortedSet posts
+	
+	static hasMany = [posts: Post]
+	
+	static constraints = {
+	}
+}

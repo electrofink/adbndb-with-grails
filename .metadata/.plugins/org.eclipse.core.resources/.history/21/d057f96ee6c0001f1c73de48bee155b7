@@ -1,0 +1,10 @@
+package simpleapp
+
+class Topic {
+
+	String subject
+	static hasMany = [posts: Post]
+	
+    static constraints = {
+    }
+}

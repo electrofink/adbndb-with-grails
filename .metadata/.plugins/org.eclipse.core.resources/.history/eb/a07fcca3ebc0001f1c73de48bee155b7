@@ -1,0 +1,14 @@
+package simpleapp
+
+class User {
+	
+	String name
+	SortedSet posts
+	
+	static hasMany = [posts: Post]
+	
+	
+	
+	static constraints = {
+	}
+}

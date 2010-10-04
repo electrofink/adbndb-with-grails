@@ -1,0 +1,12 @@
+package de.uni_koeln.hs
+
+class Confession {
+
+	String confessionType
+	
+	static hasMany = [person:Person]
+	
+	static constraints = {
+
+	}
+}

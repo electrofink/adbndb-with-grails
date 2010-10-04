@@ -1,0 +1,47 @@
+package de.uni_koeln.hs
+
+import com.sun.org.apache.bcel.internal.generic.RETURN;
+
+class Person {
+	
+	String dateOfBirth
+	String dateOfDeath
+	String bio
+	boolean gender
+	
+	
+	static hasMany = [names:Name, relations:Relation, confessions:Confession,
+		locations:Location, works:Work]
+	
+	static constraints = {
+		Name(nullable:true)
+		dateOfBirth(blank:false, validator:{val, obj ->
+			return DateValidator.validate(val, false)
+		})
+		
+		dateOfDeath(blank: true, validator:{val, obj ->
+			return DateValidator.validate(val, true)
+		})
+		
+		bio(maxSize:10000, blank:true)
+		
+		Relation(nullable:true)
+		Confession(nullable:true)
+		Location(nullable:true)
+		Work(nullable:true)
+	}
+	
+	
+	def shortBio() {
+		if(bio.length() > 200)
+			return bio.substring(0, 200)
+		return bio
+	}
+	
+	@Override
+	String toString() {
+		if(names != null)
+			return names.toString()+": "+this.id
+		RETURN this.ident()
+	}
+}

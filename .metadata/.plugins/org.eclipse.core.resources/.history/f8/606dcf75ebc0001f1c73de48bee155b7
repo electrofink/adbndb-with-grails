@@ -1,0 +1,21 @@
+package simpleapp
+
+class Post implements Comparable{
+	
+	User user
+	Topic topic
+	
+	String content
+	Date date = new Date()
+	
+	static belongsTo = User
+	
+
+	int compareTo(obj) {
+		obj.id.compareTo(id)
+	}
+
+	
+	static constraints = {
+	}
+}

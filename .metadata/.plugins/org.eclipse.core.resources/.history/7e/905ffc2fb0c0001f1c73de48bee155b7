@@ -1,0 +1,7 @@
+package simpleapp
+
+class Post {
+
+    static constraints = {
+    }
+}

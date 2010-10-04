@@ -1,0 +1,11 @@
+package simpleapp
+
+class Topic {
+	
+	static belongsTo = [Post]
+	Post post
+	String subject
+	
+	static constraints = {
+	}
+}

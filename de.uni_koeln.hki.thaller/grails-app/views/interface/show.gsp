@@ -56,7 +56,18 @@
                             <td valign="top" style="text-align: left;" class="value">
                                 <ul>
                                 <g:each in="${personInstance.relations}" var="r">
-                                    <li><g:link controller="relation" action="show" id="${r.id}">${r?.relatedPerson?.firstNames}</g:link></li>
+                                <li><g:link controller="relation" action="show" id="${r?.relatedPerson?.id}">${r?.relatedPerson?.encodeAsHTML()}</g:link></li>
+                                    <ul>
+                                    	
+                                    	<g:each in="${r?.relatedPerson?.names}" var="n">
+                                    		<li><g:link controller="name" action="show" id="${n.id}">${n?.lastName}
+                                    		
+                                    		<g:if test="${n?.firstNames != ''}">
+    											, ${n?.firstNames}
+											</g:if>
+                                    		</g:link></li>
+                               			</g:each>
+                               		</ul>
                                 </g:each>
                                 </ul>
                             </td>
@@ -69,7 +80,7 @@
                             <td valign="top" style="text-align: left;" class="value">
                                 <ul>
                                 <g:each in="${personInstance.locations}" var="l">
-                                    <li><g:link controller="location" action="show" id="${l.id}">${l?.encodeAsHTML()}</g:link></li>
+                                    <li><g:link controller="location" action="show" id="${l.id}">${l?.name.encodeAsHTML()}</g:link></li>
                                 </g:each>
                                 </ul>
                             </td>
@@ -114,8 +125,11 @@
                             
                             <td valign="top" style="text-align: left;" class="value">
                                 <ul>
-                                <g:each in="${personInstance.works}" var="w">
-                                    <li><g:link controller="work" action="show" id="${w.id}">${w?.encodeAsHTML()}</g:link></li>
+                                <g:each in="${personInstance?.works}" var="w">
+                                <%--FIXME: If w==null show.gsp should not display any ID --%>
+                                	<g:if test="${w != null}">
+                                		<li><g:link controller="work" action="show" id="${w.id}">${w?.id}</g:link></li>
+                                	</g:if>
                                 </g:each>
                                 </ul>
                             </td>

@@ -1,0 +1,32 @@
+package de.uni_koeln.hs
+
+import util.DateValidator;
+
+class PersonLocations {
+	
+	static mapping = {
+		table "person_locations"
+		startDate column:"startDate"
+		endDate column:"enddate"
+		version false
+		locationID column:"location_id"
+		locationID updateable: false
+		locationID insertable: false
+	}
+	
+	static belongsTo = [person:Person]
+	
+	Location locationID
+	String startDate
+	String endDate
+	
+	static constraints = {
+		startDate(nullable:false, validator:{val, obj ->
+			return DateValidator.validate(val, false)
+		})
+		
+		endDate(nullable: false, validator:{val, obj ->
+			return DateValidator.validate(val, false)
+		})
+	}
+}

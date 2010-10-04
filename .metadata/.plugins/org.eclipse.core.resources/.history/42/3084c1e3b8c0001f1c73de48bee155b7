@@ -1,0 +1,11 @@
+package simpleapp
+
+class Post {
+	
+	String content
+	static belongsTo = [user:User, topic: Topic]
+	
+    static constraints = {
+		topic(nullable: true)
+    }
+}

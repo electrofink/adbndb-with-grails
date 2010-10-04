@@ -71,6 +71,9 @@ input:focus, select:focus, textarea:focus {
     margin-top: 5px;
     padding: 7px 12px;
 }
+.noStyleLi {
+	list-style: none;	
+}
 
 .menuButton {
     font-size: 10px;
@@ -147,14 +150,16 @@ td, th {
     vertical-align: top;
 }
 th {
+	min-width: 90px;
     background: #fff url(../images/skin/shadow.jpg);
     color: #666;
     font-size: 11px;
     font-weight: bold;
-    line-height: 17px;
+    line-height: 20px;
     padding: 2px 6px;
 }
 th a:link, th a:visited, th a:hover {
+	
     color: #333;
     display: block;
     font-size: 10px;

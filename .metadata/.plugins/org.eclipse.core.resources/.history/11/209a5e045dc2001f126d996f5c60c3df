@@ -1,0 +1,19 @@
+package de.uni_koeln.hs
+
+class Relation {
+	
+	boolean directRelation
+	Person relatedPerson_1
+	Person relatedPerson_2
+	
+	static belongsTo = Person
+	
+	static constraints = {
+		relatedPerson(nullable:true)
+	}
+	
+	@Override
+	String toString() {
+		return relatedPerson.toString()
+	}
+}

@@ -1,0 +1,14 @@
+package simpleapp
+
+class Post {
+	
+	static belongsTo = [User]
+	
+	String content
+	Date date = new Date()
+	User user
+	Topic topic
+	
+	static constraints = {
+	}
+}

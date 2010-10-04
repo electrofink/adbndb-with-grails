@@ -12,6 +12,7 @@ class Relation {
 	
 	Person relatedPerson
 	
+	
 	static belongsTo = [person:Person]
 
     static constraints = {

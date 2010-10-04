@@ -1,0 +1,11 @@
+package simpleapp
+
+class User {
+	
+	static hasMany = [posts: Post]
+	
+	String name
+	
+	static constraints = {
+	}
+}

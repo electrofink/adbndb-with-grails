@@ -1,0 +1,7 @@
+package simpleapp
+
+class User {
+
+    static constraints = {
+    }
+}
