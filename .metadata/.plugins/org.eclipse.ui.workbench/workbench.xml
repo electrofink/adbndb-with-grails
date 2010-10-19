@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="47" version="2.0">
+<workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="79" y="60">
+<window height="768" maximized="true" width="1024" x="225" y="71">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="98" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="com.springsource.sts.grails.editor.gsp.editor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.springsource.sts.grails.editor.gsp.editor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="com.springsource.sts.ide.ui.actionSet.workbench" itemType="typeToolBarContribution" x="37" y="22"/>
 <coolItem id="com.springsource.sts.internal.ide.ui.editors.MultiPageDashboardEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.codehaus.groovy.eclipse.editor.GroovyEditor" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="161" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="146" y="22"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="146" y="22"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="122" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="98" y="22"/>
 <coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="133" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -42,32 +42,17 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Relation.groovy" partName="Relation.groovy" path="H:/adbndb-with-grails/adb_ndb/grails-app/domain/de/uni_koeln/hs/Relation.groovy" title="Relation.groovy" tooltip="adb_ndb/grails-app/domain/de/uni_koeln/hs/Relation.groovy" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Relation.groovy"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="116" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="SearchController.groovy" partName="SearchController.groovy" path="H:/adbndb-with-grails/adb_ndb/grails-app/controllers/de/uni_koeln/hs/SearchController.groovy" title="SearchController.groovy" tooltip="adb_ndb/grails-app/controllers/de/uni_koeln/hs/SearchController.groovy" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/adb_ndb/grails-app/controllers/de/uni_koeln/hs/SearchController.groovy"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1297" selectionTopPixel="612"/>
 </editor>
-<editor id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Person.groovy" partName="Person.groovy" path="H:/adbndb-with-grails/adb_ndb/grails-app/domain/de/uni_koeln/hs/Person.groovy" title="Person.groovy" tooltip="adb_ndb/grails-app/domain/de/uni_koeln/hs/Person.groovy" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Person.groovy"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="289" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="DataSource.groovy" partName="DataSource.groovy" path="H:/adbndb-with-grails/adb_ndb/grails-app/conf/DataSource.groovy" title="DataSource.groovy" tooltip="adb_ndb/grails-app/conf/DataSource.groovy" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/adb_ndb/grails-app/conf/DataSource.groovy"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="203" selectionTopPixel="0"/>
-</editor>
-<editor id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="PersonLocations.groovy" partName="PersonLocations.groovy" path="H:/adbndb-with-grails/adb_ndb/grails-app/domain/de/uni_koeln/hs/PersonLocations.groovy" title="PersonLocations.groovy" tooltip="adb_ndb/grails-app/domain/de/uni_koeln/hs/PersonLocations.groovy" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/PersonLocations.groovy"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="314" selectionTopPixel="0"/>
-</editor>
-<editor id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="PersonLocationsController.groovy" partName="PersonLocationsController.groovy" path="H:/adbndb-with-grails/adb_ndb/grails-app/controllers/de/uni_koeln/hs/PersonLocationsController.groovy" title="PersonLocationsController.groovy" tooltip="adb_ndb/grails-app/controllers/de/uni_koeln/hs/PersonLocationsController.groovy" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/adb_ndb/grails-app/controllers/de/uni_koeln/hs/PersonLocationsController.groovy"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2750" selectionTopPixel="867"/>
+<editor id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Work.groovy" partName="Work.groovy" path="H:/adbndb-with-grails/adb_ndb/grails-app/domain/de/uni_koeln/hs/Work.groovy" title="Work.groovy" tooltip="adb_ndb/grails-app/domain/de/uni_koeln/hs/Work.groovy" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Work.groovy"/>
+<editorState selectionHorizontalPixel="0" selectionLength="7" selectionOffset="152" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -75,8 +60,16 @@
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
 <view id="org.eclipse.jdt.ui.TypeHierarchy" partName="Hierarchy"/>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
+</view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Errors (1 item)"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -92,39 +85,29 @@
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1277289816218">
 <customFilters userDefinedPatternsEnabled="false">
 <xmlDefinedFilters>
+<child filterId="scala.tools.eclipse.javaelements.ScalaElementFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
-<child filterId="org.eclipse.ajdt.javamodel.CompilationUnitFilter" isEnabled="true"/>
-<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
-<child filterId="org.eclipse.ajdt.ui.editor.outline.PointcutFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsConnections" isEnabled="true"/>
-<child filterId="_patternFilterId_*.ajsym" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.ajdt.ui.editor.outline.IntroductionFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
-<child filterId="com.springsource.ide.grails.ui.hideSourceFoldersFilters" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
-<child filterId="org.maven.ide.eclipse.MavenModuleFilter" isEnabled="false"/>
-<child filterId="org.eclipse.ajdt.ui.editor.outline.AdviceFilter" isEnabled="false"/>
-<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
-<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter" isEnabled="false"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_*_Roo_*.aj" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter" isEnabled="false"/>
-<child filterId="org.eclipse.ajdt.ui.editor.outline.DeclarationFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.FieldsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter" isEnabled="true"/>
+<child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
-<child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsTempFiles" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
+<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
 </xmlDefinedFilters>
 </customFilters>
 </viewState>
@@ -140,8 +123,10 @@
 <sort4 sortDirection="1" sortKey="NONE"/>
 <sort5 sortDirection="1" sortKey="NONE"/>
 <sort6 sortDirection="1" sortKey="NONE"/>
+<sort7 sortDirection="1" sortKey="NONE"/>
 </sorter>
 </sorter>
+<filteredTreeFindHistory/>
 </viewState>
 </view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
@@ -153,7 +138,7 @@
 </view>
 </views>
 <perspectives activePart="org.codehaus.groovy.eclipse.editor.GroovyEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
-<perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
+<perspective editorAreaTrimState="1" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
 <alwaysOnActionSet id="org.eclipse.search.searchActionSet"/>
@@ -176,24 +161,7 @@
 <alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.profileActionSet"/>
-<alwaysOnActionSet id="ajelementCreation"/>
-<alwaysOnActionSet id="ajnavigation"/>
-<alwaysOnActionSet id="ajrefactoring"/>
-<alwaysOnActionSet id="com.springsource.sts.ide.help.actionSet"/>
-<alwaysOnActionSet id="com.springsource.sts.ide.ui.actionSet.workbench"/>
-<alwaysOnActionSet id="com.springsource.sts.roo.ui.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.contribution.xref.ui.XRefActionSet"/>
-<alwaysOnActionSet id="org.eclipse.jst.servlet.ui.internal.actions.ConvertToWebModuleTypeActionSet"/>
-<alwaysOnActionSet id="org.eclipse.rse.core.search.searchActionSet"/>
-<alwaysOnActionSet id="org.springframework.ide.eclipse.aop.ui.ActionSet"/>
-<alwaysOnActionSet id="org.springframework.ide.eclipse.aop.ui.matcher.actionSet"/>
-<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.ui.actionSet"/>
-<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.ui.ActionSet"/>
-<alwaysOnActionSet id="org.springframework.ide.eclipse.beans.search.actionSet"/>
-<alwaysOnActionSet id="org.maven.ide.eclipse.ui.navigation"/>
-<alwaysOnActionSet id="org.maven.ide.eclipse.actionSet"/>
-<alwaysOnActionSet id="org.maven.ide.eclipse.help.actionSet"/>
-<alwaysOnActionSet id="com.springsource.sts.grails.ui.actionSet"/>
+<alwaysOnActionSet id="org.eclipse.team.svn.ui.menu.help"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <show_view_action id="org.eclipse.jdt.ui.SourceView"/>
@@ -244,30 +212,40 @@
 <perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
 <perspective_action id="org.eclipse.jdt.ui.JavaBrowsingPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.jdt.ui.PackageExplorer"/>
-<view id="org.eclipse.jdt.ui.TypeHierarchy"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
-<view id="org.eclipse.ui.views.ProblemView"/>
-<view id="org.eclipse.jdt.ui.JavadocView"/>
-<view id="org.eclipse.jdt.ui.SourceView"/>
-<view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.mylyn.tasks.ui.views.tasks"/>
-<view id="org.eclipse.ui.views.ContentOutline"/>
-<fastViewBars/>
+<fastViewBars>
+<fastViewBar fastViewLocation="1024" id="bottom" orientation="256" selectedTabId="org.eclipse.ui.console.ConsoleView" style="1">
+<fastViews>
+<view id="org.eclipse.ui.views.ProblemView" ratio="0.3"/>
+<view id="org.eclipse.jdt.ui.JavadocView" ratio="0.3"/>
+<view id="org.eclipse.jdt.ui.SourceView" ratio="0.3"/>
+<view id="org.eclipse.ui.console.ConsoleView" ratio="0.3"/>
+<view id="org.eclipse.search.ui.views.SearchView" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="16384" id="left" orientation="512" selectedTabId="org.eclipse.ui.navigator.ProjectExplorer" style="1">
+<fastViews>
+<view id="org.eclipse.jdt.ui.PackageExplorer" ratio="0.3"/>
+<view id="org.eclipse.jdt.ui.TypeHierarchy" ratio="0.3"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@1341e11" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="1">
+<fastViews>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" ratio="0.3"/>
+<view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+</fastViewBars>
 <layout>
 <mainWindow>
 <info folder="true" part="left">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.jdt.ui.PackageExplorer" label="Package Explorer"/>
-<page content="org.eclipse.jdt.ui.TypeHierarchy" label="Hierarchy"/>
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.jdt.ui.PackageExplorer" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.TypeHierarchy" label="LabelNotFound"/>
+<page content="org.eclipse.ui.navigator.ProjectExplorer" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.jdt.junit.ResultView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@154024" ratio="0.75" ratioLeft="756" ratioRight="252" relationship="2" relative="left">
@@ -280,30 +258,22 @@
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.18991332" ratioLeft="241" ratioRight="1028" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.805618" ratioLeft="717" ratioRight="173" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
-<page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.JavadocView" label="LabelNotFound"/>
+<page content="org.eclipse.jdt.ui.SourceView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
 <page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@1341e11" ratio="0.817561" ratioLeft="838" ratioRight="187" relationship="2" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="Task List"/>
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-</presentation>
+<folder appearance="2" expanded="0">
+<page content="org.eclipse.mylyn.tasks.ui.views.tasks" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.contribution.xref.ui.views.XReferenceView" ratio="0.5991903" ratioLeft="296" ratioRight="198" relationship="4" relative="org.eclipse.ui.internal.ViewStack@1341e11"/>
@@ -330,162 +300,50 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Relation.groovy"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Person.groovy"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Location.groovy"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/adb_ndb/grails-app/conf/DataSource.groovy"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/PersonLocations.groovy"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/adb_ndb/grails-app/controllers/de/uni_koeln/hs/PersonLocationsController.groovy"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/adb_ndb/grails-app/controllers/de/uni_koeln/hs/SearchController.groovy"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Work.groovy"/>
 </editors>
-<item historyLabel="PersonLocations.groovy" index="4">
-<position info="not_deleted" x="575" y="0"/>
-</item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="252" y="0"/>
-</item>
-<item historyLabel="Location.groovy" index="2">
-<position info="not_deleted" x="120" y="0"/>
-</item>
-<item historyLabel="Relation.groovy" index="0">
-<position info="not_deleted" x="116" y="0"/>
-</item>
-<item historyLabel="PersonLocations.groovy" index="4">
+<item historyLabel="SearchController.groovy" index="0">
 <position/>
 </item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="27" y="26"/>
+<item historyLabel="Work.groovy" index="1">
+<position info="not_deleted" x="152" y="7"/>
 </item>
-<item historyLabel="PersonLocations.groovy" index="4">
+<item historyLabel="SearchController.groovy" index="0">
 <position/>
 </item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="397" y="211"/>
-</item>
-<item historyLabel="PersonLocations.groovy" index="4">
+<item historyLabel="SearchController.groovy" index="0">
 <position/>
 </item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="397" y="211"/>
-</item>
-<item historyLabel="PersonLocations.groovy" index="4">
+<item historyLabel="SearchController.groovy" index="0">
 <position/>
 </item>
-<item historyLabel="PersonLocations.groovy" index="4">
+<item historyLabel="SearchController.groovy" index="0">
 <position/>
 </item>
-<item historyLabel="Person.groovy" index="1">
+<item historyLabel="SearchController.groovy" index="0">
 <position/>
 </item>
-<item historyLabel="Location.groovy" index="2">
-<position info="not_deleted" x="276" y="0"/>
-</item>
-<item historyLabel="Person.groovy" index="1">
+<item historyLabel="SearchController.groovy" index="0">
 <position/>
 </item>
-<item historyLabel="Person.groovy" index="1">
+<item historyLabel="SearchController.groovy" index="0">
 <position/>
 </item>
-<item historyLabel="Location.groovy" index="2">
+<item historyLabel="SearchController.groovy" index="0">
 <position/>
 </item>
-<item historyLabel="Person.groovy" index="1">
+<item historyLabel="SearchController.groovy" index="0">
 <position/>
 </item>
-<item historyLabel="Location.groovy" index="2">
+<item historyLabel="SearchController.groovy" index="0">
 <position/>
 </item>
-<item historyLabel="PersonLocations.groovy" index="4">
-<position/>
+<item historyLabel="SearchController.groovy" index="0">
+<position info="not_deleted" x="2020" y="0"/>
 </item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="653" y="0"/>
-</item>
-<item historyLabel="PersonLocations.groovy" index="4">
-<position/>
-</item>
-<item historyLabel="Location.groovy" index="2">
-<position/>
-</item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="653" y="0"/>
-</item>
-<item historyLabel="PersonLocations.groovy" index="4">
-<position/>
-</item>
-<item historyLabel="Location.groovy" index="2">
-<position info="not_deleted" x="310" y="0"/>
-</item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="653" y="0"/>
-</item>
-<item historyLabel="Location.groovy" index="2">
-<position info="not_deleted" x="405" y="0"/>
-</item>
-<item historyLabel="DataSource.groovy" index="3">
-<position info="not_deleted" x="748" y="0"/>
-</item>
-<item historyLabel="PersonLocations.groovy" index="4">
-<position/>
-</item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="653" y="0"/>
-</item>
-<item historyLabel="PersonLocations.groovy" index="4">
-<position/>
-</item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="224" y="0"/>
-</item>
-<item historyLabel="PersonLocations.groovy" index="4">
-<position/>
-</item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="224" y="0"/>
-</item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="268" y="93"/>
-</item>
-<item historyLabel="Location.groovy" index="2">
-<position/>
-</item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="341" y="0"/>
-</item>
-<item historyLabel="Location.groovy" index="2">
-<position info="not_deleted" x="235" y="0"/>
-</item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="357" y="0"/>
-</item>
-<item historyLabel="PersonLocations.groovy" index="4">
-<position/>
-</item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="357" y="0"/>
-</item>
-<item historyLabel="PersonLocations.groovy" index="4">
-<position info="not_deleted" x="162" y="0"/>
-</item>
-<item historyLabel="PersonLocations.groovy" index="4">
-<position/>
-</item>
-<item historyLabel="PersonLocationsController.groovy" index="5">
-<position info="not_deleted" x="2750" y="0"/>
-</item>
-<item historyLabel="PersonLocations.groovy" index="4">
-<position info="not_deleted" x="326" y="8"/>
-</item>
-<item historyLabel="Person.groovy" index="1">
-<position info="not_deleted" x="289" y="0"/>
-</item>
-<item historyLabel="Location.groovy" index="2">
-<position info="not_deleted" x="207" y="0"/>
-</item>
-<item historyLabel="PersonLocations.groovy" index="4">
-<position info="not_deleted" x="314" y="0"/>
-</item>
-<item active="true" historyLabel="DataSource.groovy" index="3">
-<position info="not_deleted" x="748" y="0"/>
+<item active="true" historyLabel="SearchController.groovy" index="0">
+<position info="not_deleted" x="841" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -511,29 +369,11 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="PersonLocationsController.groovy" tooltip="adb_ndb/grails-app/controllers/de/uni_koeln/hs/PersonLocationsController.groovy">
-<persistable path="/adb_ndb/grails-app/controllers/de/uni_koeln/hs/PersonLocationsController.groovy"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="PersonLocations.groovy" tooltip="adb_ndb/grails-app/domain/de/uni_koeln/hs/PersonLocations.groovy">
-<persistable path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/PersonLocations.groovy"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="DataSource.groovy" tooltip="adb_ndb/grails-app/conf/DataSource.groovy">
-<persistable path="/adb_ndb/grails-app/conf/DataSource.groovy"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Location.groovy" tooltip="adb_ndb/grails-app/domain/de/uni_koeln/hs/Location.groovy">
-<persistable path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Location.groovy"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Person.groovy" tooltip="adb_ndb/grails-app/domain/de/uni_koeln/hs/Person.groovy">
-<persistable path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Person.groovy"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Relation.groovy" tooltip="adb_ndb/grails-app/domain/de/uni_koeln/hs/Relation.groovy">
-<persistable path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Relation.groovy"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Relation.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Relation.groovy">
-<persistable path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Relation.groovy"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Work.groovy" tooltip="adb_ndb/grails-app/domain/de/uni_koeln/hs/Work.groovy">
 <persistable path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Work.groovy"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="SearchController.groovy" tooltip="adb_ndb/grails-app/controllers/de/uni_koeln/hs/SearchController.groovy">
+<persistable path="/adb_ndb/grails-app/controllers/de/uni_koeln/hs/SearchController.groovy"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Name.groovy" tooltip="adb_ndb/grails-app/domain/de/uni_koeln/hs/Name.groovy">
 <persistable path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Name.groovy"/>
@@ -541,20 +381,38 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Confession.groovy" tooltip="adb_ndb/grails-app/domain/de/uni_koeln/hs/Confession.groovy">
 <persistable path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Confession.groovy"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Confession.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Confession.groovy">
-<persistable path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Confession.groovy"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Location.groovy" tooltip="adb_ndb/grails-app/domain/de/uni_koeln/hs/Location.groovy">
+<persistable path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Location.groovy"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Location.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Location.groovy">
-<persistable path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Location.groovy"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.springsource.sts.grails.editor.gsp.editor" name="list.gsp" tooltip="de.uni_koeln.hki.thaller/grails-app/views/interface/list.gsp">
+<persistable path="/de.uni_koeln.hki.thaller/grails-app/views/interface/list.gsp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Name.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Name.groovy">
-<persistable path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Name.groovy"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.springsource.sts.grails.editor.gsp.editor" name="list.gsp" tooltip="de.uni_koeln.hki.thaller/grails-app/views/person/list.gsp">
+<persistable path="/de.uni_koeln.hki.thaller/grails-app/views/person/list.gsp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Work.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Work.groovy">
-<persistable path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Work.groovy"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.springsource.sts.grails.editor.gsp.editor" name="list.gsp" tooltip="adb_ndb/grails-app/views/person/list.gsp">
+<persistable path="/adb_ndb/grails-app/views/person/list.gsp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Person.groovy" tooltip="de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Person.groovy">
-<persistable path="/de.uni_koeln.hki.thaller/grails-app/domain/de/uni_koeln/hki/thaller/Person.groovy"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="Person.groovy" tooltip="adb_ndb/grails-app/domain/de/uni_koeln/hs/Person.groovy">
+<persistable path="/adb_ndb/grails-app/domain/de/uni_koeln/hs/Person.groovy"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="NameController.groovy" tooltip="adb_ndb/grails-app/controllers/de/uni_koeln/hs/NameController.groovy">
+<persistable path="/adb_ndb/grails-app/controllers/de/uni_koeln/hs/NameController.groovy"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.springsource.sts.grails.editor.gsp.editor" name="show.gsp" tooltip="adb_ndb/grails-app/views/person/show.gsp">
+<persistable path="/adb_ndb/grails-app/views/person/show.gsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.springsource.sts.grails.editor.gsp.editor" name="index.gsp" tooltip="adb_ndb/grails-app/views/search/index.gsp">
+<persistable path="/adb_ndb/grails-app/views/search/index.gsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="PersonController.groovy" tooltip="adb_ndb/grails-app/controllers/de/uni_koeln/hs/PersonController.groovy">
+<persistable path="/adb_ndb/grails-app/controllers/de/uni_koeln/hs/PersonController.groovy"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.codehaus.groovy.eclipse.editor.GroovyEditor" name="PersonLocationsController.groovy" tooltip="adb_ndb/grails-app/controllers/de/uni_koeln/hs/PersonLocationsController.groovy">
+<persistable path="/adb_ndb/grails-app/controllers/de/uni_koeln/hs/PersonLocationsController.groovy"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="database_save.png" tooltip="adb_ndb/web-app/images/skin/database_save.png">
+<persistable path="/adb_ndb/web-app/images/skin/database_save.png"/>
 </file>
 </mruList>
 </workbench>

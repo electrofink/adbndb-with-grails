@@ -1,0 +1,86 @@
+package de.uni_koeln.hs
+
+class SearchController {
+	
+	static allowedMethods = [result:"POST"]
+	
+	def index = {
+	}
+	
+	def result = {
+		
+		def q = params.query.split();
+		
+		
+		//		def res1 = Name.findAll("from Name as n where n.firstName like :search or n.lastName like :search", [search:"%le%"])
+		//		println(res1)
+		//		
+		//		def res2 = Name.find("from Name as n where n.id = :search", [search:8L])
+		//		println(res2)
+		
+		//		def personID = Name.executeQuery("select n.person.id, n.lastName, n.firstName from Name n where n.lastName like :search", [search:"%"+params.query+"%"])
+		//		println(personID)
+		
+		//		def c = Person.createCriteria()
+		//		def work = c.list {
+		//			works {
+		//				like('workTitle', "%er%")
+		//			}
+		//		}
+		//		println(work)
+		
+		
+		def matches = []
+		def person = [:]
+		
+		q.each { str ->  
+			
+			def name = Name.withCriteria {
+				or {
+					like('lastName', "%"+str+"%")
+					like('firstName', "%"+str+"%")
+				}
+			}
+			
+			def location = Location.withCriteria {
+				or {
+					like('country', "%"+str+"%")
+					like('city', "%"+str+"%")
+				}
+			}
+			
+			def confession = Confession.withCriteria {
+				like('confessionType', "%"+str+"%")
+			}
+			
+			def work = Work.withCriteria {
+				or {
+					like('workTitle', "%"+str+"%")
+					like('subtitle', "%"+str+"%")
+				}
+			}
+			
+			//				println(name)
+			//				println(location)
+			//				println(confession)
+			//				println(work)
+			
+			
+			if(name != []) {
+				def n = retrievPersonByName(name)
+				person.put(n, ++person.get(n,1))
+			}
+			if(location != []) {
+				def l = retrievPersonByLocation(location)
+				person.put(l, ++person.get(l, 1))
+			}
+			if(confession != []) {
+				def c = retrievPersonByConfession(confession)
+			}
+			if(work != []) {
+				person = retrievPersonByWork(work)
+			}
+		}
+		// person.put(p, ++person.get(p, 1))
+	}
+}

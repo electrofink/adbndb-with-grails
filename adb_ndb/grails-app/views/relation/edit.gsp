@@ -42,10 +42,19 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="persons"><g:message code="relation.persons.label" default="Persons" /></label>
+                                  <label for="person"><g:message code="relation.person.label" default="Person" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'persons', 'errors')}">
-                                    
+                                <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'person', 'errors')}">
+                                    <g:select name="person.id" from="${de.uni_koeln.hs.Person.list()}" optionKey="id" value="${relationInstance?.person?.id}"  />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                  <label for="relatedPerson"><g:message code="relation.relatedPerson.label" default="Related Person" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'relatedPerson', 'errors')}">
+                                    <g:select name="relatedPerson.id" from="${de.uni_koeln.hs.Person.list()}" optionKey="id" value="${relationInstance?.relatedPerson?.id}"  />
                                 </td>
                             </tr>
                         

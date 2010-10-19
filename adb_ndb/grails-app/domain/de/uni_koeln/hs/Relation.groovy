@@ -5,18 +5,15 @@ class Relation {
 	
 	boolean directRelation
 	
-	/*Person person1 
-	Person person2*/
-	
-	static hasMany = [persons:Person]	
-	
-	static belongsTo = Person
+	Person relatedPerson
+
+	static belongsTo = [person:Person]
 	
 	static constraints = {
 	}
 	
 	@Override
 	String toString() {
-		return relatedPerson.toString()
+		return "ID: " + this.id + "[Rel: " + relatedPerson.toString() + " / " + person.toString()+"]"
 	}
 }

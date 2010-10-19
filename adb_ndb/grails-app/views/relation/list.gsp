@@ -26,6 +26,10 @@
                         
                             <g:sortableColumn property="directRelation" title="${message(code: 'relation.directRelation.label', default: 'Direct Relation')}" />
                         
+                            <th><g:message code="relation.person.label" default="Person" /></th>
+                        
+                            <th><g:message code="relation.relatedPerson.label" default="Related Person" /></th>
+                        
                         </tr>
                     </thead>
                     <tbody>
@@ -35,6 +39,10 @@
                             <td><g:link action="show" id="${relationInstance.id}">${fieldValue(bean: relationInstance, field: "id")}</g:link></td>
                         
                             <td><g:formatBoolean boolean="${relationInstance.directRelation}" /></td>
+                        
+                            <td>${fieldValue(bean: relationInstance, field: "person")}</td>
+                        
+                            <td>${fieldValue(bean: relationInstance, field: "relatedPerson")}</td>
                         
                         </tr>
                     </g:each>

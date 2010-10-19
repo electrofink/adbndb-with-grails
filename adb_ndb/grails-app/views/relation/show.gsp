@@ -37,15 +37,16 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="relation.persons.label" default="Persons" /></td>
+                            <td valign="top" class="name"><g:message code="relation.person.label" default="Person" /></td>
                             
-                            <td valign="top" style="text-align: left;" class="value">
-                                <ul>
-                                <g:each in="${relationInstance.persons}" var="p">
-                                    <li><g:link controller="person" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></li>
-                                </g:each>
-                                </ul>
-                            </td>
+                            <td valign="top" class="value"><g:link controller="person" action="show" id="${relationInstance?.person?.id}">${relationInstance?.person?.encodeAsHTML()}</g:link></td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="relation.relatedPerson.label" default="Related Person" /></td>
+                            
+                            <td valign="top" class="value"><g:link controller="person" action="show" id="${relationInstance?.relatedPerson?.id}">${relationInstance?.relatedPerson?.encodeAsHTML()}</g:link></td>
                             
                         </tr>
                     
