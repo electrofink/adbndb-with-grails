@@ -44,8 +44,7 @@
                         
                             <td>${fieldValue(bean: personInstance, field: "dateOfDeath")}</td>
                         
-                            <%-- <td>${fieldValue(bean: personInstance, field: "bio")}</td> --%>
-                            <td>${personInstance?.shortBio()}...</td>
+                            <td>${fieldValue(bean: personInstance, field: "bio")}</td>
                         
                             <td><g:formatBoolean boolean="${personInstance.gender}" /></td>
                         

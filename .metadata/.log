@@ -8524,3 +8524,218 @@ org.eclipse.core.internal.resources.ResourceException: Resource '/de.uni_koeln.h
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 !SUBENTRY 1 org.eclipse.core.resources 4 372 2010-10-15 11:30:01.593
 !MESSAGE Resource '/de.uni_koeln.hki.thaller' is not open.
+!SESSION 2010-10-22 15:03:58.359 -----------------------------------------------
+eclipse.buildId=I20100608-0911
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface.text 4 0 2010-10-22 16:45:07.890
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.LocalVariable.getHandleMemento(LocalVariable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleMemento(JavaElement.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleIdentifier(JavaElement.java:279)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.createURI(JavaElementLinks.java:277)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks$JavaElementLinkedLabelComposer.getSimpleTypeName(JavaElementLinks.java:133)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendTypeSignatureLabel(JavaElementLabelComposer.java:729)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendLocalVariableLabel(JavaElementLabelComposer.java:628)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel_aroundBody0(JavaElementLabelComposer.java:281)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer$AjcClosure1.run(JavaElementLabelComposer.java:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36proceed(HoversAspect.aj:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36(HoversAspect.aj:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:263)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:514)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:496)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:669)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:645)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:547)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2010-10-22 16:53:36.765
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.LocalVariable.getHandleMemento(LocalVariable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleMemento(JavaElement.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleIdentifier(JavaElement.java:279)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.createURI(JavaElementLinks.java:277)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks$JavaElementLinkedLabelComposer.getSimpleTypeName(JavaElementLinks.java:133)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendTypeSignatureLabel(JavaElementLabelComposer.java:729)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendLocalVariableLabel(JavaElementLabelComposer.java:628)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel_aroundBody0(JavaElementLabelComposer.java:281)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer$AjcClosure1.run(JavaElementLabelComposer.java:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36proceed(HoversAspect.aj:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36(HoversAspect.aj:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:263)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:514)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:496)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:669)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:645)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:547)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2010-10-22 16:55:35.093
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.LocalVariable.getHandleMemento(LocalVariable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleMemento(JavaElement.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleIdentifier(JavaElement.java:279)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.createURI(JavaElementLinks.java:277)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks$JavaElementLinkedLabelComposer.getSimpleTypeName(JavaElementLinks.java:133)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendTypeSignatureLabel(JavaElementLabelComposer.java:729)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendLocalVariableLabel(JavaElementLabelComposer.java:628)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel_aroundBody0(JavaElementLabelComposer.java:281)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer$AjcClosure1.run(JavaElementLabelComposer.java:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36proceed(HoversAspect.aj:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36(HoversAspect.aj:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:263)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:514)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:496)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:669)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:645)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:547)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2010-10-22 16:55:37.328
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.LocalVariable.getHandleMemento(LocalVariable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleMemento(JavaElement.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleIdentifier(JavaElement.java:279)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.createURI(JavaElementLinks.java:277)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks$JavaElementLinkedLabelComposer.getSimpleTypeName(JavaElementLinks.java:133)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendTypeSignatureLabel(JavaElementLabelComposer.java:729)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendLocalVariableLabel(JavaElementLabelComposer.java:628)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel_aroundBody0(JavaElementLabelComposer.java:281)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer$AjcClosure1.run(JavaElementLabelComposer.java:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36proceed(HoversAspect.aj:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36(HoversAspect.aj:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:263)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:514)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:496)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:669)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:645)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:547)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2010-10-22 17:37:11.546
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.LocalVariable.getHandleMemento(LocalVariable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleMemento(JavaElement.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleIdentifier(JavaElement.java:279)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.createURI(JavaElementLinks.java:277)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks$JavaElementLinkedLabelComposer.getSimpleTypeName(JavaElementLinks.java:133)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendTypeSignatureLabel(JavaElementLabelComposer.java:729)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendLocalVariableLabel(JavaElementLabelComposer.java:628)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel_aroundBody0(JavaElementLabelComposer.java:281)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer$AjcClosure1.run(JavaElementLabelComposer.java:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36proceed(HoversAspect.aj:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36(HoversAspect.aj:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:263)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:514)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:496)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:669)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:645)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:547)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2010-10-22 17:50:21.859
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.LocalVariable.getHandleMemento(LocalVariable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleMemento(JavaElement.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleIdentifier(JavaElement.java:279)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.createURI(JavaElementLinks.java:277)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks$JavaElementLinkedLabelComposer.getSimpleTypeName(JavaElementLinks.java:133)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendTypeSignatureLabel(JavaElementLabelComposer.java:729)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendLocalVariableLabel(JavaElementLabelComposer.java:628)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel_aroundBody0(JavaElementLabelComposer.java:281)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer$AjcClosure1.run(JavaElementLabelComposer.java:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36proceed(HoversAspect.aj:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36(HoversAspect.aj:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:263)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:514)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:496)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:669)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:645)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:547)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2010-10-22 17:55:31.796
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.LocalVariable.getHandleMemento(LocalVariable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleMemento(JavaElement.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleIdentifier(JavaElement.java:279)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.createURI(JavaElementLinks.java:277)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks$JavaElementLinkedLabelComposer.getSimpleTypeName(JavaElementLinks.java:133)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendTypeSignatureLabel(JavaElementLabelComposer.java:729)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendLocalVariableLabel(JavaElementLabelComposer.java:628)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel_aroundBody0(JavaElementLabelComposer.java:281)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer$AjcClosure1.run(JavaElementLabelComposer.java:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36proceed(HoversAspect.aj:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36(HoversAspect.aj:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:263)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:514)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:496)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:669)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:645)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:547)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2010-10-22 17:55:37.000
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.LocalVariable.getHandleMemento(LocalVariable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleMemento(JavaElement.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleIdentifier(JavaElement.java:279)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.createURI(JavaElementLinks.java:277)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks$JavaElementLinkedLabelComposer.getSimpleTypeName(JavaElementLinks.java:133)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendTypeSignatureLabel(JavaElementLabelComposer.java:729)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendLocalVariableLabel(JavaElementLabelComposer.java:628)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel_aroundBody0(JavaElementLabelComposer.java:281)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer$AjcClosure1.run(JavaElementLabelComposer.java:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36proceed(HoversAspect.aj:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36(HoversAspect.aj:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:263)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:514)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:496)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:669)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:645)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:547)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)

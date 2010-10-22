@@ -42,9 +42,9 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="person"><g:message code="confession.person.label" default="Person" /></label>
+                                  <label for="persons"><g:message code="confession.persons.label" default="Persons" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: confessionInstance, field: 'person', 'errors')}">
+                                <td valign="top" class="value ${hasErrors(bean: confessionInstance, field: 'persons', 'errors')}">
                                     
                                 </td>
                             </tr>

@@ -7,8 +7,6 @@ class PersonLocations {
 	static mapping = {
 		table "person_locations"
 		version false
-//		location updateable: false
-//		location insertable: false
 	}
 	
     static belongsTo = [person:Person, location:Location]

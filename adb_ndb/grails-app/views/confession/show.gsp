@@ -37,11 +37,11 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="confession.person.label" default="Person" /></td>
+                            <td valign="top" class="name"><g:message code="confession.persons.label" default="Persons" /></td>
                             
                             <td valign="top" style="text-align: left;" class="value">
                                 <ul>
-                                <g:each in="${confessionInstance.person}" var="p">
+                                <g:each in="${confessionInstance.persons}" var="p">
                                     <li><g:link controller="person" action="show" id="${p.id}">${p?.encodeAsHTML()}</g:link></li>
                                 </g:each>
                                 </ul>

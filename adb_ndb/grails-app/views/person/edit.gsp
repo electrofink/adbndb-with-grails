@@ -106,7 +106,14 @@
                                   <label for="relations"><g:message code="person.relations.label" default="Relations" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'relations', 'errors')}">
-                                    <g:select name="relations" from="${de.uni_koeln.hs.Relation.list()}" multiple="yes" optionKey="id" size="5" value="${personInstance?.relations*.id}" />
+                                    
+<ul>
+<g:each in="${personInstance?.relations?}" var="r">
+    <li><g:link controller="relation" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></li>
+</g:each>
+</ul>
+<g:link controller="relation" action="create" params="['person.id': personInstance?.id]">${message(code: 'default.add.label', args: [message(code: 'relation.label', default: 'Relation')])}</g:link>
+
                                 </td>
                             </tr>
                         

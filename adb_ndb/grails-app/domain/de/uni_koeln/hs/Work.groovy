@@ -8,8 +8,8 @@ class Work {
 	String subtitle
 	String releaseDate
 	
-	static hasMany = [persons:Person]
 	static belongsTo = Person
+	static hasMany = [persons:Person]
 	
 	static constraints = {
 		workTitle(blank:false)

@@ -4,8 +4,8 @@ class Confession {
 
 	String confessionType
 	
-	static hasMany = [person:Person]
 	static belongsTo = Person
+	static hasMany = [persons:Person]
 	
 	static constraints = {
 		confessionType(blank:false)
