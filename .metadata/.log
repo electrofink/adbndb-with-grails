@@ -8739,3 +8739,402 @@ java.lang.NullPointerException
 	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
 	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
 	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+!SESSION 2010-11-06 13:49:09.703 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.ui 4 4 2010-11-06 13:50:15.109
+!MESSAGE Could not create view: 'org.eclipse.mylyn.tasks.ui.views.tasks'.
+
+!ENTRY org.eclipse.jface 2 0 2010-11-06 13:50:17.671
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2010-11-06 13:50:17.671
+!MESSAGE A conflict occurred for ALT+CTRL+I:
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.egit.ui.team.Ignore,Ignore,
+		,
+		Category(org.eclipse.egit.ui.commandCategory,Git,null,true),
+		org.eclipse.egit.ui.internal.actions.IgnoreActionHandler,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+I,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.AddToSVNIgnoreCommand,Add to svn:ignore...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2010-11-06 13:50:17.671
+!MESSAGE A conflict occurred for ALT+CTRL+C:
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(org.eclipse.egit.ui.team.Commit,Commit,
+		,
+		Category(org.eclipse.egit.ui.commandCategory,Git,null,true),
+		org.eclipse.egit.ui.internal.actions.CommitActionHandler,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+C,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.CommitCommand,Commit...,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 4 0 2010-11-06 13:50:17.937
+!MESSAGE Problems occurred restoring workbench.
+!SUBENTRY 1 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+!SUBENTRY 1 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.ui 4 0 2010-11-06 13:50:17.937
+!MESSAGE Unable to restore perspective: Workspace - Java.
+!SUBENTRY 2 org.eclipse.ui 0 0 2010-11-06 13:50:17.937
+!MESSAGE Problems occurred restoring perspective.
+!SUBENTRY 3 org.eclipse.ui 0 0 2010-11-06 13:50:17.937
+!MESSAGE 
+!SUBENTRY 2 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+!SUBENTRY 2 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.ui 4 4 2010-11-06 13:50:17.937
+!MESSAGE Could not create view: org.eclipse.mylyn.tasks.ui.views.tasks
+!STACK 1
+org.eclipse.ui.PartInitException: Could not create view: org.eclipse.mylyn.tasks.ui.views.tasks
+	at org.eclipse.ui.internal.ViewFactory.createView(ViewFactory.java:158)
+	at org.eclipse.ui.internal.Perspective.createReferences(Perspective.java:1249)
+	at org.eclipse.ui.internal.FastViewManager.restoreState(FastViewManager.java:925)
+	at org.eclipse.ui.internal.Perspective.restoreState(Perspective.java:1363)
+	at org.eclipse.ui.internal.WorkbenchPage.restoreState(WorkbenchPage.java:3259)
+	at org.eclipse.ui.internal.WorkbenchWindow.restoreState(WorkbenchWindow.java:2219)
+	at org.eclipse.ui.internal.Workbench.doRestoreState(Workbench.java:3623)
+	at org.eclipse.ui.internal.Workbench.access$30(Workbench.java:3565)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2268)
+	at org.eclipse.ui.internal.Workbench.runStartupWithProgress(Workbench.java:1982)
+	at org.eclipse.ui.internal.Workbench.restoreState(Workbench.java:2266)
+	at org.eclipse.ui.internal.Workbench.access$28(Workbench.java:2237)
+	at org.eclipse.ui.internal.Workbench$51.run(Workbench.java:2100)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench.restoreState(Workbench.java:2044)
+	at org.eclipse.ui.internal.WorkbenchConfigurer.restoreState(WorkbenchConfigurer.java:183)
+	at org.eclipse.ui.application.WorkbenchAdvisor$1.run(WorkbenchAdvisor.java:781)
+!SUBENTRY 3 org.eclipse.ui 4 0 2010-11-06 13:50:17.937
+!MESSAGE Could not create view: org.eclipse.mylyn.tasks.ui.views.tasks
+!SUBENTRY 2 org.eclipse.ui 4 0 2010-11-06 13:50:17.937
+!MESSAGE Could not find view: org.eclipse.mylyn.tasks.ui.views.tasks
+!SUBENTRY 1 unknown 0 0 2010-11-06 13:50:17.937
+!MESSAGE OK
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.390
+!MESSAGE NLS unused message: add_script_load_bp in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.406
+!MESSAGE NLS unused message: bp_conditional in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.406
+!MESSAGE NLS unused message: bp_conditonal in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.406
+!MESSAGE NLS unused message: bp_entry_and_exit in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.406
+!MESSAGE NLS unused message: bp_entry_only in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.421
+!MESSAGE NLS unused message: bp_exit_only in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.421
+!MESSAGE NLS unused message: bp_hit_count in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.421
+!MESSAGE NLS unused message: bp_line_number in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.421
+!MESSAGE NLS unused message: bp_suspend_vm in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.437
+!MESSAGE NLS unused message: breakpoint_configuration in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.437
+!MESSAGE NLS unused message: connect in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.437
+!MESSAGE NLS unused message: connector in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.437
+!MESSAGE NLS unused message: connector_properties in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.453
+!MESSAGE NLS unused message: creating_script_load_bp in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.453
+!MESSAGE NLS unused message: enable_hit_count in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.453
+!MESSAGE NLS unused message: enter_new_hit_count in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.453
+!MESSAGE NLS unused message: exception_occurred_setting_bp_properties in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.468
+!MESSAGE NLS unused message: hit_count_must_be_positive in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.468
+!MESSAGE NLS unused message: no_description_provided in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.468
+!MESSAGE NLS unused message: scripts in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.484
+!MESSAGE NLS unused message: select_javascript_file in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.484
+!MESSAGE NLS unused message: set_bp_hit_count in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.484
+!MESSAGE NLS unused message: suspend_target in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.484
+!MESSAGE NLS unused message: suspend_thread in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.484
+!MESSAGE NLS unused message: the_argument_0_is_not_valid in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.osgi 2 1 2010-11-06 13:53:39.500
+!MESSAGE NLS unused message: osgi.nls.warnings in: org.eclipse.wst.jsdt.debug.internal.ui.messages
+
+!ENTRY org.eclipse.jdt.core 4 4 2010-11-06 14:24:35.953
+!MESSAGE Error performing search for ResultObject.groovy
+!STACK 0
+java.util.EmptyStackException
+	at java.util.Stack.peek(Unknown Source)
+	at java.util.Stack.pop(Unknown Source)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitPropertyExpression(TypeInferencingVisitorWithRequestor.java:1176)
+	at org.codehaus.groovy.ast.expr.PropertyExpression.visit(PropertyExpression.java:55)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitBinaryExpression(TypeInferencingVisitorWithRequestor.java:825)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitDeclarationExpression(TypeInferencingVisitorWithRequestor.java:1063)
+	at org.codehaus.groovy.ast.expr.DeclarationExpression.visit(DeclarationExpression.java:53)
+	at org.codehaus.groovy.ast.CodeVisitorSupport.visitExpressionStatement(CodeVisitorSupport.java:69)
+	at org.codehaus.groovy.ast.ClassCodeVisitorSupport.visitExpressionStatement(ClassCodeVisitorSupport.java:209)
+	at org.codehaus.groovy.ast.stmt.ExpressionStatement.visit(ExpressionStatement.java:40)
+	at org.codehaus.groovy.ast.CodeVisitorSupport.visitBlockStatement(CodeVisitorSupport.java:35)
+	at org.codehaus.groovy.ast.ClassCodeVisitorSupport.visitBlockStatement(ClassCodeVisitorSupport.java:179)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitBlockStatement(TypeInferencingVisitorWithRequestor.java:914)
+	at org.codehaus.groovy.ast.stmt.BlockStatement.visit(BlockStatement.java:51)
+	at org.codehaus.groovy.ast.CodeVisitorSupport.visitClosureExpression(CodeVisitorSupport.java:174)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitClosureExpression(TypeInferencingVisitorWithRequestor.java:904)
+	at org.codehaus.groovy.ast.expr.ClosureExpression.visit(ClosureExpression.java:46)
+	at org.codehaus.groovy.ast.CodeVisitorSupport.visitListOfExpressions(CodeVisitorSupport.java:279)
+	at org.codehaus.groovy.ast.CodeVisitorSupport.visitTupleExpression(CodeVisitorSupport.java:178)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitTupleExpression(TypeInferencingVisitorWithRequestor.java:1285)
+	at org.codehaus.groovy.ast.CodeVisitorSupport.visitArgumentlistExpression(CodeVisitorSupport.java:289)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitArgumentlistExpression(TypeInferencingVisitorWithRequestor.java:786)
+	at org.codehaus.groovy.ast.expr.ArgumentListExpression.visit(ArgumentListExpression.java:73)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitMethodCallExpression(TypeInferencingVisitorWithRequestor.java:1123)
+	at org.codehaus.groovy.ast.expr.MethodCallExpression.visit(MethodCallExpression.java:72)
+	at org.codehaus.groovy.ast.CodeVisitorSupport.visitExpressionStatement(CodeVisitorSupport.java:69)
+	at org.codehaus.groovy.ast.ClassCodeVisitorSupport.visitExpressionStatement(ClassCodeVisitorSupport.java:209)
+	at org.codehaus.groovy.ast.stmt.ExpressionStatement.visit(ExpressionStatement.java:40)
+	at org.codehaus.groovy.ast.CodeVisitorSupport.visitBlockStatement(CodeVisitorSupport.java:35)
+	at org.codehaus.groovy.ast.ClassCodeVisitorSupport.visitBlockStatement(ClassCodeVisitorSupport.java:179)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitBlockStatement(TypeInferencingVisitorWithRequestor.java:914)
+	at org.codehaus.groovy.ast.stmt.BlockStatement.visit(BlockStatement.java:51)
+	at org.codehaus.groovy.ast.CodeVisitorSupport.visitClosureExpression(CodeVisitorSupport.java:174)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitClosureExpression(TypeInferencingVisitorWithRequestor.java:904)
+	at org.codehaus.groovy.ast.expr.ClosureExpression.visit(ClosureExpression.java:46)
+	at org.codehaus.groovy.ast.ClassCodeVisitorSupport.visitField(ClassCodeVisitorSupport.java:130)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitField(TypeInferencingVisitorWithRequestor.java:485)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitJDT(TypeInferencingVisitorWithRequestor.java:331)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitJDT(TypeInferencingVisitorWithRequestor.java:233)
+	at org.eclipse.jdt.groovy.search.TypeInferencingVisitorWithRequestor.visitCompilationUnit(TypeInferencingVisitorWithRequestor.java:183)
+	at org.codehaus.groovy.eclipse.editor.highlighting.GatherSemanticReferences.findSemanticHighlightingReferences(GatherSemanticReferences.java:48)
+	at org.codehaus.groovy.eclipse.editor.highlighting.GroovySemanticReconciler.reconciled(GroovySemanticReconciler.java:121)
+	at org.eclipse.jdt.internal.ui.javaeditor.CompilationUnitEditor.reconciled(CompilationUnitEditor.java:1632)
+	at org.eclipse.jdt.internal.ui.text.java.JavaReconcilingStrategy.reconciled(JavaReconcilingStrategy.java:212)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconciled(JavaCompositeReconcilingStrategy.java:161)
+	at org.eclipse.jdt.internal.ui.text.JavaCompositeReconcilingStrategy.reconcile(JavaCompositeReconcilingStrategy.java:110)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:77)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:206)
+
+!ENTRY org.eclipse.jface.text 4 0 2010-11-06 15:13:16.156
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.LocalVariable.getHandleMemento(LocalVariable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleMemento(JavaElement.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleIdentifier(JavaElement.java:279)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.createURI(JavaElementLinks.java:277)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks$JavaElementLinkedLabelComposer.getSimpleTypeName(JavaElementLinks.java:133)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendTypeSignatureLabel(JavaElementLabelComposer.java:729)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendLocalVariableLabel(JavaElementLabelComposer.java:628)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel_aroundBody0(JavaElementLabelComposer.java:281)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer$AjcClosure1.run(JavaElementLabelComposer.java:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36proceed(HoversAspect.aj:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36(HoversAspect.aj:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:263)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:514)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:496)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:669)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:645)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:547)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2010-11-06 15:13:22.500
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.LocalVariable.getHandleMemento(LocalVariable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleMemento(JavaElement.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleIdentifier(JavaElement.java:279)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.createURI(JavaElementLinks.java:277)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks$JavaElementLinkedLabelComposer.getSimpleTypeName(JavaElementLinks.java:133)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendTypeSignatureLabel(JavaElementLabelComposer.java:729)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendLocalVariableLabel(JavaElementLabelComposer.java:628)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel_aroundBody0(JavaElementLabelComposer.java:281)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer$AjcClosure1.run(JavaElementLabelComposer.java:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36proceed(HoversAspect.aj:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36(HoversAspect.aj:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:263)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:514)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:496)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:669)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:645)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:547)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2010-11-06 15:13:33.562
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.LocalVariable.getHandleMemento(LocalVariable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleMemento(JavaElement.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleIdentifier(JavaElement.java:279)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.createURI(JavaElementLinks.java:277)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks$JavaElementLinkedLabelComposer.getSimpleTypeName(JavaElementLinks.java:133)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendTypeSignatureLabel(JavaElementLabelComposer.java:729)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendLocalVariableLabel(JavaElementLabelComposer.java:628)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel_aroundBody0(JavaElementLabelComposer.java:281)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer$AjcClosure1.run(JavaElementLabelComposer.java:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36proceed(HoversAspect.aj:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36(HoversAspect.aj:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:263)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:514)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:496)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:669)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:645)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:547)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2010-11-06 15:13:34.062
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.LocalVariable.getHandleMemento(LocalVariable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleMemento(JavaElement.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleIdentifier(JavaElement.java:279)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.createURI(JavaElementLinks.java:277)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks$JavaElementLinkedLabelComposer.getSimpleTypeName(JavaElementLinks.java:133)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendTypeSignatureLabel(JavaElementLabelComposer.java:729)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendLocalVariableLabel(JavaElementLabelComposer.java:628)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel_aroundBody0(JavaElementLabelComposer.java:281)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer$AjcClosure1.run(JavaElementLabelComposer.java:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36proceed(HoversAspect.aj:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36(HoversAspect.aj:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:263)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:514)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:496)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:669)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:645)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:547)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2010-11-06 15:19:58.656
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.LocalVariable.getHandleMemento(LocalVariable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleMemento(JavaElement.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleIdentifier(JavaElement.java:279)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.createURI(JavaElementLinks.java:277)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks$JavaElementLinkedLabelComposer.getSimpleTypeName(JavaElementLinks.java:133)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendTypeSignatureLabel(JavaElementLabelComposer.java:729)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendLocalVariableLabel(JavaElementLabelComposer.java:628)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel_aroundBody0(JavaElementLabelComposer.java:281)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer$AjcClosure1.run(JavaElementLabelComposer.java:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36proceed(HoversAspect.aj:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36(HoversAspect.aj:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:263)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:514)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:496)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:669)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:645)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:547)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)
+
+!ENTRY org.eclipse.jface.text 4 0 2010-11-06 15:28:00.500
+!MESSAGE Unexpected runtime error while computing a text hover
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jdt.internal.core.LocalVariable.getHandleMemento(LocalVariable.java:233)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleMemento(JavaElement.java:286)
+	at org.eclipse.jdt.internal.core.JavaElement.getHandleIdentifier(JavaElement.java:279)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.createURI(JavaElementLinks.java:277)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks$JavaElementLinkedLabelComposer.getSimpleTypeName(JavaElementLinks.java:133)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendTypeSignatureLabel(JavaElementLabelComposer.java:729)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendLocalVariableLabel(JavaElementLabelComposer.java:628)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel_aroundBody0(JavaElementLabelComposer.java:281)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer$AjcClosure1.run(JavaElementLabelComposer.java:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36proceed(HoversAspect.aj:1)
+	at scala.tools.eclipse.contribution.weaving.jdt.ui.javaeditor.HoversAspect.ajc$around$scala_tools_eclipse_contribution_weaving_jdt_ui_javaeditor_HoversAspect$2$6e03bb36(HoversAspect.aj:47)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLabelComposer.appendElementLabel(JavaElementLabelComposer.java:263)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:514)
+	at org.eclipse.jdt.internal.ui.viewsupport.JavaElementLinks.getElementLabel(JavaElementLinks.java:496)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getInfoText(JavadocHover.java:669)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo(JavadocHover.java:645)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.internalGetHoverInfo(JavadocHover.java:555)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavadocHover.getHoverInfo2(JavadocHover.java:547)
+	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:141)
+	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:82)
+	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:166)

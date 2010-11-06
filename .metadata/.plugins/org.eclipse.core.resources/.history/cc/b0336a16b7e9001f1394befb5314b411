@@ -1,0 +1,28 @@
+package de.uni_koeln.hs
+
+import query.util.ResultObject;
+
+class SearchController {
+	
+	static allowedMethods = [search:"POST"]
+	
+	def dataSource
+	def resultMap
+	
+	def index = {
+	}
+	
+	def search = {
+		def q = params.query.split();		
+		ResultObject ro = new ResultObject(dataSource);
+		this.resultMap = ro.search(q);
+		redirect(action: "result", resultMap)
+		
+	}
+	
+	def result = {
+		println(resultMap)
+	}
+	
+	
+}

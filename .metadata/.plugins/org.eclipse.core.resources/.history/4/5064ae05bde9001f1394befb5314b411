@@ -1,0 +1,29 @@
+package de.uni_koeln.hs
+
+import query.util.ResultObject;
+
+class SearchController {
+	
+	static allowedMethods = [search:"POST"]
+	
+	def dataSource
+	def resultMap = [:]
+	
+	def index = {
+	}
+	
+	def result = {
+		def q = params.query.split()		
+		ResultObject ro = new ResultObject(dataSource)
+		def resultMap = ro.search(q)
+		println("resultMap: "+resultMap)
+		sortByRelevance(resultMap)
+	}
+	
+	
+	def sortByRelevance = { resultMap -> 
+		def sortedMap = resultMap.sort { a, b ->
+			b.value <=> a.value
+		}
+	}
+}

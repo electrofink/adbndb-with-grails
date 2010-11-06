@@ -1,0 +1,45 @@
+package query.util
+
+import groovy.sql.Sql
+
+class ResultObject {
+	
+	def retrievePersonByName =  { name ->
+		def toReturn = []
+		name.each {
+			def rows = Name.executeQuery("select n.person.id from Name n where n.id = :id", [id: it.id])
+			rows.each { toReturn.add(it) }
+		}
+		return toReturn
+	}
+	
+	def retrievePersonByLocation = { location ->
+		def toReturn = []
+		location.each {
+			def rows = Location.executeQuery("select pl.person.id from PersonLocations pl where pl.location.id = :id", [id: it.id])
+			rows.each { toReturn.add(it) }
+		}
+		return toReturn
+	}
+	
+	def retrievePersonByConfession = { confession ->
+		def db = new Sql(dataSource)
+		def toReturn = []
+		confession.each {
+			def rows = db.rows("SELECT person_id FROM person_confessions WHERE confession_id = " + it.id)
+			rows.each { toReturn.add(it.getProperty("person_id")) }
+		}
+		return toReturn
+	}
+	
+	def retrievePersonByWork = { work ->
+		def db = new Sql(dataSource)
+		def toReturn = []
+		work.each {
+			def rows = db.rows("SELECT person_id FROM person_works WHERE work_id = " + it.id)
+			rows.each { toReturn.add(it.getProperty("person_id")) }
+		}
+		return toReturn
+	}
+	
+}

@@ -6,10 +6,11 @@
 <fullyQualifiedTypeName name="java.lang.Comparable"/>
 <fullyQualifiedTypeName name="javax.management.relation.RelationService"/>
 <fullyQualifiedTypeName name="de.uni_koeln.hs.Location"/>
-<fullyQualifiedTypeName name="de.uni_koeln.hs.Name"/>
 <fullyQualifiedTypeName name="de.uni_koeln.hs.Relation"/>
 <fullyQualifiedTypeName name="de.uni_koeln.hs.Confession"/>
 <fullyQualifiedTypeName name="de.uni_koeln.hs.Work"/>
 <fullyQualifiedTypeName name="java.lang.Override"/>
 <fullyQualifiedTypeName name="com.sun.org.apache.bcel.internal.generic.RETURN"/>
+<fullyQualifiedTypeName name="com.sun.org.apache.xalan.internal.xsltc.compiler.Import"/>
+<fullyQualifiedTypeName name="de.uni_koeln.hs.Name"/>
 </qualifiedTypeNameHistroy>

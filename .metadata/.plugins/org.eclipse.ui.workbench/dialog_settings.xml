@@ -4,17 +4,17 @@
 		<item value="167" key="DIALOG_Y_ORIGIN"/>
 		<item value="1602" key="DIALOG_X_ORIGIN"/>
 	</section>
-	<section name="NewWizardAction">
-		<item value="com.springsource.sts.grails.editor.gsp.wizard.newGSPWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
-		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
-			<item value="org.codehaus.groovy.eclipse"/>
-		</list>
-	</section>
 	<section name="ZipFileExportWizard">
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_CREATE_STRUCTURE_ID"/>
 		<item value="true" key="WizardZipFileResourceExportPage1.STORE_COMPRESS_CONTENTS_ID"/>
 		<list key="WizardZipFileResourceExportPage1.STORE_DESTINATION_NAMES_ID">
 			<item value="C:\Dokumente und Einstellungen\matanassov.SPINFO\Desktop\adb.zip"/>
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="org.codehaus.groovy.eclipse.ui.groovyClassWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.codehaus.groovy.eclipse"/>
 		</list>
 	</section>
 	<section name="ImportExportAction">
