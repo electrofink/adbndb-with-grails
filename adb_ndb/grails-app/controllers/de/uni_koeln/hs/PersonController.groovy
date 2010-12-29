@@ -14,16 +14,18 @@ class PersonController {
     }
 
     def create = {
-        def personInstance = new Person()
-        personInstance.properties = params
-        return [personInstance: personInstance]
+        def personInstance = new Person(params)
+		personInstance.save(validate: false)
+//		personInstance.properties = params
+		redirect(action: "edit", id: personInstance.id)
+//        return [personInstance: personInstance]
     }
 
     def save = {
         def personInstance = new Person(params)
         if (personInstance.save(flush: true)) {
             flash.message = "${message(code: 'default.created.message', args: [message(code: 'person.label', default: 'Person'), personInstance.id])}"
-            redirect(action: "show", id: personInstance.id)
+            redirect(action: "edit", id: personInstance.id)
         }
         else {
             render(view: "create", model: [personInstance: personInstance])

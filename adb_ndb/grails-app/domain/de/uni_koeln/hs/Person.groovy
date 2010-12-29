@@ -19,15 +19,15 @@ class Person {
 	
 	static constraints = {
 		
-		dateOfBirth(nullable:false, validator:{val, obj ->
+		dateOfBirth(nullable:true, validator:{val, obj ->
 			return DateValidator.validate(val, false)
 		})
 		
-		dateOfDeath(nullable: true, validator:{val, obj ->
+		dateOfDeath(nullable:true, validator:{val, obj ->
 			return DateValidator.validate(val, true)
 		})
 		
-		bio(maxSize:10000, blank:true)
+		bio(maxSize:10000, nullable: true)
 	}
 	
 	

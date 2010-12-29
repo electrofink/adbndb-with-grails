@@ -23,7 +23,7 @@ class RelationController {
         def relationInstance = new Relation(params)
         if (relationInstance.save(flush: true)) {
             flash.message = "${message(code: 'default.created.message', args: [message(code: 'relation.label', default: 'Relation'), relationInstance.id])}"
-            redirect(action: "show", id: relationInstance.id)
+            redirect(controller: "person", action: "edit", id: params.person.id)
         }
         else {
             render(view: "create", model: [relationInstance: relationInstance])

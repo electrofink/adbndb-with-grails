@@ -23,7 +23,7 @@ class NameController {
         def nameInstance = new Name(params)
         if (nameInstance.save(flush: true)) {
             flash.message = "${message(code: 'default.created.message', args: [message(code: 'name.label', default: 'Name'), nameInstance.id])}"
-            redirect(action: "show", id: nameInstance.id)
+            redirect(controller: "person", action: "edit", id: params.person.id)
         }
         else {
             render(view: "create", model: [nameInstance: nameInstance])
