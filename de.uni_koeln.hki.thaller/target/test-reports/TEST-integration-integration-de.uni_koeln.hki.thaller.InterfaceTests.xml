@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuite errors="0" failures="0" hostname="ambrosius-desktop" name="de.uni_koeln.hki.thaller.InterfaceTests" tests="1" time="0.031" timestamp="2010-06-20T14:54:13">
-  <properties />
-  <testcase classname="de.uni_koeln.hki.thaller.InterfaceTests" name="testQueryPersonFromDbByName" time="0.03" />
-  <system-out><![CDATA[--Output from testQueryPersonFromDbByName--
-]]></system-out>
-  <system-err><![CDATA[--Output from testQueryPersonFromDbByName--
-]]></system-err>
-</testsuite>
