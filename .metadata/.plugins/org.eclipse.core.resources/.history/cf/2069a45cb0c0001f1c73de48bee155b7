@@ -1,7 +1,0 @@
-package simpleapp
-
-class Topic {
-
-    static constraints = {
-    }
-}

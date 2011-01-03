@@ -1,9 +1,0 @@
-package de.uni_koeln.hs
-
-class Person {
-	
-	
-
-    static constraints = {
-    }
-}
