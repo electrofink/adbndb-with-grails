@@ -115,17 +115,48 @@
 					from="${de.uni_koeln.hs.Confession.list()}" multiple="yes"
 					optionKey="id" size="5" value="${personInstance?.confessions*.id}" />
 				</td>
+				<td valign="top"><g:link controller="confession"
+					action="create" params="['person.id': personInstance?.id]">
+					${message(code: 'default.add.label', args: [message(code: 'confession.label', default: 'Confession')])}
+				</g:link></td>
+
 			</tr>
 
+			<tr class="prop">
+				<td valign="top" class="location"><label for="locations"><g:message
+					code="person.locations.label" default="Locations" /></label></td>
+				<td valign="top"
+					class="value ${hasErrors(bean: personInstance, field: 'names', 'errors')}">
+
+				<ul>
+					<g:each in="${personInstance?.locations?}" var="l">
+						<li><g:link controller="personLocations" action="edit"
+							params="[person_id:personInstance?.id, location_id:l?.id]">
+							${l?.encodeAsHTML()}
+						</g:link></li>
+					</g:each>
+				</ul>
+				<g:link controller="location" action="create"
+					params="['person.id': personInstance?.id]">
+					${message(code: 'default.add.label', args: [message(code: 'location.label', default: 'Location')])}
+				</g:link></td>
+			</tr>
+
+			<%--
 			<tr class="prop">
 				<td valign="top" class="name"><label for="locations"><g:message
 					code="person.locations.label" default="Locations" /></label></td>
 				<td valign="top"
 					class="value ${hasErrors(bean: personInstance, field: 'locations', 'errors')}">
+				<g:link controller="location" action="create"
+					params="['person.id': personInstance?.id]">
+					${message(code: 'default.add.label', args: [message(code: 'location.label', default: 'Location')])}
+				</g:link>
 				<g:select name="locations" from="${de.uni_koeln.hs.Location.list()}"
 					multiple="yes" optionKey="id" size="5"
 					value="${personInstance?.locations*.id}" /></td>
 			</tr>
+			--%>
 
 			<tr class="prop">
 				<td valign="top" class="name"><label for="works"><g:message
@@ -135,6 +166,10 @@
 				<g:select name="works" from="${de.uni_koeln.hs.Work.list()}"
 					multiple="yes" optionKey="id" size="5"
 					value="${personInstance?.works*.id}" /></td>
+				<td valign="top"><g:link controller="work"
+					action="create" params="['person.id': personInstance?.id]">
+					${message(code: 'default.add.label', args: [message(code: 'work.label', default: 'Work')])}
+				</g:link></td>
 			</tr>
 
 		</tbody>

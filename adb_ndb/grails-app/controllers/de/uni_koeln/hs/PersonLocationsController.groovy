@@ -42,7 +42,11 @@ class PersonLocationsController {
     }
 
     def edit = {
-        def personLocationsInstance = PersonLocations.get(params.id)
+		def ps = PersonLocations.withCriteria {
+			eq('person.id', new Long(params.person_id))
+			eq('location.id', new Long(params.location_id))
+		}
+        def personLocationsInstance = PersonLocations.get(ps.get(0).id)
         if (!personLocationsInstance) {
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'personLocations.label', default: 'PersonLocations'), params.id])}"
             redirect(action: "list")
@@ -67,7 +71,7 @@ class PersonLocationsController {
             personLocationsInstance.properties = params
             if (!personLocationsInstance.hasErrors() && personLocationsInstance.save(flush: true)) {
                 flash.message = "${message(code: 'default.updated.message', args: [message(code: 'personLocations.label', default: 'PersonLocations'), personLocationsInstance.id])}"
-                redirect(action: "show", id: personLocationsInstance.id)
+                redirect(controller: "person", action: "edit", id: personLocationsInstance.person.id)
             }
             else {
                 render(view: "edit", model: [personLocationsInstance: personLocationsInstance])

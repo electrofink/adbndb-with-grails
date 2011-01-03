@@ -16,6 +16,7 @@ class LocationController {
     def create = {
         def locationInstance = new Location()
         locationInstance.properties = params
+		flash.put("person_id", params.person.id)
         return [locationInstance: locationInstance]
     }
 
@@ -23,7 +24,18 @@ class LocationController {
         def locationInstance = new Location(params)
         if (locationInstance.save(flush: true)) {
             flash.message = "${message(code: 'default.created.message', args: [message(code: 'location.label', default: 'Location'), locationInstance.id])}"
-            redirect(action: "show", id: locationInstance.id)
+			
+			def personLocationsInstance = new PersonLocations()
+			personLocationsInstance.person = Person.get(flash.person_id)
+			personLocationsInstance.location = Location.get(locationInstance.id)
+			if (personLocationsInstance.save(flush: true, validate: false)) {
+				flash.message = "${message(code: 'default.created.message', args: [message(code: 'personLocations.label', default: 'personLocations'), personLocationsInstance.id])}"
+				redirect(controller: "person", action: "edit", id: flash.person_id)
+			}
+			else {
+				personLocationsInstance.errors.each { println it }
+				render(view: "create", model: [personLocationsInstance: personLocationsInstance])
+			}
         }
         else {
             render(view: "create", model: [locationInstance: locationInstance])

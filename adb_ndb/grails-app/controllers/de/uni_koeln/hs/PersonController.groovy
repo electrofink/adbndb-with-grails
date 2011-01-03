@@ -18,7 +18,7 @@ class PersonController {
 		personInstance.save(validate: false)
 //		personInstance.properties = params
 		redirect(action: "edit", id: personInstance.id)
-//        return [personInstance: personInstance]
+//      return [personInstance: personInstance]
     }
 
     def save = {

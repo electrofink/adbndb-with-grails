@@ -16,12 +16,13 @@ class PersonLocations {
 	String endDate
 	
 	static constraints = {
-		startDate(nullable:false, validator:{val, obj ->
+		startDate(nullable: true, validator:{val, obj ->
 			return DateValidator.validate(val, false)
 		})
 		
-		endDate(nullable: false, validator:{val, obj ->
+		endDate(nullable: true, validator:{val, obj ->
 			return DateValidator.validate(val, false)
 		})
+
 	}
 }
