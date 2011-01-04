@@ -35,39 +35,46 @@
 
 			<tr class="prop">
 				<td valign="top" class="name"><label for="names"><g:message
-					code="person.names.label" default="Names" /></label></td>
-				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'names', 'errors')}">
+					code="person.names.label" default="Namen" /></label></td>
+				<g:if test="${!personInstance?.names?.isEmpty()}">
+					<td valign="top"
+						class="value ${hasErrors(bean: personInstance, field: 'names', 'errors')}">
 
-				<ul>
-					<g:each in="${personInstance?.names?}" var="n">
-						<li><g:link controller="name" action="show" id="${n.id}">
-							${n?.encodeAsHTML()}
-						</g:link></li>
-					</g:each>
-				</ul>
-				<g:link controller="name" action="create"
-					params="['person.id': personInstance?.id]">
-					${message(code: 'default.add.label', args: [message(code: 'name.label', default: 'Name')])}
-				</g:link></td>
+					<ul>
+						<g:each in="${personInstance?.names?}" var="n">
+							<li><g:link controller="name" action="show" id="${n.id}">
+								${n?.encodeAsHTML()}
+							</g:link></li>
+						</g:each>
+					</ul>
+					</td>
+					<td valign="top"><g:link controller="name" action="create"
+						params="['person.id': personInstance?.id]">
+						${message(code: 'default.add.label', args: [message(code: 'name.label', default: '+ Name')])}
+					</g:link></td>
+				</g:if>
+				<g:else>
+					<td valign="top"><g:link controller="name" action="create"
+						params="['person.id': personInstance?.id]">
+						${message(code: 'default.add.label', args: [message(code: 'name.label', default: '+ Name')])}
+					</g:link></td>
+				</g:else>
 			</tr>
 
 			<tr class="prop">
-				<td valign="center" class="name"><label for="dateOfBirth"><g:message
-					code="person.dateOfBirth.label" default="Date Of Birth" /></label></td>
+				<td valign="top" class="name"><label for="geboren"><g:message
+					code="person.geboren.label" default="Geboren am" /></label></td>
 				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'dateOfBirth', 'errors')}">
-				<g:textField name="dateOfBirth"
-					value="${personInstance?.dateOfBirth}" /></td>
+					class="value ${hasErrors(bean: personInstance, field: 'geboren', 'errors')}">
+				<g:textField name="geboren" value="${personInstance?.geboren}" /></td>
 			</tr>
 
 			<tr class="prop">
-				<td valign="top" class="name"><label for="dateOfDeath"><g:message
-					code="person.dateOfDeath.label" default="Date Of Death" /></label></td>
+				<td valign="top" class="name"><label for="gestorben"><g:message
+					code="person.gestorben.label" default="Gestorben am" /></label></td>
 				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'dateOfDeath', 'errors')}">
-				<g:textField name="dateOfDeath"
-					value="${personInstance?.dateOfDeath}" /></td>
+					class="value ${hasErrors(bean: personInstance, field: 'gestorben', 'errors')}">
+				<g:textField name="gestorben" value="${personInstance?.gestorben}" /></td>
 			</tr>
 
 			<tr class="prop">
@@ -80,96 +87,117 @@
 
 			<tr class="prop">
 				<td valign="top" class="name"><label for="bio"><g:message
-					code="person.bio.label" default="Bio" /></label></td>
+					code="person.biographie.label" default="Biographie" /></label></td>
 				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'bio', 'errors')}">
-				<g:textArea name="bio" cols="40" rows="5"
-					value="${personInstance?.bio}" /></td>
+					class="value ${hasErrors(bean: personInstance, field: 'biographie', 'errors')}">
+				<g:textArea name="biographie" cols="40" rows="5"
+					value="${personInstance?.biographie}" /></td>
 			</tr>
 
 			<tr class="prop">
 				<td valign="top" class="name"><label for="relations"><g:message
 					code="person.relations.label" default="Relations" /></label></td>
-				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'relations', 'errors')}">
+				<g:if test="${!personInstance?.relations?.isEmpty()}">
+					<td valign="top"
+						class="value ${hasErrors(bean: personInstance, field: 'relations', 'errors')}">
 
-				<ul>
-					<g:each in="${personInstance?.relations?}" var="r">
-						<li><g:link controller="relation" action="show" id="${r.id}">
-							${r?.encodeAsHTML()}
-						</g:link></li>
-					</g:each>
-				</ul>
-				<g:link controller="relation" action="create"
-					params="['person.id': personInstance?.id]">
-					${message(code: 'default.add.label', args: [message(code: 'relation.label', default: 'Relation')])}
-				</g:link></td>
+					<ul>
+						<g:each in="${personInstance?.relations?}" var="r">
+							<li><g:link controller="relation" action="show" id="${r.id}">
+								${r?.encodeAsHTML()}
+							</g:link></li>
+						</g:each>
+					</ul>
+					</td>
+					<td valign="top"><g:link controller="relation" action="create"
+						params="['person.id': personInstance?.id]">
+						${message(code: 'default.add.label', args: [message(code: 'relation.label', default: '+ Relation')])}
+					</g:link></td>
+				</g:if>
+				<g:else>
+					<td valign="top"><g:link controller="relation" action="create"
+						params="['person.id': personInstance?.id]">
+						${message(code: 'default.add.label', args: [message(code: 'relation.label', default: '+ Relation')])}
+					</g:link></td>
+				</g:else>
 			</tr>
 
 			<tr class="prop">
 				<td valign="top" class="name"><label for="confessions"><g:message
-					code="person.confessions.label" default="Confessions" /></label></td>
-				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'confessions', 'errors')}">
-				<g:select name="confessions"
-					from="${de.uni_koeln.hs.Confession.list()}" multiple="yes"
-					optionKey="id" size="5" value="${personInstance?.confessions*.id}" />
-				</td>
-				<td valign="top"><g:link controller="confession"
-					action="create" params="['person.id': personInstance?.id]">
-					${message(code: 'default.add.label', args: [message(code: 'confession.label', default: 'Confession')])}
-				</g:link></td>
+					code="person.confessions.label" default="Konfessionen" /></label></td>
+
+				<g:if test="${de.uni_koeln.hs.Confession.list().size() != 0}">
+					<td valign="top"
+						class="value ${hasErrors(bean: personInstance, field: 'confessions', 'errors')}">
+					<g:select name="confessions"
+						from="${de.uni_koeln.hs.Confession.list()}" multiple="yes"
+						optionKey="id" size="5" value="${personInstance?.confessions*.id}" />
+					</td>
+					<td valign="top"><g:link controller="confession"
+						action="create" params="['person.id': personInstance?.id]">
+						${message(code: 'default.add.label', args: [message(code: 'confession.label', default: '+ Konfession')])}
+					</g:link></td>
+				</g:if>
+				<g:else>
+					<td valign="top"><g:link controller="confession"
+						action="create" params="['person.id': personInstance?.id]">
+						${message(code: 'default.add.label', args: [message(code: 'confession.label', default: '+ Konfession')])}
+					</g:link></td>
+				</g:else>
 
 			</tr>
 
 			<tr class="prop">
 				<td valign="top" class="location"><label for="locations"><g:message
-					code="person.locations.label" default="Locations" /></label></td>
-				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'names', 'errors')}">
+					code="person.locations.label" default="Orte" /></label></td>
+				<g:if test="${!personInstance?.locations?.isEmpty()}">
+					<td valign="top"
+						class="value ${hasErrors(bean: personInstance, field: 'names', 'errors')}">
+					<ul>
+						<g:each in="${personInstance?.locations?}" var="l">
+							<li><g:link controller="personLocations" action="edit"
+								params="[person_id:personInstance?.id, location_id:l?.id]">
+								${l?.encodeAsHTML()}
+							</g:link></li>
+						</g:each>
+					</ul>
+					</td>
+					<td valign="top"><g:link controller="location" action="create"
+						params="['person.id': personInstance?.id]">
+						${message(code: 'default.add.label', args: [message(code: 'location.label', default: '+ Ort')])}
+					</g:link></td>
+				</g:if>
+				<g:else>
+					<td valign="top"><g:link controller="location" action="create"
+						params="['person.id': personInstance?.id]">
+						${message(code: 'default.add.label', args: [message(code: 'location.label', default: '+ Ort')])}
+					</g:link></td>
+				</g:else>
 
-				<ul>
-					<g:each in="${personInstance?.locations?}" var="l">
-						<li><g:link controller="personLocations" action="edit"
-							params="[person_id:personInstance?.id, location_id:l?.id]">
-							${l?.encodeAsHTML()}
-						</g:link></li>
-					</g:each>
-				</ul>
-				<g:link controller="location" action="create"
-					params="['person.id': personInstance?.id]">
-					${message(code: 'default.add.label', args: [message(code: 'location.label', default: 'Location')])}
-				</g:link></td>
 			</tr>
-
-			<%--
-			<tr class="prop">
-				<td valign="top" class="name"><label for="locations"><g:message
-					code="person.locations.label" default="Locations" /></label></td>
-				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'locations', 'errors')}">
-				<g:link controller="location" action="create"
-					params="['person.id': personInstance?.id]">
-					${message(code: 'default.add.label', args: [message(code: 'location.label', default: 'Location')])}
-				</g:link>
-				<g:select name="locations" from="${de.uni_koeln.hs.Location.list()}"
-					multiple="yes" optionKey="id" size="5"
-					value="${personInstance?.locations*.id}" /></td>
-			</tr>
-			--%>
 
 			<tr class="prop">
 				<td valign="top" class="name"><label for="works"><g:message
-					code="person.works.label" default="Works" /></label></td>
-				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'works', 'errors')}">
-				<g:select name="works" from="${de.uni_koeln.hs.Work.list()}"
-					multiple="yes" optionKey="id" size="5"
-					value="${personInstance?.works*.id}" /></td>
-				<td valign="top"><g:link controller="work"
-					action="create" params="['person.id': personInstance?.id]">
-					${message(code: 'default.add.label', args: [message(code: 'work.label', default: 'Work')])}
-				</g:link></td>
+					code="person.works.label" default="Werke" /></label></td>
+				<g:if test="${de.uni_koeln.hs.Work.list().size() != 0}">
+					<td valign="top"
+						class="value ${hasErrors(bean: personInstance, field: 'works', 'errors')}">
+					<g:select name="works" from="${de.uni_koeln.hs.Work.list()}"
+						multiple="yes" optionKey="id" size="5"
+						value="${personInstance?.works*.id}" /></td>
+					<td valign="top"><g:link controller="work" action="create"
+						params="['person.id': personInstance?.id]">
+						${message(code: 'default.add.label', args: [message(code: 'work.label', default: '+ Werk')])}
+					</g:link></td>
+				</g:if>
+				<g:else>
+					<td valign="top"><g:link controller="work" action="create"
+						params="['person.id': personInstance?.id]">
+						${message(code: 'default.add.label', args: [message(code: 'work.label', default: '+ Werk')])}
+					</g:link></td>
+				</g:else>
+
+
 			</tr>
 
 		</tbody>

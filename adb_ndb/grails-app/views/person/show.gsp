@@ -30,23 +30,23 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.dateOfBirth.label" default="Date Of Birth" /></td>
+                            <td valign="top" class="name"><g:message code="person.geboren.label" default="Geboren am" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "dateOfBirth")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.dateOfDeath.label" default="Date Of Death" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "dateOfDeath")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "geboren")}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.bio.label" default="Bio" /></td>
+                            <td valign="top" class="name"><g:message code="person.gestorben.label" default="Gestorben am" /></td>
                             
-                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "bio")}</td>
+                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "gestorben")}</td>
+                            
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="person.biographie.label" default="Biographie" /></td>
+                            
+                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "biographie")}</td>
                             
                         </tr>
                     

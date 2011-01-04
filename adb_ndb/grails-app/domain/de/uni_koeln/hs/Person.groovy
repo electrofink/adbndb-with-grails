@@ -3,44 +3,45 @@ package de.uni_koeln.hs
 import util.DateValidator;
 
 class Person {
-	
-	String dateOfBirth
-	String dateOfDeath
-	String bio
+
+	String geboren
+	String gestorben
+	String biographie
 	boolean gender
-	
-	
+
+
 	static hasMany = [names:Name, relations:Relation, locations:Location, confessions:Confession,
 		works:Work]
-	
+
 	static mapping = {
 		locations joinTable: [name:"person_locations", key: "person_id"]
+		columns {
+			biographie column:'bio'
+			geboren column: 'date_of_birth'
+			gestorben column: 'date_of_death'
+		}
 	}
-	
+
 	static constraints = {
-		
-		dateOfBirth(nullable:true, validator:{val, obj ->
+
+		geboren(nullable:true, validator:{val, obj ->
 			return DateValidator.validate(val, false)
 		})
-		
-		dateOfDeath(nullable:true, validator:{val, obj ->
+
+		gestorben(nullable:true, validator:{val, obj ->
 			return DateValidator.validate(val, true)
 		})
-		
-		bio(maxSize:10000, nullable: true)
+
+		biographie(maxSize:100000, nullable: true)
 	}
-	
-	
-	def shortBio() {
-		if(bio.length() > 200)
-			return bio.substring(0, 200)
-		return bio
+
+	String toString () {
+		return "Person: ${this.id}"
 	}
-	
-	@Override
-	String toString() {
-		if(names != null)
-			return names.toString()+": "+this.id
-		return this.ident().toString()
+
+	String shortBio() {
+		if(biographie != null)
+			return "${biographie.substring(0, 360)}"
+		return ""
 	}
 }
