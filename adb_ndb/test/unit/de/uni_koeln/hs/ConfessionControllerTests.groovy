@@ -11,7 +11,7 @@ class ConfessionControllerTests extends ControllerUnitTestCase {
         super.tearDown()
     }
 
-    void testSomething() {
-
+    void createConfession() {
+		
     }
 }
