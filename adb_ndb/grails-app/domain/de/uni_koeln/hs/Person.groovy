@@ -40,8 +40,11 @@ class Person {
 	}
 
 	String shortBio() {
-		if(biographie != null)
+		if (biographie == null)
+			return ""
+		else if (biographie.length() > 360)
 			return "${biographie.substring(0, 360)}"
-		return ""
+		else
+			return "${biographie}"
 	}
 }

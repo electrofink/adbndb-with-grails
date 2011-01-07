@@ -7,22 +7,12 @@
 <title><g:message code="default.list.label" args="[entityName]" /></title>
 </head>
 <body>
-	<div class="list">
-                <table>
-                    <thead>
-                        <tr>
-                        
-                            <g:sortableColumn property="id" title="${message(code: 'person.id.label', default: 'Id')}" />
-                        
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <g:each in="${personIDs}" status="i" var="item">
-                        <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-                            <td>${item}</td>
-                        </tr>
-                    </g:each>
-                    </tbody>
-                </table>
+
+
+<ol>
+	<g:each in="${personInstanceList}" status="i" var="item">
+		<li><g:link controller="person" action="show" id="${item.id}">${item.names}</g:link></li>
+	</g:each>
+</ol>
 </body>
 </html>
