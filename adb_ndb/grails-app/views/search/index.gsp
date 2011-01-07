@@ -11,7 +11,7 @@
 	<div class="dialog">
 	<table>
 			<tr class="prop">
-				<td valign="top" class="name"><label for="Name">Search</label></td>
+				<td valign="top" class="name"><label for="search">Suche</label></td>
 				<td valign="top" class="value"><g:textField name="query" /></td>
 			</tr>
 	</table>

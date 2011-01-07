@@ -3,24 +3,31 @@ package de.uni_koeln.hs
 import query.util.ResultObject;
 
 class SearchController {
-	
-	static allowedMethods = [search:"POST"]
+
+	static allowedMethods = [simpleSearch: "POST"]
 	
 	def dataSource
-	def resultMap = [:]
-	
-	def index = {
-	}
-	
+
+	def index = { }
+
 	def result = {
-		def q = params.query.split()		
+		def q = params.query.split()
 		ResultObject ro = new ResultObject(dataSource)
-		def list = sortByRelevance(ro.search(q))
-		[personIDs : list.keySet()]
+		def sortedList = sortByRelevance(ro.simpleSearch(q))
+		// [personIDs : sortedList.keySet()]
+		
+		def personInstanceList = []
+		
+		sortedList.keySet().each {
+			def p = Person.get(it)
+			personInstanceList.add(p)
+		}
+		[personInstanceList : personInstanceList]
+	
 	}
-	
-	
-	def sortByRelevance = { map -> 
+
+
+	def sortByRelevance = { map ->
 		def sortedMap = map.sort { a, b ->
 			b.value <=> a.value
 		}
