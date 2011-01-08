@@ -16,12 +16,12 @@ class AdvancedSearchController {
 		def death = params.death.split()
 		def confession = params.confession.split()
 		def work = params.work.split()
-		def location = params.location.split()
-		def begin = params.begin.split()
-		def end = params.end.split()
+		def location = params.location
+		def begin = params.begin
+		def end = params.end
 		
 		ResultObject ro = new ResultObject(dataSource)
-		def sortedList = sortByRelevance(ro.search(q))
+		def sortedList = sortByRelevance(ro.locationSearch(location, begin, end))
 		// [personIDs : sortedList.keySet()]
 		
 		def personInstanceList = []

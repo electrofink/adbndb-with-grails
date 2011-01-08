@@ -1,5 +1,7 @@
 package util;
 
+import java.text.SimpleDateFormat;
+
 public class DateValidator {
 
 	private DateValidator() {
@@ -15,7 +17,7 @@ public class DateValidator {
 	 *            true if date field can be null
 	 * @return If date (String) format is valid return true, otherwise false
 	 */
-	public static boolean validate(String date, boolean nullable) {
+	public static boolean validate(java.sql.Date date, boolean nullable) {
 
 		if (nullable)
 			return (date == null) || validate(date);
@@ -23,14 +25,17 @@ public class DateValidator {
 			return (date != null) && validate(date);
 	}
 
-	private static boolean validate(String date) {
+	private static boolean validate(java.sql.Date date) {
 
 		boolean a = false, b = false, c = false;
 
-		// YYYY-MM-DD
-		if (date.matches("[0-9]{3,4}(-[0-9]{2})?(-[0-9]{2})?")) {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+		String stringDate = sdf.format(date);
 
-			String[] str = date.split("-");
+		// YYYY-MM-DD
+		if (stringDate.matches("[0-9]{3,4}(-[0-9]{2})?(-[0-9]{2})?")) {
+
+			String[] str = stringDate.split("-");
 
 			for (int i = 0; i < str.length; i++) {
 				String s = str[i];
