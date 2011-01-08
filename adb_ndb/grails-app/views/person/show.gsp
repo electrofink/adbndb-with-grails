@@ -85,7 +85,7 @@
                                 		<g:set var="direct" value="verwandt"></g:set>
                                 	</g:if>
                                 	<g:else>
-                                		<g:set var="direct" value="idirekte Verbindubg"></g:set>
+                                		<g:set var="direct" value="Bekanntschaft"></g:set>
                                 	</g:else>
                                     <g:link controller="relation" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link> -> ${direct} <br>
                                 </g:each>
