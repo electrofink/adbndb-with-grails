@@ -1,4 +1,3 @@
-
 <%@ page import="de.uni_koeln.hs.Person" %>
 <html>
     <head>
@@ -21,105 +20,81 @@
             <div class="dialog">
                 <table>
                     <tbody>
-                    
+                 
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.id.label" default="Id" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "id")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.geboren.label" default="Geboren am" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "geboren")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.gestorben.label" default="Gestorben am" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "gestorben")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.biographie.label" default="Biographie" /></td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "biographie")}</td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.confessions.label" default="Confessions" /></td>
-                            
+                            <td valign="top" class="name"><g:message code="person.names.label" default="Namen" /></td>
                             <td valign="top" style="text-align: left;" class="value">
-                                <ul>
-                                <g:each in="${personInstance.confessions}" var="c">
-                                    <li><g:link controller="confession" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></li>
-                                </g:each>
-                                </ul>
-                            </td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.gender.label" default="Gender" /></td>
-                            
-                            <td valign="top" class="value"><g:formatBoolean boolean="${personInstance?.gender}" /></td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.locations.label" default="Locations" /></td>
-                            
-                            <td valign="top" style="text-align: left;" class="value">
-                                <ul>
-                                <g:each in="${personInstance.locations}" var="l">
-                                    <li><g:link controller="location" action="show" id="${l.id}">${l?.encodeAsHTML()}</g:link></li>
-                                </g:each>
-                                </ul>
-                            </td>
-                            
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.names.label" default="Names" /></td>
-                            
-                            <td valign="top" style="text-align: left;" class="value">
-                                <ul>
                                 <g:each in="${personInstance.names}" var="n">
-                                    <li><g:link controller="name" action="show" id="${n.id}">${n?.encodeAsHTML()}</g:link></li>
+                                    	${n?.encodeAsHTML()}<br>
                                 </g:each>
-                                </ul>
                             </td>
-                            
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.relations.label" default="Relations" /></td>
-                            
-                            <td valign="top" style="text-align: left;" class="value">
-                                <ul>
-                                <g:each in="${personInstance.relations}" var="r">
-                                    <li><g:link controller="relation" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link></li>
-                                </g:each>
-                                </ul>
-                            </td>
-                            
+                            <td valign="top" class="name"><g:message code="person.dateOfBirth.label" default="Geboren" /></td>
+                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "dateOfBirth")}</td>
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.works.label" default="Works" /></td>
-                            
+                            <td valign="top" class="name"><g:message code="person.dateOfDeath.label" default="Gestorben" /></td>
+                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "dateOfDeath")}</td>
+                        </tr>
+                        
+                         <tr class="prop">
+                            <td valign="top" class="name"><g:message code="person.gender.label" default="Geschlecht" /></td>
+                            	<g:if test="${personInstance?.gender}">
+                            		<td valign="top" class="value">m&auml;nnlich</td>
+                            	</g:if>
+                            	<g:else>
+    								<td valign="top" class="value">weiblich</td>
+								</g:else>
+                        </tr>
+                        
+                         <tr class="prop">
+                            <td valign="top" class="name"><g:message code="person.locations.label" default="Orte" /></td>
                             <td valign="top" style="text-align: left;" class="value">
-                                <ul>
+                                <g:each in="${personInstance.locations}" var="l">
+                                    ${l?.encodeAsHTML()}, ${l?.latitude}, ${l?.longitude} <br>
+                                </g:each>
+                            </td>
+                        </tr>
+                        
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="person.confessions.label" default="Konfession(en)" /></td>
+                            <td valign="top" style="text-align: left;" class="value">
+                                <g:each in="${personInstance.confessions}" var="c">
+                                    ${c?.encodeAsHTML()} <br>
+                                </g:each>
+                            </td>
+                        </tr>
+                        
+                         <tr class="prop">
+                            <td valign="top" class="name"><g:message code="person.works.label" default="Werke" /></td>
+                            <td valign="top" style="text-align: left;" class="value">
                                 <g:each in="${personInstance.works}" var="w">
-                                    <li><g:link controller="work" action="show" id="${w.id}">${w?.encodeAsHTML()}</g:link></li>
+                                  	 <g:link controller="werke" action="show" id="${w.id}">${w?.encodeAsHTML()}</g:link>
                                 </g:each>
-                                </ul>
                             </td>
-                            
+                        </tr>
+                        
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="person.relations.label" default="Relationen" /></td>
+                            <td valign="top" style="text-align: left;" class="value">
+                                <g:each in="${personInstance.relations}" var="r">
+                                	<g:if test="${r?.directRelation}">
+                                		<g:set var="direct" value="verwandt"></g:set>
+                                	</g:if>
+                                	<g:else>
+                                		<g:set var="direct" value="idirekte Verbindubg"></g:set>
+                                	</g:else>
+                                    <g:link controller="relation" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link> -> ${direct} <br>
+                                </g:each>
+                            </td>
+                        </tr>
+                    
+                        <tr class="prop">
+                            <td valign="top" class="name"><g:message code="person.bio.label" default="Biographie" /></td>
+                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "bio")}</td>
                         </tr>
                     
                     </tbody>

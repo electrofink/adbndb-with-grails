@@ -31,15 +31,15 @@
                     <table>
                         <tbody>
                         
-                            <tr class="prop">
+                            <%--<tr class="prop">
                                 <td valign="top" class="name">
                                   <label for="person"><g:message code="name.person.label" default="Person" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: nameInstance, field: 'person', 'errors')}">
                                     <g:select name="person.id" from="${de.uni_koeln.hs.Person.list()}" optionKey="id" value="${nameInstance?.person?.id}"  />
                                 </td>
-                            </tr>
-                        
+                            </tr>--%>
+                            
                             <tr class="prop">
                                 <td valign="top" class="name">
                                   <label for="firstName"><g:message code="name.firstName.label" default="First Name" /></label>

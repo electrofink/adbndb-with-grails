@@ -295,8 +295,19 @@ th.desc a {
 
 /* CUSTOM */
 .prop .value #confessions {
-	width:  450;
+	width: 450;
 }
+
 .prop .value #works {
-	width:  450;
+	width: 450;
+}
+
+.search{
+	background: transparent url(../images/skin/search.png) 5px 50%
+		no-repeat;
+	padding-left: 28px;
+}
+
+.searchButton {
+	border: 0px;
 }

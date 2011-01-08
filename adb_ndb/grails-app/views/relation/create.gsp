@@ -30,14 +30,14 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="directRelation"><g:message code="relation.directRelation.label" default="Direct Relation" /></label>
+                                    <label for="directRelation"><g:message code="relation.directRelation.label" default="Direkte Relation" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'directRelation', 'errors')}">
                                     <g:checkBox name="directRelation" value="${relationInstance?.directRelation}" />
                                 </td>
                             </tr>
                         
-                            <tr class="prop">
+                         	<tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="person"><g:message code="relation.person.label" default="Person" /></label>
                                 </td>
@@ -48,7 +48,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="relatedPerson"><g:message code="relation.relatedPerson.label" default="Related Person" /></label>
+                                    <label for="relatedPerson"><g:message code="relation.relatedPerson.label" default="Relation zu" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'relatedPerson', 'errors')}">
                                     <g:select name="relatedPerson.id" from="${de.uni_koeln.hs.Person.list()}" optionKey="id" value="${relationInstance?.relatedPerson?.id}"  />

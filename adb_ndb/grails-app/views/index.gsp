@@ -52,26 +52,50 @@ h2 {
 #pageBody {
 	margin-left: 20px;
 }
+
+.simpleDialog {
+	padding: 15px 0;
+	margin: 0;
+	width: auto;
+}
+
+#welcome {
+	padding: 5px 0;
+	margin: 0;
+	width: auto;
+}
 </style>
 </head>
-<body>
-<div id="pageBody">
-<h1>Willkommen bei ADB NDB fake...</h1>
-<p>A university project to implement a basic structure for the
-ADB/NDB, a german biography database</p>
-
-<div id="controllerList" class="dialog">
-<h2>Optionen</h2>
-<ul>
-	<li class="controller"><g:link controller="search" action="index">
-		Einfache Suche
-	</g:link></li>
-	<li class="controller"><g:link controller="person" action="list">
-		Liste aller Person
-	</g:link></li>
-
-</ul>
-</div>
-</div>
-</body>
+	<body>
+		<div class="nav">
+			<span class="menuButton">
+				<g:link	class="list" controller="person" action="list">
+					<g:message code="person.list.label" args="[entityName]" />
+				</g:link>
+			</span> 
+			<span class="menuButton">
+				<g:link class="create" controller="person" action="create">
+					<g:message code="person.new.label" args="[entityName]" />
+				</g:link>
+			</span>
+		</div>
+		
+		<div id="pageBody">
+			<g:form controller="search">
+				<div class="simpleDialog">
+					<label for="search">Einfache Suche </label>
+					<g:textField name="query" /> 
+					<span class="searchButton">
+						<g:actionSubmit	class="search" value="Person(en) finden" action="result" />
+					</span>
+				</div>
+			</g:form>
+			
+			<div id="welcome">
+				<h1>Welcome to the ADB/NDB fake...</h1>
+				<p>A university project to implement a basic structure for the
+				ADB/NDB, a german biography database</p>
+			</div>
+		</div>
+	</body>
 </html>

@@ -21,7 +21,7 @@
 <h1><g:message code="default.edit.label" args="[entityName]" /></h1>
 <g:if test="${flash.message}">
 	<div class="message">
-	${flash.message}
+		${flash.message}
 	</div>
 </g:if> <g:hasErrors bean="${personInstance}">
 	<div class="errors"><g:renderErrors bean="${personInstance}"
@@ -39,11 +39,10 @@
 				<g:if test="${!personInstance?.names?.isEmpty()}">
 					<td valign="top"
 						class="value ${hasErrors(bean: personInstance, field: 'names', 'errors')}">
-
 					<ul>
 						<g:each in="${personInstance?.names?}" var="n">
-							<li><g:link controller="name" action="show" id="${n.id}">
-								${n?.encodeAsHTML()}
+							<li><g:link controller="name" action="edit" id="${n.id}"
+							params="['person.id': personInstance?.id]">	${n?.encodeAsHTML()}
 							</g:link></li>
 						</g:each>
 					</ul>
@@ -62,19 +61,19 @@
 			</tr>
 
 			<tr class="prop">
-				<td valign="top" class="name"><label for="geboren"><g:message
-					code="person.geboren.label" default="Geboren am" /></label></td>
+				<td valign="top" class="name"><label for="dateOfBirth"><g:message
+					code="person.dateOfBirth.label" default="Geboren" /></label></td>
 				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'geboren', 'errors')}">
-				<g:textField name="geboren" value="${personInstance?.geboren}" /></td>
+					class="value ${hasErrors(bean: personInstance, field: 'dateOfBirth', 'errors')}">
+				<g:textField name="dateOfBirth" value="${personInstance?.dateOfBirth}" /></td>
 			</tr>
 
 			<tr class="prop">
-				<td valign="top" class="name"><label for="gestorben"><g:message
-					code="person.gestorben.label" default="Gestorben am" /></label></td>
+				<td valign="top" class="name"><label for="dateOfDeath"><g:message
+					code="person.dateOfDeath.label" default="Gestorben" /></label></td>
 				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'gestorben', 'errors')}">
-				<g:textField name="gestorben" value="${personInstance?.gestorben}" /></td>
+					class="value ${hasErrors(bean: personInstance, field: 'dateOfDeath', 'errors')}">
+				<g:textField name="dateOfDeath" value="${personInstance?.dateOfDeath}" /></td>
 			</tr>
 
 			<tr class="prop">
@@ -87,11 +86,11 @@
 
 			<tr class="prop">
 				<td valign="top" class="name"><label for="bio"><g:message
-					code="person.biographie.label" default="Biographie" /></label></td>
+					code="person.bio.label" default="Biographie" /></label></td>
 				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'biographie', 'errors')}">
-				<g:textArea name="biographie" cols="40" rows="5"
-					value="${personInstance?.biographie}" /></td>
+					class="value ${hasErrors(bean: personInstance, field: 'bio', 'errors')}">
+				<g:textArea name="bio" cols="40" rows="5"
+					value="${personInstance?.bio}" /></td>
 			</tr>
 
 			<tr class="prop">
@@ -100,7 +99,6 @@
 				<g:if test="${!personInstance?.relations?.isEmpty()}">
 					<td valign="top"
 						class="value ${hasErrors(bean: personInstance, field: 'relations', 'errors')}">
-
 					<ul>
 						<g:each in="${personInstance?.relations?}" var="r">
 							<li><g:link controller="relation" action="show" id="${r.id}">

@@ -22,15 +22,15 @@
                     <thead>
                         <tr>
                         
-                            <g:sortableColumn property="id" title="${message(code: 'person.id.label', default: 'Id')}" />
+                            <g:sortableColumn property="name" title="${message(code: 'person.name.label', default: 'Name')}" />
                         
-                            <g:sortableColumn property="dateOfBirth" title="${message(code: 'person.dateOfBirth.label', default: 'Date Of Birth')}" />
+                            <g:sortableColumn property="dateOfBirth" title="${message(code: 'person.dateOfBirth.label', default: 'Geboren')}" />
                         
-                            <g:sortableColumn property="dateOfDeath" title="${message(code: 'person.dateOfDeath.label', default: 'Date Of Death')}" />
+                            <g:sortableColumn property="dateOfDeath" title="${message(code: 'person.dateOfDeath.label', default: 'Gestorben')}" />
                         
-                            <g:sortableColumn property="bio" title="${message(code: 'person.bio.label', default: 'Bio')}" />
+                            <g:sortableColumn property="bio" title="${message(code: 'person.bio.label', default: 'Biographie')}" />
                         
-                            <g:sortableColumn property="gender" title="${message(code: 'person.gender.label', default: 'Gender')}" />
+                            <%--<g:sortableColumn property="gender" title="${message(code: 'person.gender.label', default: 'Gender')}" />--%>
                         
                         </tr>
                     </thead>
@@ -38,15 +38,15 @@
                     <g:each in="${personInstanceList}" status="i" var="personInstance">
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                         
-                            <td><g:link action="show" id="${personInstance.id}">${fieldValue(bean: personInstance, field: "id")}</g:link></td>
+                            <td><g:link action="show" id="${personInstance.id}">${personInstance.names}</g:link></td>
                         
-                            <td>${fieldValue(bean: personInstance, field: "geboren")}</td>
+                            <td>${fieldValue(bean: personInstance, field: "dateOfBirth")}</td>
                         
-                            <td>${fieldValue(bean: personInstance, field: "gestorben")}</td>
+                            <td>${fieldValue(bean: personInstance, field: "dateOfDeath")}</td>
                         
                             <td>${personInstance.shortBio()}</td>
                         
-                            <td><g:formatBoolean boolean="${personInstance.gender}" /></td>
+							<%-- <td><g:formatBoolean boolean="${personInstance.gender}" /></td>--%>
                         
                         </tr>
                     </g:each>

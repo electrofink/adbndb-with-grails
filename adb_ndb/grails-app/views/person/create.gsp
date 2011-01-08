@@ -30,7 +30,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="dateOfBirth"><g:message code="person.dateOfBirth.label" default="Date Of Birth" /></label>
+                                    <label for="dateOfBirth"><g:message code="person.dateOfBirth.label" default="Geboren" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'dateOfBirth', 'errors')}">
                                     <g:textField name="dateOfBirth" value="${personInstance?.dateOfBirth}" />
@@ -39,7 +39,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="dateOfDeath"><g:message code="person.dateOfDeath.label" default="Date Of Death" /></label>
+                                    <label for="dateOfDeath"><g:message code="person.dateOfDeath.label" default="Gestorben" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'dateOfDeath', 'errors')}">
                                     <g:textField name="dateOfDeath" value="${personInstance?.dateOfDeath}" />
@@ -48,7 +48,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="bio"><g:message code="person.bio.label" default="Bio" /></label>
+                                    <label for="bio"><g:message code="person.bio.label" default="Biographie" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: personInstance, field: 'bio', 'errors')}">
                                     <g:textArea name="bio" cols="40" rows="5" value="${personInstance?.bio}" />

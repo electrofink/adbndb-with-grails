@@ -1,6 +1,7 @@
 package query.util
 
 import groovy.sql.Sql
+
 import de.uni_koeln.hs.*
 
 class ResultObject {
@@ -8,7 +9,7 @@ class ResultObject {
 	def dataSource
 
 	def person = [:]
-	
+
 	ResultObject(dataSource) {
 		this.dataSource = dataSource
 	}
@@ -16,19 +17,18 @@ class ResultObject {
 	def simpleSearch = { q ->
 
 		q.each { eachSearchString ->
-			
+
 			getPersonByName(eachSearchString)
-			
+
 			getPersonByConfession(eachSearchString)
-			
+
 			getPersonByWork(eachSearchString)
 
 			getPersonByLocation(eachSearchString, null, null)
-		
 		}
 		return person
 	}
-	
+
 	def getPersonByName = { searchString ->
 		def name = Name.withCriteria {
 			or {
@@ -43,9 +43,9 @@ class ResultObject {
 			}
 		}
 	}
-	
+
 	def getPersonByConfession = { searchString ->
-	
+
 		def confession = Confession.withCriteria {
 			like('confessionType', "%"+searchString+"%")
 		}
@@ -56,9 +56,9 @@ class ResultObject {
 			}
 		}
 	}
-	
+
 	def getPersonByWork = { searchString ->
-	
+
 		def work = Work.withCriteria {
 			or {
 				like('workTitle', "%"+searchString+"%")
@@ -72,8 +72,8 @@ class ResultObject {
 			}
 		}
 	}
-	
-	def getPersonByLocation = { searchString, begin, end -> 
+
+	def getPersonByLocation = { searchString, begin, end ->
 		def location = Location.withCriteria {
 			or {
 				like('country', "%"+searchString+"%")
@@ -81,17 +81,17 @@ class ResultObject {
 			}
 		}
 		if(location != []) {
-			if (begin != null || end != null) {
-				def person_locations = PersonLocations.withCriteria {
-					or {
-						like('startDate', begin+"%")
-						like('endDate', end+"%")
-					}
-				}
-				def l = retrievePersonByPersonLocations(person_locations)
-			}
-			else
-				def l = retrievePersonByLocation(location)
+			//			if (begin != null || end != null) {
+			//				def person_locations = PersonLocations.withCriteria {
+			//					or {
+			//						like('startDate', begin+"%")
+			//						like('endDate', end+"%")
+			//					}
+			//				}
+			//				def l = retrievePersonByPersonLocations(person_locations)
+			//			}
+			//			else
+			def l = retrievePersonByLocation(location)
 			if(l != []) {
 				l.each {person.put(it, ++person.get(it, 0))}
 			}
@@ -117,7 +117,7 @@ class ResultObject {
 	def locationSearch = { q ->
 		q.each { eachSearchString -> getPersonByLocation(eachSearchString) }
 	}
-	
+
 	def retrievePersonByName =  { name ->
 		def db = new Sql(dataSource)
 		def listOfPersonID = []
@@ -147,7 +147,7 @@ class ResultObject {
 		}
 		return listOfPersonID
 	}
-	
+
 	def retrievePersonByConfession = { confession ->
 		def db = new Sql(dataSource)
 		def listOfPersonID = []

@@ -4,9 +4,9 @@ import util.DateValidator;
 
 class Person {
 
-	String geboren
-	String gestorben
-	String biographie
+	String dateOfBirth
+	String dateOfDeath
+	String bio
 	boolean gender
 
 
@@ -15,24 +15,19 @@ class Person {
 
 	static mapping = {
 		locations joinTable: [name:"person_locations", key: "person_id"]
-		columns {
-			biographie column:'bio'
-			geboren column: 'date_of_birth'
-			gestorben column: 'date_of_death'
-		}
 	}
 
 	static constraints = {
 
-		geboren(nullable:true, validator:{val, obj ->
+		dateOfBirth(nullable:true, validator:{val, obj ->
 			return DateValidator.validate(val, false)
 		})
 
-		gestorben(nullable:true, validator:{val, obj ->
+		dateOfDeath(nullable:true, validator:{val, obj ->
 			return DateValidator.validate(val, true)
 		})
 
-		biographie(maxSize:100000, nullable: true)
+		bio(maxSize:100000, nullable: true)
 	}
 
 	String toString () {
@@ -40,11 +35,11 @@ class Person {
 	}
 
 	String shortBio() {
-		if (biographie == null)
+		if (bio == null)
 			return ""
-		else if (biographie.length() > 360)
-			return "${biographie.substring(0, 360)}"
+		else if (bio.length() > 360)
+			return "${bio.substring(0, 360)}..."
 		else
-			return "${biographie}"
+			return "${bio}"
 	}
 }

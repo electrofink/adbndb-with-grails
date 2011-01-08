@@ -16,7 +16,8 @@
 			</tr>
 			<tr class="prop">
 				<td valign="top" class="name"><label for="gender">Geschlecht</label></td>
-				<td valign="top" class="value"><g:textField name="gender" /></td>
+				<td valign="top" class="value">
+				<g:checkBox name="gender" value="${false}" /></td>
 			</tr>
 			<tr class="prop">
 				<td valign="top" class="name"><label for="birth">Geburtsdatum</label></td>
