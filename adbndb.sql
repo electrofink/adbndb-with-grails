@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.3.8.1
+-- version 3.3.9
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jan 03, 2011 at 02:44 PM
+-- Generation Time: Jan 08, 2011 at 06:20 PM
 -- Server version: 5.1.53
--- PHP Version: 5.3.4-pl0-gentoo
+-- PHP Version: 5.3.4-pl1-gentoo
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -89,8 +89,8 @@ CREATE TABLE IF NOT EXISTS `person` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `version` bigint(20) NOT NULL,
   `bio` longtext,
-  `date_of_birth` varchar(255) DEFAULT NULL,
-  `date_of_death` varchar(255) DEFAULT NULL,
+  `date_of_birth` date DEFAULT NULL,
+  `date_of_death` date DEFAULT NULL,
   `gender` bit(1) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;

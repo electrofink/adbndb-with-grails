@@ -1,7 +1,7 @@
 package query.util
 
 import groovy.sql.Sql
-
+import java.text.SimpleDateFormat
 import de.uni_koeln.hs.*
 
 class ResultObject {
@@ -37,7 +37,7 @@ class ResultObject {
 			}
 		}
 		if(name != []) {
-			def n = retrievePersonByName(name)
+			def n = retrievePersonIdByName(name)
 			if(n != []) {
 				n.each {person.put(it, ++person.get(it, 0))}
 			}
@@ -50,7 +50,7 @@ class ResultObject {
 			like('confessionType', "%"+searchString+"%")
 		}
 		if(confession != []) {
-			def c = retrievePersonByConfession(confession)
+			def c = retrievePersonIdByConfession(confession)
 			if(c != []) {
 				c.each {person.put(it, ++person.get(it, 0))}
 			}
@@ -80,18 +80,40 @@ class ResultObject {
 				like('city', "%"+searchString+"%")
 			}
 		}
+		def parsedBegin, parsedEnd
+		def sdf = new SimpleDateFormat("yyyy-MM-dd")
+
 		if(location != []) {
-			//			if (begin != null || end != null) {
-			//				def person_locations = PersonLocations.withCriteria {
-			//					or {
-			//						like('startDate', begin+"%")
-			//						like('endDate', end+"%")
-			//					}
-			//				}
-			//				def l = retrievePersonByPersonLocations(person_locations)
-			//			}
-			//			else
-			def l = retrievePersonByLocation(location)
+			def l
+			// If no date is specified, don't search with it (simpleSearch).
+			if (begin == null && end == null)
+				l = retrievePersonIdByLocation(location)
+			// At least one of them is not null
+			else {
+				
+				// In case only one of them is given...
+				if (begin != null)
+					parsedBegin = sdf.parse(begin)
+				else
+					parsedBegin = new Date()
+				// ... set the other to now.
+				if (end != null)
+					parsedEnd = sdf.parse(end)
+				else
+					parsedEnd = new Date()
+				
+				// Only sensible input, please.	
+				if (parsedEnd > parsedBegin) {
+					def person_locations = PersonLocations.withCriteria {
+						and {
+							between('startDate', parsedBegin, parsedEnd)
+							between('endDate', parsedBegin, parsedEnd)
+						}
+					}
+					l = retrievePersonIdByPersonLocations(person_locations)
+				}
+			}
+
 			if(l != []) {
 				l.each {person.put(it, ++person.get(it, 0))}
 			}
@@ -114,11 +136,11 @@ class ResultObject {
 		q.each { eachSearchString -> getPersonByWork(eachSearchString) }
 	}
 
-	def locationSearch = { q ->
-		q.each { eachSearchString -> getPersonByLocation(eachSearchString) }
+	def locationSearch = { location, begin, end ->
+		getPersonByLocation(location, begin, end)
 	}
 
-	def retrievePersonByName =  { name ->
+	def retrievePersonIdByName =  { name ->
 		def db = new Sql(dataSource)
 		def listOfPersonID = []
 		name.each {
@@ -128,7 +150,7 @@ class ResultObject {
 		return listOfPersonID
 	}
 
-	def retrievePersonByLocation = { location ->
+	def retrievePersonIdByLocation = { location ->
 		def db = new Sql(dataSource)
 		def listOfPersonID = []
 		location.each {
@@ -138,7 +160,7 @@ class ResultObject {
 		return listOfPersonID
 	}
 
-	def retrievePersonByPersonLocations = { person_locations ->
+	def retrievePersonIdByPersonLocations = { person_locations ->
 		def db = new Sql(dataSource)
 		def listOfPersonID = []
 		person_locations.each {
@@ -148,7 +170,7 @@ class ResultObject {
 		return listOfPersonID
 	}
 
-	def retrievePersonByConfession = { confession ->
+	def retrievePersonIdByConfession = { confession ->
 		def db = new Sql(dataSource)
 		def listOfPersonID = []
 		confession.each {
@@ -158,7 +180,7 @@ class ResultObject {
 		return listOfPersonID
 	}
 
-	def retrievePersonByWork = { work ->
+	def retrievePersonIdByWork = { work ->
 		def db = new Sql(dataSource)
 		def listOfPersonID = []
 		work.each {

@@ -4,8 +4,8 @@ import util.DateValidator;
 
 class Person {
 
-	String dateOfBirth
-	String dateOfDeath
+	java.sql.Date dateOfBirth
+	java.sql.Date dateOfDeath
 	String bio
 	boolean gender
 
