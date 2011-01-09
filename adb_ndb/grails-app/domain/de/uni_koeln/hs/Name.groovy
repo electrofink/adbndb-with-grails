@@ -4,17 +4,19 @@ class Name {
 	
 	String firstName
 	String lastName
+	String other
 	
 	static belongsTo = [person:Person]
 	
 	static constraints = {
 		person(nullable:false)
-		firstName(blank:false)
-		lastName(blank:false)
+		firstName(nullable:true)
+		lastName(nullable:true)
+		other(nullable:true)
 	}
 	
 	@Override
 	String toString() {
-		return lastName+", "+firstName
+		return "${lastName}, ${firstName}"
 	}
 }
