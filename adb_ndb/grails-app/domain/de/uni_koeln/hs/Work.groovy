@@ -1,6 +1,6 @@
 package de.uni_koeln.hs
 
-import util.DateValidator;
+import util.DateUtil;
 
 class Work {
 	
@@ -16,7 +16,7 @@ class Work {
 		subtitle(blank:true)
 		
 		releaseDate(blank: true, validator:{val, obj ->
-			return DateValidator.validate(val, true)
+			return DateUtil.parseToDate(val, true)
 		})
 	}
 	

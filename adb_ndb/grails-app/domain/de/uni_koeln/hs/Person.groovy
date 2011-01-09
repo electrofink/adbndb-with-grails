@@ -1,14 +1,19 @@
 package de.uni_koeln.hs
 
-import util.DateValidator;
+import util.DateUtil;
 
 class Person {
 
-	java.sql.Date dateOfBirth
-	java.sql.Date dateOfDeath
+	java.util.Date dateOfBirth
+	java.util.Date dateOfDeath
+	
+	String dateBirth
+	String dateDeath
+	
 	String bio
 	boolean gender
 
+	static transients = ["dateBirth", "dateDeath"]
 
 	static hasMany = [names:Name, relations:Relation, locations:Location, confessions:Confession,
 		works:Work]
@@ -18,15 +23,8 @@ class Person {
 	}
 
 	static constraints = {
-
-		dateOfBirth(nullable:true, validator:{val, obj ->
-			return DateValidator.validate(val, false)
-		})
-
-		dateOfDeath(nullable:true, validator:{val, obj ->
-			return DateValidator.validate(val, true)
-		})
-
+		dateOfBirth(nullable:true)
+		dateOfDeath(nullable:true)
 		bio(maxSize:100000, nullable: true)
 	}
 

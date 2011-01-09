@@ -61,19 +61,19 @@
 			</tr>
 
 			<tr class="prop">
-				<td valign="top" class="name"><label for="dateOfBirth"><g:message
-					code="person.dateOfBirth.label" default="Geboren" /></label></td>
+				<td valign="top" class="name"><label for="dateBirth"><g:message
+					code="person.dateBirth.label" default="Geboren" /></label></td>
 				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'dateOfBirth', 'errors')}">
-				<g:textField name="dateOfBirth" value="${personInstance?.dateOfBirth}" /></td>
+					class="value ${hasErrors(bean: personInstance, field: 'dateBirth', 'errors')}">
+				<g:textField name="dateBirth" value="${personInstance?.dateBirth}" /></td>
 			</tr>
 
 			<tr class="prop">
-				<td valign="top" class="name"><label for="dateOfDeath"><g:message
-					code="person.dateOfDeath.label" default="Gestorben" /></label></td>
+				<td valign="top" class="name"><label for="dateDeath"><g:message
+					code="person.dateDeath.label" default="Gestorben" /></label></td>
 				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'dateOfDeath', 'errors')}">
-				<g:textField name="dateOfDeath" value="${personInstance?.dateOfDeath}" /></td>
+					class="value ${hasErrors(bean: personInstance, field: 'dateDeath', 'errors')}">
+				<g:textField name="dateDeath" value="${personInstance?.dateDeath}" /></td>
 			</tr>
 
 			<tr class="prop">

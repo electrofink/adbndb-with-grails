@@ -1,4 +1,5 @@
 <%@ page import="de.uni_koeln.hs.Person" %>
+<%@ page import="util.DateUtil" %>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -32,12 +33,14 @@
                     
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="person.dateOfBirth.label" default="Geboren" /></td>
-                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "dateOfBirth")}</td>
+                            <g:set  var="dateBirth" value="${DateUtil.getStringFromDate(personInstance?.dateOfBirth)}" scope="page" />
+                            <td valign="top" class="value">${dateBirth}</td>
                         </tr>
                     
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="person.dateOfDeath.label" default="Gestorben" /></td>
-                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "dateOfDeath")}</td>
+                            <g:set  var="dateDeath" value="${DateUtil.getStringFromDate(personInstance?.dateOfDeath)}" scope="page" />
+                            <td valign="top" class="value">${dateDeath}</td>
                         </tr>
                         
                          <tr class="prop">
@@ -82,7 +85,7 @@
                             <td valign="top" style="text-align: left;" class="value">
                                 <g:each in="${personInstance.relations}" var="r">
                                 	<g:if test="${r?.directRelation}">
-                                		<g:set var="direct" value="verwandt"></g:set>
+                                		<g:set var="direct" value="Verwandschaft"></g:set>
                                 	</g:if>
                                 	<g:else>
                                 		<g:set var="direct" value="Bekanntschaft"></g:set>

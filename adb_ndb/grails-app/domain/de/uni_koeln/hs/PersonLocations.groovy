@@ -1,6 +1,6 @@
 package de.uni_koeln.hs
 
-import util.DateValidator;
+import util.DateUtil;
 
 class PersonLocations {
 	
@@ -17,11 +17,11 @@ class PersonLocations {
 	
 	static constraints = {
 		startDate(nullable: true, validator:{val, obj ->
-			return DateValidator.validate(val, false)
+			return DateUtil.parseToDate(val, false)
 		})
 		
 		endDate(nullable: true, validator:{val, obj ->
-			return DateValidator.validate(val, false)
+			return DateUtil.parseToDate(val, false)
 		})
 
 	}
