@@ -1,5 +1,5 @@
-
 <%@ page import="de.uni_koeln.hs.Person" %>
+<%@ page import="util.DateUtil" %>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -39,10 +39,20 @@
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                         
                             <td><g:link action="show" id="${personInstance.id}">${personInstance.names}</g:link></td>
-                        
-                            <td>${fieldValue(bean: personInstance, field: "dateOfBirth")}</td>
-                        
-                            <td>${fieldValue(bean: personInstance, field: "dateOfDeath")}</td>
+                        	
+                        	<g:if test="${personInstance?.dateOfBirth != null}">
+                           		<g:set  var="dateBirth" value="${DateUtil.getStringFromDate(personInstance?.dateOfBirth)}" scope="page" />
+                           		<td valign="top" class="value">${dateBirth}</td>
+                           	</g:if><g:else>
+                           		<td valign="top" class="value">unbekannt</td>
+                           	</g:else>
+                        	
+                        	<g:if test="${personInstance?.dateOfDeath != null}">
+                           		<g:set  var="dateDeath" value="${DateUtil.getStringFromDate(personInstance?.dateOfDeath)}" scope="page" />
+                           		<td valign="top" class="value">${dateDeath}</td>
+                           	</g:if><g:else>
+                           		<td valign="top" class="value">unbekannt</td>
+                           	</g:else>
                         
                             <td>${personInstance.shortBio()}</td>
                         

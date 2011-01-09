@@ -33,14 +33,22 @@
                     
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="person.dateOfBirth.label" default="Geboren" /></td>
-                            <g:set  var="dateBirth" value="${DateUtil.getStringFromDate(personInstance?.dateOfBirth)}" scope="page" />
-                            <td valign="top" class="value">${dateBirth}</td>
+                            <g:if test="${personInstance?.dateOfBirth != null}">
+                           		<g:set  var="dateBirth" value="${DateUtil.getStringFromDate(personInstance?.dateOfBirth)}" scope="page" />
+                           		<td valign="top" class="value">${dateBirth}</td>
+                           	</g:if><g:else>
+                           		<td valign="top" class="value">unbekannt</td>
+                           	</g:else>
                         </tr>
                     
                         <tr class="prop">
                             <td valign="top" class="name"><g:message code="person.dateOfDeath.label" default="Gestorben" /></td>
-                            <g:set  var="dateDeath" value="${DateUtil.getStringFromDate(personInstance?.dateOfDeath)}" scope="page" />
-                            <td valign="top" class="value">${dateDeath}</td>
+                            <g:if test="${personInstance?.dateOfDeath != null}">
+                           		<g:set  var="dateDeath" value="${DateUtil.getStringFromDate(personInstance?.dateOfDeath)}" scope="page" />
+                           		<td valign="top" class="value">${dateDeath}</td>
+                           	</g:if><g:else>
+                           		<td valign="top" class="value">unbekannt</td>
+                           	</g:else>
                         </tr>
                         
                          <tr class="prop">

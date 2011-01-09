@@ -100,7 +100,7 @@ class PersonController {
 		}
 
 		// Case dateOfDeath is before dateOfBirth
-		if(date_death != null)
+		if(date_death != null && date_birth != null)
 			if(date_birth.after(date_death)) {
 				def arg0 = DateUtil.getStringFromDate(date_birth)
 				def arg2 = DateUtil.getStringFromDate(date_death)
