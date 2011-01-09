@@ -11,8 +11,8 @@
     <body>
         <div class="nav">
             <span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
-            <span class="menuButton"><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></span>
-            <span class="menuButton"><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></span>
+            <span class="menuButton"><g:link class="list" controller="person" action="list"><g:message code="person.list.label" args="[entityName]" /></g:link></span>
+            <span class="menuButton"><g:link class="create" controller="person" action="create"><g:message code="person.new.label" args="[entityName]" /></g:link></span>
         </div>
         <div class="body">
             <h1><g:message code="default.edit.label" args="[entityName]" /></h1>
@@ -42,7 +42,7 @@
                             
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="firstName"><g:message code="name.firstName.label" default="First Name" /></label>
+                                  <label for="firstName"><g:message code="name.firstName.label" default="Vorname" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: nameInstance, field: 'firstName', 'errors')}">
                                     <g:textField name="firstName" value="${nameInstance?.firstName}" />
@@ -51,7 +51,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="lastName"><g:message code="name.lastName.label" default="Last Name" /></label>
+                                  <label for="lastName"><g:message code="name.lastName.label" default="Nachname" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: nameInstance, field: 'lastName', 'errors')}">
                                     <g:textField name="lastName" value="${nameInstance?.lastName}" />

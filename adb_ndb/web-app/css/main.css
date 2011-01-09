@@ -302,12 +302,19 @@ th.desc a {
 	width: 450;
 }
 
-.search{
-	background: transparent url(../images/skin/search.png) 5px 50%
-		no-repeat;
-	padding-left: 28px;
+.search {
+	background: transparent url(../images/skin/search.png) 5px 50% no-repeat;
+	padding-left: 35px;
+	margin-left: 5px;
 }
 
 .searchButton {
 	border: 0px;
+}
+
+.smallLink {
+	font-size: x-small;
+	background: transparent url(../images/skin/arrow_85.gif) 2px 50%
+		no-repeat;
+	padding-left: 15px;
 }

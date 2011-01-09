@@ -76,22 +76,22 @@ class NameController {
 
 	def delete = {
 		def nameInstance = Name.get(params.id)
+		flash.put("person_id", nameInstance.person.id)
 		if (nameInstance) {
 			try {
 				def arg0 = "'" + nameInstance.lastName + ', ' + nameInstance.firstName + "'"
-				flash.put("person", nameInstance.person)
 				nameInstance.delete(flush: true)
 				flash.message = "${message(code: 'default.deleted.message', args: [message(code: 'name.label', default: 'Name'), arg0])}"
-				redirect(controller: "person", action: "edit", id: flash.person.id)
+				redirect(controller: "person", action: "edit", id: flash.person_id)
 			}
 			catch (org.springframework.dao.DataIntegrityViolationException e) {
 				flash.message = "${message(code: 'default.not.deleted.message', args: [message(code: 'name.label', default: 'Name'), params.id])}"
-				redirect(controller: "person", action: "edit", id: flash.person.id)
+				redirect(controller: "person", action: "edit", id: flash.person_id)
 			}
 		}
 		else {
 			flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'name.label', default: 'Name'), params.id])}"
-			redirect(controller: "person", action: "edit", id: flash.person.id)
+			redirect(controller: "person", action: "edit", id: flash.person_id)
 		}
 	}
 

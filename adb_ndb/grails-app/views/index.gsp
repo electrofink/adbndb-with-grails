@@ -64,38 +64,34 @@ h2 {
 	margin: 0;
 	width: auto;
 }
+
 </style>
 </head>
 	<body>
 		<div class="nav">
-			<span class="menuButton">
-				<g:link	class="list" controller="person" action="list">
-					<g:message code="person.list.label" args="[entityName]" />
-				</g:link>
-			</span> 
-			<span class="menuButton">
-				<g:link class="create" controller="person" action="create">
-					<g:message code="person.new.label" args="[entityName]" />
-				</g:link>
-			</span>
-		</div>
+            <span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
+            <span class="menuButton"><g:link class="list" controller="person" action="list"><g:message code="person.list.label" args="[entityName]" /></g:link></span>
+            <span class="menuButton"><g:link class="create" controller="person" action="create"><g:message code="person.new.label" args="[entityName]" /></g:link></span>
+        </div>
 		
 		<div id="pageBody">
-			<g:form controller="search">
-				<div class="simpleDialog">
+			<div class="simpleDialog">
+				<g:form controller="search">
 					<label for="search">Einfache Suche </label>
 					<g:textField name="query" /> 
 					<span class="searchButton">
 						<g:actionSubmit	class="search" value="Person(en) finden" action="result" />
 					</span>
-				</div>
-			</g:form>
+				</g:form>
+				<span class="smallLink"><g:link controller="advancedSearch" action="index">Erweiterte Suche</g:link></span>
+			</div>
 			
 			<div id="welcome">
 				<h1>Welcome to the ADB/NDB fake...</h1>
 				<p>A university project to implement a basic structure for the
 				ADB/NDB, a german biography database</p>
 			</div>
+			
 		</div>
 	</body>
 </html>
