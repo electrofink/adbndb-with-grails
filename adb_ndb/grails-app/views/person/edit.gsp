@@ -1,5 +1,3 @@
-
-
 <%@ page import="de.uni_koeln.hs.Person"%>
 <html>
 <head>

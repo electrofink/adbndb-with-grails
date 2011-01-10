@@ -77,7 +77,7 @@ h2 {
 		<div id="pageBody">
 			<div class="simpleDialog">
 				<g:form controller="search">
-					<label for="search">Einfache Suche </label>
+					<label for="search">Einfache Suche</label>
 					<g:textField name="query" /> 
 					<span class="searchButton">
 						<g:actionSubmit	class="search" value="Person(en) finden" action="result" />
@@ -89,7 +89,11 @@ h2 {
 			<div id="welcome">
 				<h1>Welcome to the ADB/NDB fake...</h1>
 				<p>A university project to implement a basic structure for the
-				ADB/NDB, a german biography database</p>
+				ADB/NDB, a german biography database. For more information about the project please visit:</p>
+				<ul>
+					<li><a href="https://github.com/semkath/adbndb-with-grails/">Repository on Github</a></li>
+					<li><a href="http://www.deutsche-biographie.de/index.html">Official ADB/NDB site</a></li>
+				</ul>
 			</div>
 			
 		</div>

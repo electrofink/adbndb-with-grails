@@ -26,6 +26,10 @@ a:link,a:visited,a:hover {
 	text-decoration: none;
 }
 
+p {
+	padding: 5px 0 5px 0;
+}
+
 h1 {
 	color: #48802c;
 	font-weight: normal;
@@ -167,7 +171,7 @@ th {
 }
 
 th a:link,th a:visited,th a:hover {
-	color: #333;
+	color: #000;
 	display: block;
 	font-size: 10px;
 	text-decoration: none;
@@ -188,11 +192,11 @@ th.desc a {
 }
 
 .odd {
-	background: #f7f7f7;
+	background: #fff;
 }
 
 .even {
-	background: #fff;
+	background: #ccff99;
 }
 
 /* LIST */
@@ -205,7 +209,7 @@ th.desc a {
 }
 
 .list th:hover,.list tr:hover {
-	background: #b2d1ff;
+	background: #b2cce5;
 }
 
 /* PAGINATION */

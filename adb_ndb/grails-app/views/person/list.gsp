@@ -23,15 +23,21 @@
                     <thead>
                         <tr>
                         
-                            <g:sortableColumn property="name" title="${message(code: 'person.name.label', default: 'Name')}" />
+                        	<th>Details</th>
+                        	
+                            <g:sortableColumn property="id" title="${message(code: 'person.id.label', default: 'ID')}" />
+                            
+                            <%-- Column 'Name' is not sortable because property attribute refers only to fields in Person domain
+                            <g:sortableColumn property="names" title="${message(code: 'person.name.label', default: 'Name')}" />--%>
+                            <th>Name</th>
                         
                             <g:sortableColumn property="dateOfBirth" title="${message(code: 'person.dateOfBirth.label', default: 'Geboren')}" />
                         
                             <g:sortableColumn property="dateOfDeath" title="${message(code: 'person.dateOfDeath.label', default: 'Gestorben')}" />
                         
-                            <g:sortableColumn property="bio" title="${message(code: 'person.bio.label', default: 'Biographie')}" />
-                        
-                            <%--<g:sortableColumn property="gender" title="${message(code: 'person.gender.label', default: 'Gender')}" />--%>
+                            <g:sortableColumn property="gender" title="${message(code: 'person.gender.label', default: 'Geschlecht')}" />
+                            
+                            <th>Biographie</th>
                         
                         </tr>
                     </thead>
@@ -39,26 +45,52 @@
                     <g:each in="${personInstanceList}" status="i" var="personInstance">
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                         
-                            <td><g:link action="show" id="${personInstance.id}">${personInstance.names}</g:link></td>
+                       		 <td valign="top">
+                        		<span class="smallLink"><g:link action="show" id="${personInstance?.id}">zu den Details</g:link></span>                        	
+                        	</td>
+                        
+                        	<td valign="top" style="width:10px;">
+                        		${personInstance?.id}                        	
+                        	</td>
+                        
+                            <td valign="top" class="value">
+								<g:each in="${personInstance?.names?}" var="n">
+									<%--<g:link controller="name" action="edit" id="${n.id}" params="['person.id': personInstance?.id]">--%>
+										${n?.encodeAsHTML()} <br>
+									<%--</g:link>--%>
+								</g:each>
+	                            <%--<g:link action="show" id="${personInstance.id}">${personInstance.names}</g:link>--%>
+                            </td>
                         	
-                        	<g:if test="${personInstance?.dateOfBirth != null}">
-                           		<g:set  var="dateBirth" value="${DateUtil.getStringFromDate(personInstance?.dateOfBirth)}" scope="page" />
-                           		<td valign="top" class="value">${dateBirth}</td>
-                           	</g:if><g:else>
-                           		<td valign="top" class="value">unbekannt</td>
-                           	</g:else>
-                        	
-                        	<g:if test="${personInstance?.dateOfDeath != null}">
-                           		<g:set  var="dateDeath" value="${DateUtil.getStringFromDate(personInstance?.dateOfDeath)}" scope="page" />
-                           		<td valign="top" class="value">${dateDeath}</td>
-                           	</g:if><g:else>
-                           		<td valign="top" class="value">unbekannt</td>
-                           	</g:else>
+                        	<td valign="top" class="value">
+	                        	<g:if test="${personInstance?.dateOfBirth != null}">
+	                           		<g:set  var="dateBirth" value="${DateUtil.getStringFromDate(personInstance?.dateOfBirth)}" scope="page" />
+	                           		${dateBirth}
+	                           	</g:if><g:else>
+	                           		unbekannt
+	                           	</g:else>
+                           	</td>
+                           	
+                        	<td valign="top" class="value">
+	                        	<g:if test="${personInstance?.dateOfDeath != null}">
+	                           		<g:set  var="dateDeath" value="${DateUtil.getStringFromDate(personInstance?.dateOfDeath)}" scope="page" />
+	                           		${dateDeath}
+	                           	</g:if><g:else>
+	                           		unbekannt
+	                           	</g:else>
+                           	</td>
+                           	
+                           	<td valign="top" class="value">
+	                            <g:if test="${personInstance?.gender}">
+	                            	m&auml;nnlich
+	                            </g:if>
+	                            <g:else>
+	    							weiblich
+								</g:else>
+							</td>
                         
-                            <td>${personInstance.shortBio()}</td>
-                        
-							<%-- <td><g:formatBoolean boolean="${personInstance.gender}" /></td>--%>
-                        
+                            <td style="width: 100%">${personInstance.shortBio()}</td>
+                            
                         </tr>
                     </g:each>
                     </tbody>

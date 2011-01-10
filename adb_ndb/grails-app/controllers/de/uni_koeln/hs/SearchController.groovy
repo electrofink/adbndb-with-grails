@@ -4,26 +4,21 @@ import query.util.ResultObject;
 
 class SearchController {
 
-	static allowedMethods = [simpleSearch: "POST"]
-	
-	def dataSource
+	static allowedMethods = [result: "POST"]
 
-	def index = { }
+	def dataSource
 
 	def result = {
 		def q = params.query.split()
 		ResultObject ro = new ResultObject(dataSource)
 		def sortedList = sortByRelevance(ro.simpleSearch(q))
-		// [personIDs : sortedList.keySet()]
-		
 		def personInstanceList = []
-		
 		sortedList.keySet().each {
 			def p = Person.get(it)
 			personInstanceList.add(p)
 		}
-		[personInstanceList : personInstanceList]
-	
+		params.max = Math.min(params.max ? params.int('max') : 10, 100)
+		[personInstanceList: personInstanceList, personInstanceTotal: personInstanceList.size()]
 	}
 
 
