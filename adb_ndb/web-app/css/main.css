@@ -31,7 +31,7 @@ p {
 }
 
 h1 {
-	color: #48802c;
+/*	color: #48802c;*/
 	font-weight: normal;
 	font-size: 16px;
 	margin: .8em 0 .3em 0;
@@ -92,29 +92,29 @@ input:focus,select:focus,textarea:focus {
 }
 
 .menuButton a.home {
-	background: url(../images/skin/house.png) center left no-repeat;
+	background: url(../images/icons/home_16x16.png) center left no-repeat;
 	color: #333;
 	padding-left: 25px;
 }
 
 .menuButton a.list {
-	background: url(../images/skin/database_table.png) center left no-repeat;
+	background: url(../images/icons/read_more_16x16.png) center left no-repeat;
 	color: #333;
 	padding-left: 25px;
 }
 
 .menuButton a.create {
-	background: url(../images/skin/database_add.png) center left no-repeat;
+	background: url(../images/icons/plus_16x16.png) center left no-repeat;
 	color: #333;
 	padding-left: 25px;
 }
 
 /* MESSAGES AND ERRORS */
 .message {
-	background: #f3f8fc url(../images/skin/information.png) 8px 50%
+	background: #f3f8fc url(../images/icons/info_8x16.png) 8px 50%
 		no-repeat;
 	border: 1px solid #b2d1ff;
-	color: #006dba;
+	color: #000;
 	margin: 10px 0 5px 0;
 	padding: 5px 5px 5px 30px
 }
@@ -122,7 +122,7 @@ input:focus,select:focus,textarea:focus {
 div.errors {
 	background: #fff3f3;
 	border: 1px solid red;
-	color: #cc0000;
+	color: #000;
 	margin: 10px 0 5px 0;
 	padding: 5px 0 5px 0;
 }
@@ -133,7 +133,7 @@ div.errors ul {
 }
 
 div.errors li {
-	background: url(../images/skin/exclamation.png) 8px 0% no-repeat;
+	background: url(../images/icons/x_alt_16x16.png) 8px 0% no-repeat;
 	line-height: 16px;
 	padding-left: 30px;
 }
@@ -288,19 +288,25 @@ th.desc a {
 }
 
 .buttons input.delete {
-	background: transparent url(../images/skin/database_delete.png) 5px 50%
+	background: transparent url(../images/icons/x_14x14.png) 5px 50%
 		no-repeat;
 	padding-left: 28px;
 }
 
 .buttons input.edit {
-	background: transparent url(../images/skin/database_edit.png) 5px 50%
+	background: transparent url(../images/icons/cog_alt_16x16.png) 5px 50%
 		no-repeat;
 	padding-left: 28px;
 }
 
 .buttons input.save {
-	background: transparent url(../images/skin/database_save.png) 5px 50%
+	background: transparent url(../images/icons/check_16x13.png) 5px 50%
+		no-repeat;
+	padding-left: 28px;
+}
+
+.buttons input.update {
+	background: transparent url(../images/icons/loop_16x16.png) 5px 50%
 		no-repeat;
 	padding-left: 28px;
 }
@@ -315,7 +321,7 @@ th.desc a {
 }
 
 .buttons input.search {
-	background: transparent url(../images/skin/search.png) 5px 50% no-repeat;
+	background: transparent url(../images/icons/magnifying_glass_alt_16x16.png) 5px 50% no-repeat;
 	padding-left: 25px;
 }
 
@@ -332,14 +338,12 @@ th.desc a {
 
 .complexDialog { /*margin: 0 auto;*/
 	margin: 0;
-	padding: 0 1.5em;
 	text-align: left;
 	width: 350px;
 }
 
 .complexDialog2 { /*margin: 0 auto;*/
 	margin: 0;
-	padding: 0 1.5em;
 	text-align: left;
 	width: 600px;
 }
@@ -398,4 +402,18 @@ label {
 	padding: 5px 0;
 	margin: 0;
 	width: auto;
+}
+
+/*COLUMNS in person/edit.gsp*/
+#columnOne {
+	float:left;
+}
+#columnTwo {
+	float:left;
+	width: 150px;
+}
+#columnThree {
+	width:300px;
+	text-align: right;
+	float: left;
 }
