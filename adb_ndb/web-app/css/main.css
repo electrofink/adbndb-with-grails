@@ -42,11 +42,12 @@ ul {
 }
 
 input,select,textarea {
-	background-color: #fcfcfc;
+	background-color: #fefefe;
 	border: 1px solid #ccc;
 	font: 11px verdana, arial, helvetica, sans-serif;
 	margin: 2px 0;
 	padding: 2px 4px;
+	color: #333;
 }
 
 select {
@@ -54,13 +55,16 @@ select {
 }
 
 textarea {
-	width: 450px;
+	width: 570;
 	height: 200px;
 	vertical-align: top;
+	padding: 0 0.5em;
+	margin: 0 0 8px 8px;
 }
 
 input:focus,select:focus,textarea:focus {
 	border: 1px solid #b2d1ff;
+	background-color: #efefef;
 }
 
 .body {
@@ -134,6 +138,10 @@ div.errors li {
 	padding-left: 30px;
 }
 
+div input.errors {
+	border: 1px solid red;
+}
+
 td.errors select {
 	border: 1px solid red;
 }
@@ -196,7 +204,7 @@ th.desc a {
 }
 
 .even {
-	background: #ccff99;
+	background: #eee;
 }
 
 /* LIST */
@@ -306,14 +314,13 @@ th.desc a {
 	width: 450;
 }
 
-.search {
+.buttons input.search {
 	background: transparent url(../images/skin/search.png) 5px 50% no-repeat;
-	padding-left: 35px;
-	margin-left: 5px;
+	padding-left: 25px;
 }
 
 .searchButton {
-	border: 0px;
+	border: solid 1px #efefef;
 }
 
 .smallLink {
@@ -321,4 +328,74 @@ th.desc a {
 	background: transparent url(../images/skin/arrow_85.gif) 2px 50%
 		no-repeat;
 	padding-left: 15px;
+}
+
+.complexDialog { /*margin: 0 auto;*/
+	margin: 0;
+	padding: 0 1.5em;
+	text-align: left;
+	width: 350px;
+}
+
+.complexDialog2 { /*margin: 0 auto;*/
+	margin: 0;
+	padding: 0 1.5em;
+	text-align: left;
+	width: 600px;
+}
+
+fieldset {
+	border: solid 1px #999;
+	margin: 1em 0;
+}
+
+fieldset div {
+	display: block;
+	margin-bottom: 0.5em;
+	padding: 0;
+}
+
+fieldset div input, 
+fieldset div select {
+	padding: 1px;
+	width: 150px;
+}
+
+legend {
+	background: none repeat scroll 0 0 transparent;
+	color: #999;
+	font-size: 1.2em; font-weight : bold;
+	margin: 0;
+	padding: 0 1em 1em;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+label {
+	float: left;
+	padding: 0 1em;
+	text-align: left;
+	width: 100px;
+}
+
+#submit {
+	clear: both;
+	padding-top: 1em;
+	text-align: center;
+}
+
+#pageBody {
+	margin-left: 20px;
+}
+
+.simpleDialog {
+	padding: 15px 0;
+	margin: 0;
+	width: auto;
+}
+
+#welcome {
+	padding: 5px 0;
+	margin: 0;
+	width: auto;
 }

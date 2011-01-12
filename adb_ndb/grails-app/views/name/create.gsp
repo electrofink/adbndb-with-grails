@@ -1,5 +1,3 @@
-
-
 <%@ page import="de.uni_koeln.hs.Name" %>
 <html>
     <head>
@@ -24,54 +22,29 @@
                 <g:renderErrors bean="${nameInstance}" as="list" />
             </div>
             </g:hasErrors>
-            <g:form action="save" >
-                <div class="dialog">
-                    <table>
-                        <tbody>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="firstName"><g:message code="name.firstName.label" default="Vorname" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: nameInstance, field: 'firstName', 'errors')}">
-                                    <g:textField name="firstName" value="${nameInstance?.firstName}" />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="lastName"><g:message code="name.lastName.label" default="Nachname" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: nameInstance, field: 'lastName', 'errors')}">
-                                    <g:textField name="lastName" value="${nameInstance?.lastName}" />
-                                </td>
-                            </tr>
-                            
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="other"><g:message code="name.other.label" default="Anderer" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: nameInstance, field: 'other', 'errors')}">
-                                    <g:textField name="other" value="${nameInstance?.other}" />
-                                </td>
-                            </tr>
-                            
-                             <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="person"><g:message code="name.person.label" default="Person" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: nameInstance, field: 'person', 'errors')}">
-                                    <g:select name="person.id" from="${de.uni_koeln.hs.Person.list()}" optionKey="id" value="${nameInstance?.person?.id}"  />
-                                </td>
-                            </tr>
-                        
-                        </tbody>
-                    </table>
-                </div>
-                <div class="buttons">
-                    <span class="button"><g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" /></span>
-                </div>
-            </g:form>
-        </div>
+            <div class="complexDialog">
+				<g:form action="save">
+                 	<g:hiddenField name="person.id" value="${nameInstance?.person?.id}"  />
+					<fieldset>
+						<legend>Namen anlegen</legend>
+							<div>
+								<label for="firstName"><g:message code="name.firstName.label" default="Vorname" /></label>
+								<g:textField class="value ${hasErrors(bean: nameInstance, field: 'firstName', 'errors')}" name="firstName" value="${nameInstance?.firstName}" />
+							</div>
+							<div>
+								<label for="lastName"><g:message code="name.lastName.label" default="Nachname" /></label>
+								<g:textField class="value ${hasErrors(bean: nameInstance, field: 'lastName', 'errors')}" name="lastName" value="${nameInstance?.lastName}" />
+							</div>
+							<div>
+								<label for="other"><g:message code="name.other.label" default="Anderer" /></label>
+								<g:textField class="value ${hasErrors(bean: nameInstance, field: 'other', 'errors')}" name="other" value="${nameInstance?.other}" />
+							</div>
+					</fieldset>
+					<div class="buttons">
+                    	<span class="button"><g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" /></span>
+                	</div>
+				</g:form>
+			</div>
+		</div>
     </body>
 </html>

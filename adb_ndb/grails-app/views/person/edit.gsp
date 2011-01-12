@@ -6,13 +6,27 @@
 <g:set var="entityName"
 	value="${message(code: 'person.label', default: 'Person')}" />
 <title><g:message code="default.edit.label" args="[entityName]" /></title>
+<style type="text/css">
+#firstParam {
+	float:left;
+}
+#secondParam {
+	float:left;
+	width: 150px;
+}
+#thirdParam {
+	width:300px;
+	text-align: right;
+	float: left;
+}
+</style>
 </head>
 <body>
-		<div class="nav">
-            <span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
-            <span class="menuButton"><g:link class="list" controller="person" action="list"><g:message code="person.list.label" args="[entityName]" /></g:link></span>
-            <span class="menuButton"><g:link class="create" controller="person" action="create"><g:message code="person.new.label" args="[entityName]" /></g:link></span>
-		</div>
+	<div class="nav">
+   		<span class="menuButton"><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></span>
+    	<span class="menuButton"><g:link class="list" controller="person" action="list"><g:message code="person.list.label" args="[entityName]" /></g:link></span>
+     	<span class="menuButton"><g:link class="create" controller="person" action="create"><g:message code="person.new.label" args="[entityName]" /></g:link></span>
+	</div>
 <div class="body">
 <h1><g:message code="default.edit.label" args="[entityName]" /></h1>
 <g:if test="${flash.message}">
@@ -22,189 +36,184 @@
 </g:if> <g:hasErrors bean="${personInstance}">
 	<div class="errors"><g:renderErrors bean="${personInstance}"
 		as="list" /></div>
-</g:hasErrors> <g:form method="post">
-	<g:hiddenField name="id" value="${personInstance?.id}" />
-	<g:hiddenField name="version" value="${personInstance?.version}" />
-	<div class="dialog">
-	<table>
-		<tbody>
-
-			<tr class="prop">
-				<td valign="top" class="name"><label for="names"><g:message
-					code="person.names.label" default="Namen" /></label></td>
-				<g:if test="${!personInstance?.names?.isEmpty()}">
-					<td valign="top"
-						class="value ${hasErrors(bean: personInstance, field: 'names', 'errors')}">
-					<ul>
-						<g:each in="${personInstance?.names?}" var="n">
-							<li><g:link controller="name" action="edit" id="${n.id}"
-							params="['person.id': personInstance?.id]">	${n?.encodeAsHTML()}
-							</g:link></li>
-						</g:each>
-					</ul>
-					</td>
-					<td valign="top"><g:link controller="name" action="create"
-						params="['person.id': personInstance?.id]">
-						${message(code: 'default.add.label', args: [message(code: 'name.label', default: '+ Name')])}
-					</g:link></td>
-				</g:if>
-				<g:else>
-					<td valign="top"><g:link controller="name" action="create"
-						params="['person.id': personInstance?.id]">
-						${message(code: 'default.add.label', args: [message(code: 'name.label', default: '+ Name')])}
-					</g:link></td>
-				</g:else>
-			</tr>
-
-			<tr class="prop">
-				<td valign="top" class="name"><label for="dateBirth"><g:message
-					code="person.dateBirth.label" default="Geboren" /></label></td>
-				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'dateBirth', 'errors')}">
-				<g:textField name="dateBirth" value="${personInstance?.dateBirth}" /></td>
-			</tr>
-
-			<tr class="prop">
-				<td valign="top" class="name"><label for="dateDeath"><g:message
-					code="person.dateDeath.label" default="Gestorben" /></label></td>
-				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'dateDeath', 'errors')}">
-				<g:textField name="dateDeath" value="${personInstance?.dateDeath}" /></td>
-			</tr>
-
-			<tr class="prop">
-				<td valign="top" class="name"><label for="gender"><g:message
-					code="person.gender.label" default="Gender" /></label></td>
-				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'gender', 'errors')}">
-				<g:checkBox name="gender" value="${personInstance?.gender}" /></td>
-			</tr>
-
-			<tr class="prop">
-				<td valign="top" class="name"><label for="bio"><g:message
-					code="person.bio.label" default="Biographie" /></label></td>
-				<td valign="top"
-					class="value ${hasErrors(bean: personInstance, field: 'bio', 'errors')}">
-				<g:textArea name="bio" cols="40" rows="5"
-					value="${personInstance?.bio}" /></td>
-			</tr>
-
-			<tr class="prop">
-				<td valign="top" class="name"><label for="relations"><g:message
-					code="person.relations.label" default="Relations" /></label></td>
-				<g:if test="${!personInstance?.relations?.isEmpty()}">
-					<td valign="top"
-						class="value ${hasErrors(bean: personInstance, field: 'relations', 'errors')}">
-					<ul>
-						<g:each in="${personInstance?.relations?}" var="r">
-							<li><g:link controller="relation" action="show" id="${r.id}">
-								${r?.encodeAsHTML()}
-							</g:link></li>
-						</g:each>
-					</ul>
-					</td>
-					<td valign="top"><g:link controller="relation" action="create"
-						params="['person.id': personInstance?.id]">
-						${message(code: 'default.add.label', args: [message(code: 'relation.label', default: '+ Relation')])}
-					</g:link></td>
-				</g:if>
-				<g:else>
-					<td valign="top"><g:link controller="relation" action="create"
-						params="['person.id': personInstance?.id]">
-						${message(code: 'default.add.label', args: [message(code: 'relation.label', default: '+ Relation')])}
-					</g:link></td>
-				</g:else>
-			</tr>
-
-			<tr class="prop">
-				<td valign="top" class="name"><label for="confessions"><g:message
-					code="person.confessions.label" default="Konfessionen" /></label></td>
-
-				<g:if test="${de.uni_koeln.hs.Confession.list().size() != 0}">
-					<td valign="top"
-						class="value ${hasErrors(bean: personInstance, field: 'confessions', 'errors')}">
-					<g:select name="confessions"
-						from="${de.uni_koeln.hs.Confession.list()}" multiple="yes"
-						optionKey="id" size="5" value="${personInstance?.confessions*.id}" />
-					</td>
-					<td valign="top"><g:link controller="confession"
-						action="create" params="['person.id': personInstance?.id]">
-						${message(code: 'default.add.label', args: [message(code: 'confession.label', default: '+ Konfession')])}
-					</g:link></td>
-				</g:if>
-				<g:else>
-					<td valign="top"><g:link controller="confession"
-						action="create" params="['person.id': personInstance?.id]">
-						${message(code: 'default.add.label', args: [message(code: 'confession.label', default: '+ Konfession')])}
-					</g:link></td>
-				</g:else>
-
-			</tr>
-
-			<tr class="prop">
-				<td valign="top" class="location"><label for="locations"><g:message
-					code="person.locations.label" default="Orte" /></label></td>
-				<g:if test="${!personInstance?.locations?.isEmpty()}">
-					<td valign="top"
-						class="value ${hasErrors(bean: personInstance, field: 'names', 'errors')}">
-					<ul>
-						<g:each in="${personInstance?.locations?}" var="l">
-							<li><g:link controller="personLocations" action="edit"
-								params="[person_id:personInstance?.id, location_id:l?.id]">
-								${l?.encodeAsHTML()}
-							</g:link></li>
-						</g:each>
-					</ul>
-					</td>
-					<td valign="top"><g:link controller="location" action="create"
-						params="['person.id': personInstance?.id]">
-						${message(code: 'default.add.label', args: [message(code: 'location.label', default: '+ Ort')])}
-					</g:link></td>
-				</g:if>
-				<g:else>
-					<td valign="top"><g:link controller="location" action="create"
-						params="['person.id': personInstance?.id]">
-						${message(code: 'default.add.label', args: [message(code: 'location.label', default: '+ Ort')])}
-					</g:link></td>
-				</g:else>
-
-			</tr>
-
-			<tr class="prop">
-				<td valign="top" class="name"><label for="works"><g:message
-					code="person.works.label" default="Werke" /></label></td>
-				<g:if test="${de.uni_koeln.hs.Work.list().size() != 0}">
-					<td valign="top"
-						class="value ${hasErrors(bean: personInstance, field: 'works', 'errors')}">
-					<g:select name="works" from="${de.uni_koeln.hs.Work.list()}"
-						multiple="yes" optionKey="id" size="5"
-						value="${personInstance?.works*.id}" /></td>
-					<td valign="top"><g:link controller="work" action="create"
-						params="['person.id': personInstance?.id]">
-						${message(code: 'default.add.label', args: [message(code: 'work.label', default: '+ Werk')])}
-					</g:link></td>
-				</g:if>
-				<g:else>
-					<td valign="top"><g:link controller="work" action="create"
-						params="['person.id': personInstance?.id]">
-						${message(code: 'default.add.label', args: [message(code: 'work.label', default: '+ Werk')])}
-					</g:link></td>
-				</g:else>
-
-
-			</tr>
-
-		</tbody>
-	</table>
+</g:hasErrors> 
+	<div class="complexDialog2">
+				<g:form method="post">
+					<g:hiddenField name="id" value="${personInstance?.id}" />
+					<g:hiddenField name="version" value="${personInstance?.version}" />
+                 	<g:hiddenField name="person.id" value="${nameInstance?.person?.id}"  />
+					<fieldset>
+						<legend>Name(n)</legend>
+						<div id="firstParam">
+							<label for="names"><g:message code="person.names.label" default="Namen" /></label>
+						</div>
+						<g:if test="${!personInstance?.names?.isEmpty()}">
+								<div id="secondParam">
+									<ul>
+										<g:each in="${personInstance?.names?}" var="n">
+											<li>
+												<g:link controller="name" action="edit" id="${n.id}" params="['person.id': personInstance?.id]">
+													${n?.encodeAsHTML()}
+												</g:link>
+											</li>
+										</g:each>
+									</ul>
+								</div>
+								<div id="thirdParam">
+									<g:link controller="name" action="create" params="['person.id': personInstance?.id]">
+										${message(code: 'default.add.label', args: [message(code: 'name.label', default: '+ Name')])}
+									</g:link>
+								</div>
+							</g:if>
+							<g:else>
+								<div>
+									<g:link controller="name" action="create" params="['person.id': personInstance?.id]">
+										${message(code: 'default.add.label', args: [message(code: 'name.label', default: '+ Name')])}
+									</g:link>
+								</div>
+							</g:else>
+					</fieldset>
+					<fieldset>
+						<legend>Lebensdaten</legend>
+							<div id="firstParam">
+								<label for="dateBirth"><g:message code="person.dateBirth.label" default="Geboren" /></label>
+							</div>
+							<div>
+								<g:textField class="value ${hasErrors(bean: personInstance, field: 'dateBirth', 'errors')}" name="dateBirth" value="${personInstance?.dateBirth}" />
+							</div>
+							<div id="firstParam">
+								<label for="dateDeath"><g:message code="person.dateDeath.label" default="Gestorben" /></label>
+							</div>
+							<div>
+								<g:textField class="value ${hasErrors(bean: personInstance, field: 'dateDeath', 'errors')}" name="dateDeath" value="${personInstance?.dateDeath}" />
+							</div>		
+					</fieldset>
+					<fieldset>
+						<legend>Geschlecht</legend>
+						<div class="value ${hasErrors(bean: personInstance, field: 'gender', 'errors')}">
+							<label for="gender"><g:message code="person.gender.label" default="Gender" /></label>
+							<g:checkBox style="margin-left: -11%;" name="gender" value="${personInstance?.gender}" />
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Biographie</legend>
+							<g:textArea class="value ${hasErrors(bean: personInstance, field: 'bio', 'errors')}" name="bio" cols="40" rows="6" value="${personInstance?.bio}" />
+					</fieldset>
+					<fieldset>
+						<legend>Relationen</legend>
+						<div id="firstParam">
+							<label for="relations"><g:message code="person.relations.label" default="Relationen" /></label>
+						</div>
+							<g:if test="${!personInstance?.relations?.isEmpty()}">
+								<div id="secondParam">
+									<ul>
+										<g:each in="${personInstance?.relations?}" var="r">
+											<li>
+												<g:link controller="person" action="show" id="${r?.relatedPerson?.id}">
+													${r?.encodeAsHTML()}
+												</g:link>
+											</li>
+										</g:each>
+									</ul>
+								</div>
+								<div id="thirdParam">
+									<g:link controller="relation" action="create" params="['person.id': personInstance?.id]">
+										${message(code: 'default.add.label', args: [message(code: 'relation.label', default: '+ Relation')])}
+									</g:link>
+								</div>
+							</g:if>
+							<g:else>
+								<div>
+									<g:link controller="relation" action="create" params="['person.id': personInstance?.id]">
+										${message(code: 'default.add.label', args: [message(code: 'relation.label', default: '+ Relation')])}
+									</g:link>
+								</div>
+							</g:else>
+					</fieldset>
+					<fieldset>
+						<legend>Konfession</legend>
+						<div id="firstParam">
+							<label for="confessions"><g:message	code="person.confessions.label" default="Konfessionen" /></label>
+						</div>
+							<g:if test="${de.uni_koeln.hs.Confession.list().size() != 0}">
+								<div id="secondParam">
+									<g:select name="confessions" from="${de.uni_koeln.hs.Confession.list()}" multiple="yes" optionKey="id" size="5" value="${personInstance?.confessions*.id}"  />
+								</div>
+								<div id="thirdParam">
+									<g:link controller="confession" action="create" params="['person.id': personInstance?.id]">
+										${message(code: 'default.add.label', args: [message(code: 'confession.label', default: '+ Konfession')])}
+									</g:link>
+								</div>
+							</g:if>
+							<g:else>
+								<div>
+									<g:link controller="confession"	action="create" params="['person.id': personInstance?.id]">
+										${message(code: 'default.add.label', args: [message(code: 'confession.label', default: '+ Konfession')])}
+									</g:link>
+								</div>
+							</g:else>
+					</fieldset>
+					<fieldset>
+						<legend>Orte</legend>
+						
+						<div id="firstParam">
+							<label for="locations"><g:message code="person.locations.label" default="Orte" /></label>
+						</div>
+							<g:if test="${!personInstance?.locations?.isEmpty()}">
+								<div id="secondParam">
+									<ul>
+										<g:each in="${personInstance?.locations?}" var="l">
+											<li>
+												<g:link controller="personLocations" action="edit" params="[person_id:personInstance?.id, location_id:l?.id]">
+													${l?.encodeAsHTML()}
+												</g:link>
+											</li>
+										</g:each>
+									</ul>
+								</div>
+								<div id="thirdParam">
+									<g:link controller="location" action="create" params="['person.id': personInstance?.id]">
+										${message(code: 'default.add.label', args: [message(code: 'location.label', default: '+ Ort')])}
+									</g:link>
+								</div>
+							</g:if>
+							<g:else>
+								<div>
+									<g:link controller="location" action="create" params="['person.id': personInstance?.id]">
+										${message(code: 'default.add.label', args: [message(code: 'location.label', default: '+ Ort')])}
+									</g:link>
+								</div>
+							</g:else>
+					</fieldset>
+					<fieldset>
+						<legend>Werke</legend>
+						<div id="firstParam">
+							<label for="works"><g:message code="person.works.label" default="Werke" /></label>
+						</div>
+							<g:if test="${de.uni_koeln.hs.Work.list().size() != 0}">
+								<div id="secondParam">
+									<g:select name="works" from="${de.uni_koeln.hs.Work.list()}" multiple="yes" optionKey="id" size="5" value="${personInstance?.works*.id}" />
+								</div>
+								<div id="thirdParam">
+									<g:link controller="work" action="create" params="['person.id': personInstance?.id]">
+										${message(code: 'default.add.label', args: [message(code: 'work.label', default: '+ Werk')])}
+									</g:link>
+								</div>
+							</g:if>
+							<g:else>
+								<div>
+									<g:link controller="work" action="create" params="['person.id': personInstance?.id]">
+										${message(code: 'default.add.label', args: [message(code: 'work.label', default: '+ Werk')])}
+									</g:link>
+								</div>
+							</g:else>
+					</fieldset>
+					<div class="buttons">
+						<span class="button"><g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" /></span>
+						<span class="button"><g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
+					</div>
+				</g:form>
+			</div>
 	</div>
-	<div class="buttons"><span class="button"><g:actionSubmit
-		class="save" action="update"
-		value="${message(code: 'default.button.update.label', default: 'Update')}" /></span>
-	<span class="button"><g:actionSubmit class="delete"
-		action="delete"
-		value="${message(code: 'default.button.delete.label', default: 'Delete')}"
-		onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" /></span>
-	</div>
-</g:form></div>
 </body>
 </html>

@@ -49,22 +49,6 @@ h2 {
 	font-size: 1.2em;
 }
 
-#pageBody {
-	margin-left: 20px;
-}
-
-.simpleDialog {
-	padding: 15px 0;
-	margin: 0;
-	width: auto;
-}
-
-#welcome {
-	padding: 5px 0;
-	margin: 0;
-	width: auto;
-}
-
 </style>
 </head>
 	<body>
@@ -73,29 +57,23 @@ h2 {
             <span class="menuButton"><g:link class="list" controller="person" action="list"><g:message code="person.list.label" args="[entityName]" /></g:link></span>
             <span class="menuButton"><g:link class="create" controller="person" action="create"><g:message code="person.new.label" args="[entityName]" /></g:link></span>
         </div>
-		
 		<div id="pageBody">
-			<div class="simpleDialog">
+			<div class="complexDialog">
 				<g:form controller="search">
-					<label for="search">Einfache Suche</label>
-					<g:textField name="query" /> 
-					<span class="searchButton">
-						<g:actionSubmit	class="search" value="Person(en) finden" action="result" />
-					</span>
+					<fieldset>
+						<legend>Freitext Suche</legend>
+							<div>
+								<label for="search">Suchbegriff</label>
+								<g:textField name="query" />
+							</div>
+					</fieldset>
+					<div class="buttons">
+                    	<span class="button"><g:actionSubmit class="search" value="Person(en) finden" action="result"/></span>
+                	</div>
 				</g:form>
+				<br>
 				<span class="smallLink"><g:link controller="advancedSearch" action="index">Erweiterte Suche</g:link></span>
 			</div>
-			
-			<div id="welcome">
-				<h1>Welcome to the ADB/NDB fake...</h1>
-				<p>A university project to implement a basic structure for the
-				ADB/NDB, a german biography database. For more information about the project please visit:</p>
-				<ul>
-					<li><a href="https://github.com/semkath/adbndb-with-grails/">Repository on Github</a></li>
-					<li><a href="http://www.deutsche-biographie.de/index.html">Official ADB/NDB site</a></li>
-				</ul>
-			</div>
-			
 		</div>
 	</body>
 </html>
