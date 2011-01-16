@@ -18,79 +18,76 @@
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
-            <div class="dialog">
-                <table>
-                    <tbody>
-                 
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.names.label" default="Namen" /></td>
-                            <td valign="top" style="text-align: left;" class="value">
-                                <g:each in="${personInstance.names}" var="n">
-                                    	${n?.encodeAsHTML()}<br>
-                                </g:each>
-                            </td>
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.dateOfBirth.label" default="Geboren" /></td>
-                            <g:if test="${personInstance?.dateOfBirth != null}">
-                           		<g:set  var="dateBirth" value="${DateUtil.getStringFromDate(personInstance?.dateOfBirth)}" scope="page" />
-                           		<td valign="top" class="value">${dateBirth}</td>
-                           	</g:if><g:else>
-                           		<td valign="top" class="value">unbekannt</td>
-                           	</g:else>
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.dateOfDeath.label" default="Gestorben" /></td>
-                            <g:if test="${personInstance?.dateOfDeath != null}">
-                           		<g:set  var="dateDeath" value="${DateUtil.getStringFromDate(personInstance?.dateOfDeath)}" scope="page" />
-                           		<td valign="top" class="value">${dateDeath}</td>
-                           	</g:if><g:else>
-                           		<td valign="top" class="value">unbekannt</td>
-                           	</g:else>
-                        </tr>
-                        
-                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.gender.label" default="Geschlecht" /></td>
+            <div class="showPersonInfo">
+            
+             				<h1><g:message code="person.names.label" default="Name(n)" /></h1>
+                            <div style="text-align: left;" class="value">
+                                <g:each in="${personInstance.names}" status="counter" var="item">
+									<g:if test="${counter < personInstance.names.size()-1}">
+										<b>${item?.lastName}, </b>${item?.firstName};
+									</g:if>
+									<g:else>
+										<b>${item?.lastName}, </b>${item?.firstName}
+									</g:else>
+								</g:each>
+                            </div>
+                            
+                            
+                            <h1>Lebensdaten</h1>
+	                       	<div>
+	                            <g:if test="${personInstance?.dateOfBirth != null}">
+	                           		<g:set  var="dateBirth" value="${DateUtil.getStringFromDate(personInstance?.dateOfBirth)}" scope="page" />
+	                           		*${dateBirth},
+	                           	</g:if><g:else>
+	                           		<div>*unbekannt,
+	                           	</g:else>
+	                           	
+	                            <g:if test="${personInstance?.dateOfDeath != null}">
+	                           		<g:set  var="dateDeath" value="${DateUtil.getStringFromDate(personInstance?.dateOfDeath)}" scope="page" />
+	                           		&#8224;${dateDeath}
+	                           	</g:if><g:else>
+	                           		&#8224;unbekannt
+	                           	</g:else>
+           					</div>
+           					
+           					
+                            <h1><g:message code="person.gender.label" default="Geschlecht" /></h1>
+                            <div>
                             	<g:if test="${personInstance?.gender}">
-                            		<td valign="top" class="value">m&auml;nnlich</td>
+									m&auml;nnlich
                             	</g:if>
                             	<g:else>
-    								<td valign="top" class="value">weiblich</td>
+    								weiblich
 								</g:else>
-                        </tr>
-                        
-                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.locations.label" default="Orte" /></td>
-                            <td valign="top" style="text-align: left;" class="value">
+							</div>
+							
+							 
+                            <h1><g:message code="person.locations.label" default="Orte" /></h1>
+                            <div>
                                 <g:each in="${personInstance.locations}" var="l">
-                                    ${l?.encodeAsHTML()}, ${l?.latitude}, ${l?.longitude} <br>
+                                    ${l?.encodeAsHTML()}; ${l?.latitude}, ${l?.longitude} <br>
                                 </g:each>
-                            </td>
-                        </tr>
-                        
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.confessions.label" default="Konfession(en)" /></td>
-                            <td valign="top" style="text-align: left;" class="value">
+                            </div>
+                            
+                            
+                            <h1><g:message code="person.confessions.label" default="Konfession(en)" /></h1>
+                            <div>
                                 <g:each in="${personInstance.confessions}" var="c">
                                     ${c?.encodeAsHTML()} <br>
                                 </g:each>
-                            </td>
-                        </tr>
-                        
-                         <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.works.label" default="Werke" /></td>
-                            <td valign="top" style="text-align: left;" class="value">
+                           	</div>
+                           	
+                           	
+                            <h1><g:message code="person.works.label" default="Werke" /></h1>
+                            <div>
                                 <g:each in="${personInstance.works}" var="w">
                                   	 <g:link controller="werke" action="show" id="${w.id}">${w?.encodeAsHTML()}</g:link>
                                 </g:each>
-                            </td>
-                        </tr>
-                        
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.relations.label" default="Relationen" /></td>
-                            <td valign="top" style="text-align: left;" class="value">
+            				</div>
+            				
+            				
+                            <h1><g:message code="person.relations.label" default="Relationen" /></h1>
+                            <div>
                                 <g:each in="${personInstance.relations}" var="r">
                                 	<g:if test="${r?.directRelation}">
                                 		<g:set var="direct" value="Verwandschaft"></g:set>
@@ -100,16 +97,11 @@
                                 	</g:else>
                                     <g:link controller="relation" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link> -> ${direct} <br>
                                 </g:each>
-                            </td>
-                        </tr>
-                    
-                        <tr class="prop">
-                            <td valign="top" class="name"><g:message code="person.bio.label" default="Biographie" /></td>
-                            <td valign="top" class="value">${fieldValue(bean: personInstance, field: "bio")}</td>
-                        </tr>
-                    
-                    </tbody>
-                </table>
+                            </div>  
+                              
+                              
+                            <h1><g:message code="person.bio.label" default="Biographie" /></h1>
+                            <div id="bio">${fieldValue(bean: personInstance, field: "bio")}</div>
             </div>
             <div class="buttons">
                 <g:form>

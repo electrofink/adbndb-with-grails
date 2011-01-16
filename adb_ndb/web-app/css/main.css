@@ -417,3 +417,18 @@ label {
 	text-align: right;
 	float: left;
 }
+
+.showPersonInfo {
+	border-top: solid 1px #999;
+	margin: 0;
+	padding: 0;
+	width: 300px;
+}
+
+#bio {
+	width: inherit;
+	max-height: 250px;
+	display: block;
+	overflow: auto;
+	
+}

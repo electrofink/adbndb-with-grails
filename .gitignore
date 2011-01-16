@@ -9,3 +9,5 @@
 
 adb_ndb/grails-app/conf/DataSource.groovy
 .metadata/
+
+adb_ndb/target/*

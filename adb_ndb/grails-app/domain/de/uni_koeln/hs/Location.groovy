@@ -25,7 +25,7 @@ class Location {
 	
 	@Override
 	String toString() {
-		return city+" ("+country+")"
+		return "${city}, (${country})"
 	}
 	
 }
