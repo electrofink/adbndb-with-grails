@@ -19,89 +19,83 @@
             <div class="message">${flash.message}</div>
             </g:if>
             <div class="showPersonInfo">
-            
-             				<h1><g:message code="person.names.label" default="Name(n)" /></h1>
-                            <div style="text-align: left;" class="value">
-                                <g:each in="${personInstance.names}" status="counter" var="item">
-									<g:if test="${counter < personInstance.names.size()-1}">
-										<b>${item?.lastName}, </b>${item?.firstName};
-									</g:if>
-									<g:else>
-										<b>${item?.lastName}, </b>${item?.firstName}
-									</g:else>
-								</g:each>
-                            </div>
+            	<h1><g:message code="person.names.label" default="Name(n)" /></h1>
+                <div style="text-align: left;" class="value">
+              		<g:each in="${personInstance.names}" status="counter" var="item">
+						<g:if test="${counter < personInstance.names.size()-1}">
+							<b>${item?.lastName}, </b>${item?.firstName};
+						</g:if>
+						<g:else>
+							<b>${item?.lastName}, </b>${item?.firstName}
+						</g:else>
+					</g:each>
+               	</div>
                             
-                            
-                            <h1>Lebensdaten</h1>
-	                       	<div>
-	                            <g:if test="${personInstance?.dateOfBirth != null}">
-	                           		<g:set  var="dateBirth" value="${DateUtil.getStringFromDate(personInstance?.dateOfBirth)}" scope="page" />
-	                           		*${dateBirth},
-	                           	</g:if><g:else>
-	                           		<div>*unbekannt,
-	                           	</g:else>
-	                           	
-	                            <g:if test="${personInstance?.dateOfDeath != null}">
-	                           		<g:set  var="dateDeath" value="${DateUtil.getStringFromDate(personInstance?.dateOfDeath)}" scope="page" />
-	                           		&#8224;${dateDeath}
-	                           	</g:if><g:else>
-	                           		&#8224;unbekannt
-	                           	</g:else>
-           					</div>
-           					
-           					
-                            <h1><g:message code="person.gender.label" default="Geschlecht" /></h1>
-                            <div>
-                            	<g:if test="${personInstance?.gender}">
-									m&auml;nnlich
-                            	</g:if>
-                            	<g:else>
-    								weiblich
-								</g:else>
-							</div>
+	         	<h1>Lebensdaten</h1>
+	            <div>
+	                 <g:if test="${personInstance?.dateOfBirth != null}">
+	                   	<g:set  var="dateBirth" value="${DateUtil.getStringFromDate(personInstance?.dateOfBirth)}" scope="page" />
+	                       	*${dateBirth},
+	               	</g:if>
+	               	<g:else>
+	                   	*unbekannt,
+	              	</g:else>
+			        	<g:if test="${personInstance?.dateOfDeath != null}">
+	                     	<g:set  var="dateDeath" value="${DateUtil.getStringFromDate(personInstance?.dateOfDeath)}" scope="page" />
+	                           	&#8224;${dateDeath}
+	                   	</g:if>
+	          			<g:else>
+	                    	&#8224;unbekannt
+	                    </g:else>
+           		</div>
+	           			
+	          	<h1><g:message code="person.gender.label" default="Geschlecht" /></h1>
+                <div>
+               		<g:if test="${personInstance?.gender}">
+						m&auml;nnlich
+              		</g:if>
+               		<g:else>
+    					weiblich
+					</g:else>
+				</div>
 							
-							 
-                            <h1><g:message code="person.locations.label" default="Orte" /></h1>
-                            <div>
-                                <g:each in="${personInstance.locations}" var="l">
-                                    ${l?.encodeAsHTML()}; ${l?.latitude}, ${l?.longitude} <br>
-                                </g:each>
-                            </div>
+				<h1><g:message code="person.locations.label" default="Orte" /></h1>
+              	<div>
+               		<g:each in="${personInstance.locations}" var="l">
+                  		${l?.encodeAsHTML()}; ${l?.latitude}, ${l?.longitude} <br>
+                 	</g:each>
+              	</div>
                             
-                            
-                            <h1><g:message code="person.confessions.label" default="Konfession(en)" /></h1>
-                            <div>
-                                <g:each in="${personInstance.confessions}" var="c">
-                                    ${c?.encodeAsHTML()} <br>
-                                </g:each>
-                           	</div>
+               	<h1><g:message code="person.confessions.label" default="Konfession(en)" /></h1>
+               	<div>
+                	<g:each in="${personInstance.confessions}" var="c">
+                		${c?.encodeAsHTML()} <br>
+               		</g:each>
+                </div>
                            	
-                           	
-                            <h1><g:message code="person.works.label" default="Werke" /></h1>
-                            <div>
-                                <g:each in="${personInstance.works}" var="w">
-                                  	 <g:link controller="werke" action="show" id="${w.id}">${w?.encodeAsHTML()}</g:link>
-                                </g:each>
-            				</div>
+                <h1><g:message code="person.works.label" default="Werke" /></h1>
+             	<div>
+                	<g:each in="${personInstance.works}" var="w">
+                   		<g:link controller="werke" action="show" id="${w.id}">${w?.encodeAsHTML()}</g:link>
+                  	</g:each>
+            	</div>
             				
-            				
-                            <h1><g:message code="person.relations.label" default="Relationen" /></h1>
-                            <div>
-                                <g:each in="${personInstance.relations}" var="r">
-                                	<g:if test="${r?.directRelation}">
-                                		<g:set var="direct" value="Verwandschaft"></g:set>
-                                	</g:if>
-                                	<g:else>
-                                		<g:set var="direct" value="Bekanntschaft"></g:set>
-                                	</g:else>
-                                    <g:link controller="relation" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link> -> ${direct} <br>
-                                </g:each>
-                            </div>  
-                              
-                              
-                            <h1><g:message code="person.bio.label" default="Biographie" /></h1>
-                            <div id="bio">${fieldValue(bean: personInstance, field: "bio")}</div>
+            	<h1><g:message code="person.relations.label" default="Relationen" /></h1>
+                <div>
+              		<g:each in="${personInstance.relations}" var="r">
+                     	<g:if test="${r?.directRelation}">
+                     		<g:set var="direct" value="Verwandschaft"></g:set>
+                 		</g:if>
+             			<g:else>
+                    		<g:set var="direct" value="Bekanntschaft"></g:set>
+                   		</g:else>
+                      		<g:link controller="relation" action="show" id="${r.id}">${r?.encodeAsHTML()}</g:link> -> ${direct} <br>
+                   	</g:each>
+              	</div>
+             				  
+                 <h1><g:message code="person.bio.label" default="Biographie" /></h1>
+                 <div id="bioDisplay">${fieldValue(bean: personInstance, field: "bio")}</div>
+                 
             </div>
             <div class="buttons">
                 <g:form>
