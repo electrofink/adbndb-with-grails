@@ -22,8 +22,6 @@ class Work {
 	
 	@Override
 	String toString() {
-		if(releaseDate.length() > 0)
-			return workTitle+" ("+releaseDate+")"
-		return workTitle
+		return "${workTitle}"
 	}
 }

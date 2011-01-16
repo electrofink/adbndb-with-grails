@@ -123,7 +123,7 @@
 						</div>
 							<g:if test="${de.uni_koeln.hs.Confession.list().size() != 0}">
 								<div id="columnTwo">
-									<g:select name="confessions" from="${de.uni_koeln.hs.Confession.list()}" multiple="yes" optionKey="id" size="5" value="${personInstance?.confessions*.id}"  />
+									<g:select name="confessions" from="${de.uni_koeln.hs.Confession.list(sort:'confessionType')}" multiple="yes" optionKey="id" size="5" value="${personInstance?.confessions*.id}"  />
 								</div>
 								<div id="columnThree">
 									<g:link controller="confession" action="create" params="['person.id': personInstance?.id]">
@@ -178,7 +178,7 @@
 						</div>
 							<g:if test="${de.uni_koeln.hs.Work.list().size() != 0}">
 								<div id="columnTwo">
-									<g:select name="works" from="${de.uni_koeln.hs.Work.list()}" multiple="yes" optionKey="id" size="5" value="${personInstance?.works*.id}" />
+									<g:select name="works" from="${de.uni_koeln.hs.Work.list(sort:'workTitle')}" multiple="yes" optionKey="id" size="5" value="${personInstance?.works*.id}" />
 								</div>
 								<div id="columnThree">
 									<g:link controller="work" action="create" params="['person.id': personInstance?.id]">

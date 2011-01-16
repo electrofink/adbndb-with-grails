@@ -46,7 +46,7 @@
 					<legend>Konfession/Werk(e)</legend>
 						<div>
 							<label for="confession">Konfession</label>
-							<g:select name="confessionType" from="${de.uni_koeln.hs.Confession.list()}" optionKey="id" value="${confessionInstance?.confessions?.id}"  />
+							<g:select name="confessionType" from="${de.uni_koeln.hs.Confession.list(sort:'confessionType')}" optionKey="id" value="${confessionInstance?.id}"  />
 						</div>
 						<div>
 							<label for="work">Werk</label>

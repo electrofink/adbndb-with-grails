@@ -12,6 +12,6 @@ class Confession {
 	}
 	
 	String toString() {
-		return confessionType
+		return "${confessionType}"
 	}
 }
