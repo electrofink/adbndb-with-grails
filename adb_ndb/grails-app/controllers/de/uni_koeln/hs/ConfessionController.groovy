@@ -23,29 +23,14 @@ class ConfessionController {
 
 	def save = {
 		def confessionInstance = new Confession(params)
+		def person = Person.get(flash.person_id)
 		if (confessionInstance.save(flush: true)) {
-			def person = Person.get(flash.person_id)
 			person.confessions.add(confessionInstance)
-			if(person.save(flush: true)) {
-				flash.message = "${message(code: 'default.created.message', args: [message(code: 'confession.label', default: 'Confession'), confessionInstance.id])}"
-				redirect(controller: "person", action: "edit", id: flash.person_id)
-			}else {
-				render(view: "create", model: [confessionInstance: confessionInstance])
-			}
+			flash.message = "${message(code: 'default.created.message', args: [message(code: 'confession.label', default: 'Confession'), "'"+confessionInstance.confessionType+"'"])}"
+			redirect(controller: "person", action: "edit", id: person.id)
 		}
 		else {
 			render(view: "create", model: [confessionInstance: confessionInstance])
-		}
-	}
-
-	def show = {
-		def confessionInstance = Confession.get(params.id)
-		if (!confessionInstance) {
-			flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'confession.label', default: 'Confession'), params.id])}"
-			redirect(action: "list")
-		}
-		else {
-			[confessionInstance: confessionInstance]
 		}
 	}
 
