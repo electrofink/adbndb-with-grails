@@ -12,17 +12,18 @@ class PersonLocations {
     static belongsTo = [person:Person, location:Location]
 	
 	Location location
-	String startDate
-	String endDate
+	
+	java.util.Date startDate
+	java.util.Date endDate
+	
+	String startDateString
+	String endDateString
+	
+	static transients = ["startDateString", "endDateString"]
 	
 	static constraints = {
-		startDate(nullable: true, validator:{val, obj ->
-			return DateUtil.parseToDate(val, false)
-		})
-		
-		endDate(nullable: true, validator:{val, obj ->
-			return DateUtil.parseToDate(val, false)
-		})
+		startDate(nullable: true)
+		endDate(nullable: true)
 
 	}
 }

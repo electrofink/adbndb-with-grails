@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 3.2.4
+-- version 3.3.9
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 16. Januar 2011 um 21:17
--- Server Version: 5.1.41
--- PHP-Version: 5.3.1
+-- Generation Time: Jan 18, 2011 at 09:00 PM
+-- Server version: 5.1.53
+-- PHP Version: 5.3.5-pl0-gentoo
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -16,13 +16,13 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Datenbank: `adbndb`
+-- Database: `adbndb`
 --
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `confession`
+-- Table structure for table `confession`
 --
 
 CREATE TABLE IF NOT EXISTS `confession` (
@@ -33,14 +33,14 @@ CREATE TABLE IF NOT EXISTS `confession` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Daten für Tabelle `confession`
+-- Dumping data for table `confession`
 --
 
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `location`
+-- Table structure for table `location`
 --
 
 CREATE TABLE IF NOT EXISTS `location` (
@@ -54,14 +54,14 @@ CREATE TABLE IF NOT EXISTS `location` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Daten für Tabelle `location`
+-- Dumping data for table `location`
 --
 
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `name`
+-- Table structure for table `name`
 --
 
 CREATE TABLE IF NOT EXISTS `name` (
@@ -76,95 +76,95 @@ CREATE TABLE IF NOT EXISTS `name` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Daten für Tabelle `name`
+-- Dumping data for table `name`
 --
 
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `person`
+-- Table structure for table `person`
 --
 
 CREATE TABLE IF NOT EXISTS `person` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `version` bigint(20) NOT NULL,
   `bio` longtext,
-  `date_of_birth` date DEFAULT NULL,
-  `date_of_death` date DEFAULT NULL,
+  `date_of_birth` datetime DEFAULT NULL,
+  `date_of_death` datetime DEFAULT NULL,
   `gender` bit(1) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Daten für Tabelle `person`
+-- Dumping data for table `person`
 --
 
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `person_confessions`
+-- Table structure for table `person_confessions`
 --
 
 CREATE TABLE IF NOT EXISTS `person_confessions` (
-  `confession_id` bigint(20) NOT NULL,
   `person_id` bigint(20) NOT NULL,
+  `confession_id` bigint(20) NOT NULL,
   PRIMARY KEY (`person_id`,`confession_id`),
   KEY `FK2CC20AE24275D656` (`person_id`),
   KEY `FK2CC20AE2A3FEB316` (`confession_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Daten für Tabelle `person_confessions`
+-- Dumping data for table `person_confessions`
 --
 
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `person_locations`
+-- Table structure for table `person_locations`
 --
 
 CREATE TABLE IF NOT EXISTS `person_locations` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `end_date` date DEFAULT NULL,
+  `end_date` datetime DEFAULT NULL,
   `location_id` bigint(20) NOT NULL,
   `person_id` bigint(20) NOT NULL,
-  `start_date` date DEFAULT NULL,
+  `start_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK8D3286F44275D656` (`person_id`),
   KEY `FK8D3286F4D8DBB56` (`location_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Daten für Tabelle `person_locations`
+-- Dumping data for table `person_locations`
 --
 
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `person_works`
+-- Table structure for table `person_works`
 --
 
 CREATE TABLE IF NOT EXISTS `person_works` (
-  `work_id` bigint(20) NOT NULL,
   `person_id` bigint(20) NOT NULL,
+  `work_id` bigint(20) NOT NULL,
   PRIMARY KEY (`person_id`,`work_id`),
   KEY `FKEDD286184275D656` (`person_id`),
   KEY `FKEDD286183B806BD6` (`work_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
--- Daten für Tabelle `person_works`
+-- Dumping data for table `person_works`
 --
 
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `relation`
+-- Table structure for table `relation`
 --
 
 CREATE TABLE IF NOT EXISTS `relation` (
@@ -179,30 +179,26 @@ CREATE TABLE IF NOT EXISTS `relation` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Daten für Tabelle `relation`
+-- Dumping data for table `relation`
 --
 
 
 -- --------------------------------------------------------
 
 --
--- Tabellenstruktur für Tabelle `work`
+-- Table structure for table `work`
 --
 
 CREATE TABLE IF NOT EXISTS `work` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `version` bigint(20) NOT NULL,
-  `release_date` date DEFAULT NULL,
+  `release_date` varchar(255) NOT NULL,
   `subtitle` varchar(255) NOT NULL,
   `work_title` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 --
--- Daten für Tabelle `work`
+-- Dumping data for table `work`
 --
 
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

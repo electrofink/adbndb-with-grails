@@ -7,13 +7,13 @@ class Person {
 	java.util.Date dateOfBirth
 	java.util.Date dateOfDeath
 	
-	String dateBirth
-	String dateDeath
+	String dateOfBirthString
+	String dateOfDeathString
 	
 	String bio
 	boolean gender
 
-	static transients = ["dateBirth", "dateDeath"]
+	static transients = ["dateOfBirthString", "dateOfDeathString"]
 
 	static hasMany = [names:Name, relations:Relation, locations:Location, confessions:Confession,
 		works:Work]

@@ -33,19 +33,19 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="startDate"><g:message code="personLocations.startDate.label" default="Start Date" /></label>
+                                  <label for="startDateString"><g:message code="personLocations.startDateString.label" default="Start Date" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: personLocationsInstance, field: 'startDate', 'errors')}">
-                                    <g:textField name="startDate" value="${personLocationsInstance?.startDate}" />
+                                <td valign="top" class="value ${hasErrors(bean: personLocationsInstance, field: 'startDateString', 'errors')}">
+                                    <g:textField name="startDateString" value="${personLocationsInstance?.startDateString}" />
                                 </td>
                             </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="endDate"><g:message code="personLocations.endDate.label" default="End Date" /></label>
+                                  <label for="endDateString"><g:message code="personLocations.endDateString.label" default="End Date" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: personLocationsInstance, field: 'endDate', 'errors')}">
-                                    <g:textField name="endDate" value="${personLocationsInstance?.endDate}" />
+                                <td valign="top" class="value ${hasErrors(bean: personLocationsInstance, field: 'endDateString', 'errors')}">
+                                    <g:textField name="endDateString" value="${personLocationsInstance?.endDateString}" />
                                 </td>
                             </tr>
                         

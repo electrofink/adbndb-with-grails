@@ -18,15 +18,7 @@
 				<fieldset>
 					<legend>Name(n)/Geschlecht/Lebensdaten</legend>
 						<div>
-							<label for="name">Vorname</label>
-							<g:textField name="name" />
-						</div>
-						<div>
 							<label for="name">Name</label>
-							<g:textField name="name" />
-						</div>
-						<div>
-							<label for="name">Anderer</label>
 							<g:textField name="name" />
 						</div>
 						<div>
