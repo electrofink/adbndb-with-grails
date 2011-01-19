@@ -1,5 +1,7 @@
 package de.uni_koeln.hs
 
+import util.DateUtil
+
 class WorkController {
 
 	static allowedMethods = [save: "POST", update: "POST", delete: "POST"]

@@ -11,3 +11,4 @@ adb_ndb/grails-app/conf/DataSource.groovy
 .metadata/
 
 adb_ndb/target/*
+adb_ndb/target/stacktrace.log

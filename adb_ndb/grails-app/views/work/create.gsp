@@ -14,7 +14,7 @@
             <span class="menuButton"><g:link class="list" action="list"><g:message code="default.list.label" args="[entityName]" /></g:link></span>
         </div>
         <div class="body">
-            <h1><g:message code="default.create.label" args="[entityName]" /></h1>
+<%--            <h1><g:message code="default.create.label" args="[entityName]" /></h1>--%>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -23,45 +23,29 @@
                 <g:renderErrors bean="${workInstance}" as="list" />
             </div>
             </g:hasErrors>
-            <g:form action="save" >
-                <div class="dialog">
-                    <table>
-                        <tbody>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="workTitle"><g:message code="work.workTitle.label" default="Work Title" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: workInstance, field: 'workTitle', 'errors')}">
-                                    <g:textField name="workTitle" value="${workInstance?.workTitle}" />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="subtitle"><g:message code="work.subtitle.label" default="Subtitle" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: workInstance, field: 'subtitle', 'errors')}">
-                                    <g:textField name="subtitle" value="${workInstance?.subtitle}" />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="releaseDate"><g:message code="work.releaseDate.label" default="Release Date" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: workInstance, field: 'releaseDate', 'errors')}">
-                                    <g:textField name="releaseDate" value="${workInstance?.releaseDate}" />
-                                </td>
-                            </tr>
-                        
-                        </tbody>
-                    </table>
-                </div>
-                <div class="buttons">
-                    <span class="button"><g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" /></span>
-                </div>
-            </g:form>
+	            <div class="complexDialog">
+					<g:form action="save">
+	                 	<g:hiddenField name="person.id" value="${nameInstance?.person?.id}"  />
+						<fieldset>
+							<legend>Werk anlegen</legend>
+								<div>
+									<label for="workTitle"><g:message code="work.workTitle.label" default="Werkname" /></label>
+									<g:textField class="value ${hasErrors(bean: workInstance, field: 'workTitle', 'errors')}" name="workTitle" value="${workInstance?.workTitle}" />
+								</div>
+								<div>
+									<label for="subtitle"><g:message code="work.subtitle.label" default="Untertitel" /></label>
+									 <g:textField class="value ${hasErrors(bean: workInstance, field: 'subtitle', 'errors')}" name="subtitle" value="${workInstance?.subtitle}" />
+								</div>
+								<div>
+									<label for="releaseDateAsString"><g:message code="work.releaseDateAsString.label" default="Ver&ouml;ffentlichung" /></label>
+									<g:textField class="value ${hasErrors(bean: workInstance, field: 'releaseDateAsString', 'errors')}" name="releaseDateAsString" value="${workInstance?.releaseDateAsString}" />
+								</div>
+						</fieldset>
+						<div class="buttons">
+	                    	<span class="button"><g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" /></span>
+	                	</div>
+					</g:form>
+				</div>
         </div>
     </body>
 </html>
