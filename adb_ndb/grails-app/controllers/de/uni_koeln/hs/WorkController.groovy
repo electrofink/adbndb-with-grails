@@ -16,13 +16,31 @@ class WorkController {
 	def create = {
 		if(params.person != null)
 			flash.put("person_id", params.person.id)
+		else {
+			// If no person.id is passed the create action redirects to "/"
+			redirect(uri:"/")
+		}
 		def workInstance = new Work()
 		workInstance.properties = params
-		return [workInstance: workInstance]
+		return[workInstance: workInstance]
 	}
 
 	def save = {
 		def workInstance = new Work(params)
+
+		workInstance.releaseDateAsString = params.releaseDateAsString
+
+		def date_string
+
+		if(params.releaseDateAsString) {
+			date_string = DateUtil.parseToDate(params.releaseDateAsString)
+			if(date_string == null) {
+				workInstance.errors.rejectValue('releaseDateAsString','date.invalid.format.message')
+				render(view: "edit", model: [workInstance: workInstance])
+				return
+			}
+		}
+
 		if (workInstance.save(flush: true)) {
 			def person = Person.get(flash.person_id)
 			person.works.add(workInstance)
@@ -56,12 +74,28 @@ class WorkController {
 			redirect(action: "list")
 		}
 		else {
+			if(workInstance.releaseDate)
+				workInstance.releaseDateAsString = DateUtil.getStringFromDate(workInstance.releaseDate)
 			return [workInstance: workInstance]
 		}
 	}
 
 	def update = {
 		def workInstance = Work.get(params.id)
+
+		workInstance.releaseDateAsString = params.releaseDateAsString
+
+		def date_string
+
+		if(params.releaseDateAsString) {
+			date_string = DateUtil.parseToDate(params.releaseDateAsString)
+			if(date_string == null) {
+				workInstance.errors.rejectValue('releaseDateAsString','date.invalid.format.message')
+				render(view: "edit", model: [workInstance: workInstance])
+				return
+			}
+		}
+
 		if (workInstance) {
 			if (params.version) {
 				def version = params.version.toLong()

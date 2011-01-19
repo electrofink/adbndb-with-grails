@@ -51,10 +51,10 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                  <label for="releaseDate"><g:message code="work.releaseDate.label" default="Release Date" /></label>
+                                  <label for="releaseDateAsString"><g:message code="work.releaseDateAsString.label" default="Ver&ouml;ffentlicht" /></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean: workInstance, field: 'releaseDate', 'errors')}">
-                                    <g:textField name="releaseDate" value="${workInstance?.releaseDate}" />
+                                <td valign="top">
+                                    <g:textField class="value ${hasErrors(bean: workInstance, field: 'releaseDateAsString', 'errors')}" name="releaseDateAsString" value="${workInstance?.releaseDateAsString}" />
                                 </td>
                             </tr>
                         

@@ -6,18 +6,19 @@ class Work {
 	
 	String workTitle
 	String subtitle
-	String releaseDate
+	java.util.Date releaseDate
+	
+	String releaseDateAsString
 	
 	static belongsTo = Person
 	static hasMany = [persons:Person]
 	
+	static transients = ["releaseDateAsString"]
+	
 	static constraints = {
 		workTitle(blank:false)
 		subtitle(blank:true)
-		
-		releaseDate(blank: true, validator:{val, obj ->
-			return DateUtil.parseToDate(val, true)
-		})
+		releaseDate(nullable:true)
 	}
 	
 	@Override

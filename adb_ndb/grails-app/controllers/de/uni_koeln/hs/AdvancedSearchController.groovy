@@ -1,27 +1,47 @@
 package de.uni_koeln.hs
 
-import query.util.ResultObject;
+import query.util.ResultObject
 
 class AdvancedSearchController {
 	
-	static allowedMethods = [simpleSearch: "POST"]
+	static allowedMethods = [result: "POST"]
 	
 	def dataSource
 	
     def index = { }
 
 	def result = {
-		def name = params.name.split()
-		def birth = params.birth.split()
-		def death = params.death.split()
-		def confession = params.confession.split()
-		def work = params.work.split()
-		def location = params.location
-		def begin = params.begin
-		def end = params.end
+		
+		def name, birth, death, confession, work, location, begin, end
+		
+		if (params.name != null)
+			name = params.name.split()
+			
+		if (params.birth != null)
+			birth = params.birth.split()
+			
+		if (params.death != null)
+			death = params.death.split()
+			
+		if (params.confessionType != null)
+			confession = params.confessionType
+			
+		if (params.work != null)
+			work = params.work.split()
+			
+		if (params.location != null)
+			location = params.location
+			
+		if (params.locationBegin != null)
+			begin = params.locationBegin
+			
+		if (params.locationEnd != null)
+			end = params.locationEnd
 		
 		ResultObject ro = new ResultObject(dataSource)
-		def sortedList = sortByRelevance(ro.locationSearch(location, begin, end))
+		ro.locationSearch(location, begin, end)
+		println "person hashmap: " + ro.getPersonHashMap()
+		def sortedList = sortByRelevance(ro.getPersonHashMap())
 		// [personIDs : sortedList.keySet()]
 		
 		def personInstanceList = []

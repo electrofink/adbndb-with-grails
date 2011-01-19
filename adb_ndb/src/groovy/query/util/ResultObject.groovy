@@ -1,7 +1,7 @@
 package query.util
 
 import groovy.sql.Sql
-import java.text.SimpleDateFormat
+import util.DateUtil
 import de.uni_koeln.hs.*
 
 class ResultObject {
@@ -12,6 +12,10 @@ class ResultObject {
 
 	ResultObject(dataSource) {
 		this.dataSource = dataSource
+	}
+	
+	def getPersonHashMap() {
+		return person
 	}
 
 	def simpleSearch = { q ->
@@ -80,37 +84,40 @@ class ResultObject {
 				like('city', "%"+searchString+"%")
 			}
 		}
+		
 		def parsedBegin, parsedEnd
-		def sdf = new SimpleDateFormat("yyyy-MM-dd")
 
 		if(location != []) {
 			def l
 			// If no date is specified, don't search with it (simpleSearch).
-			if (begin == null && end == null)
+			if (begin == null && end == null) {
 				l = retrievePersonIdByLocation(location)
+			}
 			// At least one of them is not null
-			else {
-				
+			else {			
 				// In case only one of them is given...
 				if (begin != null)
-					parsedBegin = sdf.parse(begin)
+					parsedBegin = DateUtil.parseToDate(begin)
 				else
 					parsedBegin = new Date()
 				// ... set the other to now.
 				if (end != null)
-					parsedEnd = sdf.parse(end)
+					parsedEnd = DateUtil.parseToDate(end)
 				else
 					parsedEnd = new Date()
 				
 				// Only sensible input, please.	
 				if (parsedEnd > parsedBegin) {
 					def person_locations = PersonLocations.withCriteria {
+						// TODO: This isn't working yet, logic error!
 						and {
 							between('startDate', parsedBegin, parsedEnd)
 							between('endDate', parsedBegin, parsedEnd)
 						}
 					}
+					println "PersonLocations.withCriteria: " + person_locations
 					l = retrievePersonIdByPersonLocations(person_locations)
+					
 				}
 			}
 

@@ -62,16 +62,16 @@
 					<fieldset>
 						<legend>Lebensdaten</legend>
 							<div id="columnOne">
-								<label for="dateBirth"><g:message code="person.dateBirth.label" default="Geboren" /></label>
+								<label for="dateOfBirthString"><g:message code="person.dateOfBirthString.label" default="Geboren" /></label>
 							</div>
 							<div>
-								<g:textField class="value ${hasErrors(bean: personInstance, field: 'dateBirth', 'errors')}" name="dateBirth" value="${personInstance?.dateBirth}" />
+								<g:textField class="value ${hasErrors(bean: personInstance, field: 'dateOfBirthString', 'errors')}" name="dateOfBirthString" value="${personInstance?.dateOfBirthString}" />
 							</div>
 							<div id="columnOne">
-								<label for="dateDeath"><g:message code="person.dateDeath.label" default="Gestorben" /></label>
+								<label for="dateOfDeathString"><g:message code="person.dateOfDeathString.label" default="Gestorben" /></label>
 							</div>
 							<div>
-								<g:textField class="value ${hasErrors(bean: personInstance, field: 'dateDeath', 'errors')}" name="dateDeath" value="${personInstance?.dateDeath}" />
+								<g:textField class="value ${hasErrors(bean: personInstance, field: 'dateOfDeathString', 'errors')}" name="dateOfDeathString" value="${personInstance?.dateOfDeathString}" />
 							</div>		
 					</fieldset>
 					<fieldset>

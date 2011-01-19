@@ -3,10 +3,9 @@ package util;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-
 /**
- * @author Mihail Atanassov <mail:saeko.bjagai@gmail.com>
- */
+* @author Mihail Atanassov <mail:saeko.bjagai@gmail.com>
+*/
 public class DateUtil {
 
 	private DateUtil() {

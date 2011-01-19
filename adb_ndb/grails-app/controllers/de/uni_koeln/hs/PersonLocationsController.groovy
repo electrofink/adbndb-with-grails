@@ -1,5 +1,7 @@
 package de.uni_koeln.hs
 
+import util.DateUtil
+
 class PersonLocationsController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
@@ -52,12 +54,56 @@ class PersonLocationsController {
             redirect(action: "list")
         }
         else {
+			// If not null converted into String and placed in person.edit.gsp input field
+			if(personLocationsInstance.startDate)
+				personLocationsInstance.startDateString = DateUtil.getStringFromDate(personLocationsInstance.startDate)
+
+			if(personLocationsInstance.endDate)
+				personLocationsInstance.endDateString = DateUtil.getStringFromDate(personLocationsInstance.endDate)
+
             return [personLocationsInstance: personLocationsInstance]
         }
     }
 
     def update = {
         def personLocationsInstance = PersonLocations.get(params.id)
+		
+		// Get values from text fields [startDateString, endDateString] in personLocation.edit.gsp
+		personLocationsInstance.startDateString = params.startDateString
+		personLocationsInstance.endDateString = params.endDateString
+		
+		def start_date, end_date
+
+		if(params.startDateString) {
+			start_date = DateUtil.parseToDate(params.startDateString)
+			if(start_date == null) {
+				personLocationsInstance.errors.rejectValue('dateOfBirthString','date.invalid.format.message')
+				render(view: "edit", model: [personLocationsInstance: personLocationsInstance])
+				return
+			}
+		}
+
+		if (params.endDateString) {
+			end_date = DateUtil.parseToDate(params.endDateString)
+			if(end_date == null) {
+				personLocationsInstance.errors.rejectValue('dateOfDeathString','date.invalid.format.message')
+				render(view: "edit", model: [personLocationsInstance: personLocationsInstance])
+				return
+			}
+		}
+
+		// Case startDate is before endDate
+		if(start_date != null && end_date != null) {
+			if(start_date.after(end_date)) {
+				def arg0 = DateUtil.getStringFromDate(start_date)
+				def arg2 = DateUtil.getStringFromDate(end_date)
+				personLocationsInstance.errors.rejectValue('startDateString',"${message(code: 'custom.date.invalid.validator.message', args: [arg0, 'Gestorben', arg2, 'Geboren'])}")
+				personLocationsInstance.errors.rejectValue('endDateString','')
+				render(view: "edit", model: [personLocationsInstance: personLocationsInstance])
+				return
+			}
+		}
+		
         if (personLocationsInstance) {
             if (params.version) {
                 def version = params.version.toLong()
@@ -69,6 +115,9 @@ class PersonLocationsController {
                 }
             }
             personLocationsInstance.properties = params
+			personLocationsInstance.startDate = DateUtil.parseToDate(params.startDateString)
+			personLocationsInstance.endDate = DateUtil.parseToDate(params.endDateString)
+			
             if (!personLocationsInstance.hasErrors() && personLocationsInstance.save(flush: true)) {
                 flash.message = "${message(code: 'default.updated.message', args: [message(code: 'personLocations.label', default: 'PersonLocations'), personLocationsInstance.id])}"
                 redirect(controller: "person", action: "edit", id: personLocationsInstance.person.id)
