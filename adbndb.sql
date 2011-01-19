@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Erstellungszeit: 16. Januar 2011 um 21:17
+-- Erstellungszeit: 19. Januar 2011 um 01:37
 -- Server Version: 5.1.41
 -- PHP-Version: 5.3.1
 
@@ -90,8 +90,8 @@ CREATE TABLE IF NOT EXISTS `person` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `version` bigint(20) NOT NULL,
   `bio` longtext,
-  `date_of_birth` date DEFAULT NULL,
-  `date_of_death` date DEFAULT NULL,
+  `date_of_birth` datetime DEFAULT NULL,
+  `date_of_death` datetime DEFAULT NULL,
   `gender` bit(1) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -108,8 +108,8 @@ CREATE TABLE IF NOT EXISTS `person` (
 --
 
 CREATE TABLE IF NOT EXISTS `person_confessions` (
-  `confession_id` bigint(20) NOT NULL,
   `person_id` bigint(20) NOT NULL,
+  `confession_id` bigint(20) NOT NULL,
   PRIMARY KEY (`person_id`,`confession_id`),
   KEY `FK2CC20AE24275D656` (`person_id`),
   KEY `FK2CC20AE2A3FEB316` (`confession_id`)
@@ -128,10 +128,10 @@ CREATE TABLE IF NOT EXISTS `person_confessions` (
 
 CREATE TABLE IF NOT EXISTS `person_locations` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `end_date` date DEFAULT NULL,
+  `end_date` datetime DEFAULT NULL,
   `location_id` bigint(20) NOT NULL,
   `person_id` bigint(20) NOT NULL,
-  `start_date` date DEFAULT NULL,
+  `start_date` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `FK8D3286F44275D656` (`person_id`),
   KEY `FK8D3286F4D8DBB56` (`location_id`)
@@ -149,8 +149,8 @@ CREATE TABLE IF NOT EXISTS `person_locations` (
 --
 
 CREATE TABLE IF NOT EXISTS `person_works` (
-  `work_id` bigint(20) NOT NULL,
   `person_id` bigint(20) NOT NULL,
+  `work_id` bigint(20) NOT NULL,
   PRIMARY KEY (`person_id`,`work_id`),
   KEY `FKEDD286184275D656` (`person_id`),
   KEY `FKEDD286183B806BD6` (`work_id`)
