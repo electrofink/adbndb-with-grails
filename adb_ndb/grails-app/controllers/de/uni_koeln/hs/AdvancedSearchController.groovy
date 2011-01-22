@@ -12,46 +12,46 @@ class AdvancedSearchController {
 
 	def result = {
 		
-		def name, birth, death, confession, work, location, begin, end
+		def name, birth, death, gender, confession, work, location, begin, end
 		
-		if (params.name != null)
-			name = params.name.split()
-			
-		if (params.birth != null)
-			birth = params.birth.split()
-			
-		if (params.death != null)
-			death = params.death.split()
-			
-		if (params.confessionType != null)
-			confession = params.confessionType
-			
-		if (params.work != null)
-			work = params.work.split()
-			
-		if (params.location != null)
-			location = params.location
-			
-		if (params.locationBegin != null)
-			begin = params.locationBegin
-			
-		if (params.locationEnd != null)
-			end = params.locationEnd
+		name = params.name
+		birth = params.birth
+		death = params.death
+		gender = params.gender
+		confession = params.confessionType
+		work = params.work
+		location = params.location
+		begin = params.locationBegin
+		end = params.locationEnd
 		
 		ResultObject ro = new ResultObject(dataSource)
-		ro.locationSearch(location, begin, end)
-		println "person hashmap: " + ro.getPersonHashMap()
-		def sortedList = sortByRelevance(ro.getPersonHashMap())
-		// [personIDs : sortedList.keySet()]
 		
+		if (name != "")
+			ro.nameSearch(name)
+		if (birth != "" || death != "")
+			ro.bioDataSearch(birth, death, gender)
+		if (confession != "")
+			ro.confessionSearch(confession)
+		if (work != "")
+			ro.workSearch(work)
+		if (location != "")
+			ro.locationSearch(location, begin, end)	
+		
+		def sortedList = ro.getSortedPersonHashMap()
 		def personInstanceList = []
-		
 		sortedList.keySet().each {
 			def p = Person.get(it)
 			personInstanceList.add(p)
 		}
-		[personInstanceList : personInstanceList]
+		params.max = Math.min(params.max ? params.int('max') : 10, 100)
+		[personInstanceList : personInstanceList, personInstanceTotal: personInstanceList.size()]
 	
+	}
+	
+	def sortByRelevance = { map ->
+		def sortedMap = map.sort { a, b ->
+			b.value <=> a.value
+		}
 	}
 	
 }

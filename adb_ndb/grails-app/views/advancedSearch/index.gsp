@@ -23,7 +23,9 @@
 						</div>
 						<div>
 							<label for="gender">Geschlecht</label>
-							<g:checkBox style="margin-left: -20%;" name="gender" value="${false}" />
+							w<g:radio name="gender" value="female" checked="true"/>
+							m<g:radio name="gender" value="male" />
+							<%-- <g:checkBox style="margin-left: 20%;" name="gender" value="${false}" /> --%>
 						</div>
 						<div>
 							<label for="birth">Geburtsdatum</label>
@@ -38,7 +40,7 @@
 					<legend>Konfession/Werk(e)</legend>
 						<div>
 							<label for="confession">Konfession</label>
-							<g:select name="confessionType" from="${de.uni_koeln.hs.Confession.list(sort:'confessionType')}" optionKey="id" value="${confessionInstance?.id}"  />
+							<g:select name="confessionType" from="${de.uni_koeln.hs.Confession.list(sort:'confessionType')}" value="" noSelection="['':'']" />
 						</div>
 						<div>
 							<label for="work">Werk</label>

@@ -14,8 +14,14 @@ class ResultObject {
 		this.dataSource = dataSource
 	}
 	
-	def getPersonHashMap() {
-		return person
+	def getSortedPersonHashMap() {
+		return sortByRelevance(person)
+	}
+	
+	def sortByRelevance = { map ->
+		def sortedMap = map.sort { a, b ->
+			b.value <=> a.value
+		}
 	}
 
 	def simpleSearch = { q ->
@@ -28,9 +34,9 @@ class ResultObject {
 
 			getPersonByWork(eachSearchString)
 
-			getPersonByLocation(eachSearchString, null, null)
+			getPersonByLocation(eachSearchString, "", "")
 		}
-		return person
+		//return person
 	}
 
 	def getPersonByName = { searchString ->
@@ -38,6 +44,7 @@ class ResultObject {
 			or {
 				like('lastName', "%"+searchString+"%")
 				like('firstName', "%"+searchString+"%")
+				like('other', "%"+searchString+"%")
 			}
 		}
 		if(name != []) {
@@ -49,6 +56,8 @@ class ResultObject {
 	}
 
 	def getPersonByConfession = { searchString ->
+		
+		println "confession searchString: " + searchString
 
 		def confession = Confession.withCriteria {
 			like('confessionType', "%"+searchString+"%")
@@ -70,7 +79,7 @@ class ResultObject {
 			}
 		}
 		if(work != []) {
-			def w = retrievePersonByWork(work)
+			def w = retrievePersonIdByWork(work)
 			if(w != []) {
 				w.each {person.put(it, ++person.get(it, 0))}
 			}
@@ -90,34 +99,31 @@ class ResultObject {
 		if(location != []) {
 			def l
 			// If no date is specified, don't search with it (simpleSearch).
-			if (begin == null && end == null) {
+			if (begin == "" && end == "") {
 				l = retrievePersonIdByLocation(location)
 			}
 			// At least one of them is not null
 			else {			
 				// In case only one of them is given...
-				if (begin != null)
+				if (begin != "")
 					parsedBegin = DateUtil.parseToDate(begin)
 				else
 					parsedBegin = new Date()
 				// ... set the other to now.
-				if (end != null)
+				if (end != "")
 					parsedEnd = DateUtil.parseToDate(end)
 				else
 					parsedEnd = new Date()
 				
-				// Only sensible input, please.	
+				// Only sensible input, please.
 				if (parsedEnd > parsedBegin) {
 					def person_locations = PersonLocations.withCriteria {
-						// TODO: This isn't working yet, logic error!
-						and {
+						or {
 							between('startDate', parsedBegin, parsedEnd)
 							between('endDate', parsedBegin, parsedEnd)
 						}
 					}
-					println "PersonLocations.withCriteria: " + person_locations
 					l = retrievePersonIdByPersonLocations(person_locations)
-					
 				}
 			}
 
@@ -127,24 +133,58 @@ class ResultObject {
 		}
 	}
 
-	def nameSearch = { q ->
-		q.each { eachSearchString -> getPersonByName(eachSearchString) }
+	def nameSearch = { searchString ->
+		getPersonByName(searchString)
 	}
 
-	def birthSearch = {}
-
-	def deathSearch = {}
-
-	def confessionSearch = { q ->
-		q.each { eachSearchString -> getPersonByConfession(eachSearchString) }
+	def bioDataSearch = { birth, death, gender ->
+		
+		def g
+		if (gender.equals("male"))
+			g = true
+		if (gender.equals("female"))
+			g = false
+		
+		def parsedBirth, parsedDeath
+		
+		// In case only one of them is given...
+		if (birth != "")
+			parsedBirth = DateUtil.parseToDate(birth)
+		else
+			parsedBirth = new Date()
+		// ... set the other to now.
+		if (death != "")
+			parsedDeath = DateUtil.parseToDate(death)
+		else
+			parsedDeath = new Date()
+		
+		if (parsedDeath > parsedBirth) {
+			def b = []
+			def biodata = Person.withCriteria {
+				or {
+					between('dateOfBirth', parsedBirth, parsedDeath)
+					between('dateOfDeath', parsedBirth, parsedDeath)
+				}
+			}
+			if (biodata != []) {
+				b.addAll(biodata.id)
+				if(b != []) {
+					b.each {person.put(it, ++person.get(it, 0))}
+				}
+			}
+		}
 	}
 
-	def workSearch = { q ->
-		q.each { eachSearchString -> getPersonByWork(eachSearchString) }
+	def confessionSearch = { searchString ->
+		getPersonByConfession(searchString)
 	}
 
-	def locationSearch = { location, begin, end ->
-		getPersonByLocation(location, begin, end)
+	def workSearch = { searchString ->
+		getPersonByWork(searchString)
+	}
+
+	def locationSearch = { searchString, begin, end ->
+		getPersonByLocation(searchString, begin, end)
 	}
 
 	def retrievePersonIdByName =  { name ->
