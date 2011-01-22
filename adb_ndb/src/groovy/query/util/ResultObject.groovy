@@ -57,8 +57,6 @@ class ResultObject {
 
 	def getPersonByConfession = { searchString ->
 		
-		println "confession searchString: " + searchString
-
 		def confession = Confession.withCriteria {
 			like('confessionType', "%"+searchString+"%")
 		}
