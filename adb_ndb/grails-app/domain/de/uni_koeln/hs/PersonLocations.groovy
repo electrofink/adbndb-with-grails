@@ -1,8 +1,11 @@
 package de.uni_koeln.hs
 
 import util.DateUtil;
+import java.text.DateFormat;
 
 class PersonLocations {
+	
+	Integer id
 	
 	static mapping = {
 		table "person_locations"
@@ -24,5 +27,10 @@ class PersonLocations {
 	static constraints = {
 		startDate(nullable: true)
 		endDate(nullable: true)
+	}
+	
+	@Override
+	String toString() {
+		return "von ${DateFormat.getDateInstance().format(startDate)} bis ${DateFormat.getDateInstance().format(endDate)}"
 	}
 }

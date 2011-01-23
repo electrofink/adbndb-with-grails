@@ -45,8 +45,8 @@ class PersonLocationsController {
 
     def edit = {
 		def ps = PersonLocations.withCriteria {
-			eq('person.id', new Long(params.person_id))
-			eq('location.id', new Long(params.location_id))
+			eq('person.id', new Integer(params.person_id))
+			eq('location.id', new Integer(params.location_id))
 		}
         def personLocationsInstance = PersonLocations.get(ps.get(0).id)
         if (!personLocationsInstance) {

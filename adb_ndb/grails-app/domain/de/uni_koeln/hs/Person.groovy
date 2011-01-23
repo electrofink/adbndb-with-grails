@@ -4,6 +4,8 @@ import util.DateUtil;
 
 class Person {
 
+	Integer id
+	
 	java.util.Date dateOfBirth
 	java.util.Date dateOfDeath
 	

@@ -2,6 +2,8 @@ package de.uni_koeln.hs
 
 class Confession {
 
+	Integer id
+	
 	String confessionType
 	
 	static belongsTo = Person

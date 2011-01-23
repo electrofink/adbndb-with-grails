@@ -2,6 +2,7 @@ package de.uni_koeln.hs
 
 class Location {
 	
+	Integer id
 	
 	String city
 	String country

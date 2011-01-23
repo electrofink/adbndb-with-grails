@@ -4,6 +4,8 @@ import util.DateUtil;
 
 class Work {
 	
+	Integer id
+	
 	String workTitle
 	String subtitle
 	java.util.Date releaseDate

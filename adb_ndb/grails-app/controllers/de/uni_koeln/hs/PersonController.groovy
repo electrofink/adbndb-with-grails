@@ -36,11 +36,16 @@ class PersonController {
 
 	def show = {
 		def personInstance = Person.get(params.id)
+		def personInstanceLocationsList = PersonLocations.withCriteria {
+			eq('person.id', new Integer(params.id))
+		}
+		println "personInstanceLocationsList: " + personInstanceLocationsList
+
 		if (!personInstance) {
 			flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'person.label', default: 'Person'), params.id])}"
 			redirect(action: "list")
 		} else {
-			[personInstance: personInstance]
+			[personInstance: personInstance, personInstanceLocationsList: personInstanceLocationsList]
 		}
 	}
 

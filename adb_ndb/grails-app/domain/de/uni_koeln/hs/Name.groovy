@@ -2,6 +2,8 @@ package de.uni_koeln.hs
 
 class Name {
 	
+	Integer id
+	
 	String firstName
 	String lastName
 	String other

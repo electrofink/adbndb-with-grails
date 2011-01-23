@@ -2,7 +2,8 @@ package de.uni_koeln.hs
 
 class Relation {
 
-
+	Integer id
+	
 	boolean directRelation
 
 	Person relatedPerson
