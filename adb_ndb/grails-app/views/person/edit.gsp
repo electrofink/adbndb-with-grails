@@ -77,8 +77,9 @@
 					<fieldset>
 						<legend>Geschlecht</legend>
 						<div class="value ${hasErrors(bean: personInstance, field: 'gender', 'errors')}">
-							<label for="gender"><g:message code="person.gender.label" default="Gender" /></label>
-							<g:checkBox style="margin-left: -11%;" name="gender" value="${personInstance?.gender}" />
+							<label for="gender"><g:message code="person.gender.label" default="Geschlecht" /></label>
+							m&auml;nnlich<g:radio name="gender" value="${true}" checked="${personInstance?.gender}" />
+							weiblich<g:radio name="gender" value="${false}" checked="${!personInstance?.gender}" />
 						</div>
 					</fieldset>
 					<fieldset>

@@ -135,13 +135,7 @@ class ResultObject {
 		getPersonByName(searchString)
 	}
 
-	def bioDataSearch = { birth, death, gender ->
-		
-		def g
-		if (gender.equals("male"))
-			g = true
-		if (gender.equals("female"))
-			g = false
+	def bioDataSearch = { birth, death ->
 		
 		def parsedBirth, parsedDeath
 		
@@ -173,6 +167,28 @@ class ResultObject {
 		}
 	}
 
+	def genderSearch = { gender ->
+		def g = []
+		
+		if (gender == "m")
+			gender = true
+		else if (gender == "w")
+			gender = false
+		else
+			return
+			
+		def genderPersons = Person.withCriteria {
+			eq('gender', gender)
+		}
+		
+		if (genderPersons != []) {
+			g.addAll(genderPersons.id)
+			if (g != []) {
+				g.each {person.put(it, ++person.get(it, 0))}
+			}
+		}
+	}
+	
 	def confessionSearch = { searchString ->
 		getPersonByConfession(searchString)
 	}

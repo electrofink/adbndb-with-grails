@@ -29,7 +29,9 @@ class AdvancedSearchController {
 		if (name != "")
 			ro.nameSearch(name)
 		if (birth != "" || death != "")
-			ro.bioDataSearch(birth, death, gender)
+			ro.bioDataSearch(birth, death)
+		if (gender != "")
+			ro.genderSearch(gender)
 		if (confession != "")
 			ro.confessionSearch(confession)
 		if (work != "")
@@ -46,12 +48,6 @@ class AdvancedSearchController {
 		params.max = Math.min(params.max ? params.int('max') : 10, 100)
 		[personInstanceList : personInstanceList, personInstanceTotal: personInstanceList.size()]
 	
-	}
-	
-	def sortByRelevance = { map ->
-		def sortedMap = map.sort { a, b ->
-			b.value <=> a.value
-		}
 	}
 	
 }
