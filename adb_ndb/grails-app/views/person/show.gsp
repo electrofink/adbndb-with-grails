@@ -62,7 +62,7 @@
 				<h1><g:message code="person.locations.label" default="Orte" /></h1>
               	<div>
                		<g:each in="${personInstance.locations}" var="l">
-                  		${l?.encodeAsHTML()}: ${l?.latitude}, ${l?.longitude}, Zeitraum: ${personInstanceLocationsList.getAt(l?.id - 1)} <br />
+                  		${l?.encodeAsHTML()}: ${l?.latitude}, ${l?.longitude}; Zeitraum: ${personInstanceLocationsList.getAt(l?.id - 1)} <br />
                  	</g:each>
               	</div>
                             

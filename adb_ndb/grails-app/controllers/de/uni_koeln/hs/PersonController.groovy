@@ -39,7 +39,6 @@ class PersonController {
 		def personInstanceLocationsList = PersonLocations.withCriteria {
 			eq('person.id', new Integer(params.id))
 		}
-		println "personInstanceLocationsList: " + personInstanceLocationsList
 
 		if (!personInstance) {
 			flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'person.label', default: 'Person'), params.id])}"
@@ -51,6 +50,9 @@ class PersonController {
 
 	def edit = {
 		def personInstance = Person.get(params.id)
+		def personInstanceLocationsList = PersonLocations.withCriteria {
+			eq('person.id', new Integer(params.id))
+		}
 		if (!personInstance) {
 			flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'person.label', default: 'Person'), params.id])}"
 			redirect(action: "list")
@@ -62,7 +64,7 @@ class PersonController {
 			if(personInstance.dateOfDeath)
 				personInstance.dateOfDeathString = DateUtil.getStringFromDate(personInstance.dateOfDeath)
 
-			return [personInstance: personInstance]
+			return [personInstance: personInstance, personInstanceLocationsList: personInstanceLocationsList]
 		}
 	}
 
