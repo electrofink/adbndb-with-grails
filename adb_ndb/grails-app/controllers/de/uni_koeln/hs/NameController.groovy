@@ -6,15 +6,11 @@ class NameController {
 
 	def create = {
 		def nameInstance = new Name(params)
-		//		nameInstance.properties = params
-		//		flash.put("person_id", params.person.id)
 		return [nameInstance: nameInstance]
 	}
 
 	def save = {
 		def nameInstance = new Name(params)
-
-		//		nameInstance.person = Person.get(flash.person_id)
 		nameInstance.properties = prepareValues(nameInstance).properties
 
 		if (nameInstance.save(flush: true)) {
@@ -32,7 +28,7 @@ class NameController {
 		flash.put("pre_nameInstance", nameInstance)
 		if (!nameInstance) {
 			flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'name.label', default: 'Name'), params.id])}"
-			redirect(action: "list")
+			redirect(controller: "person", action: "show", id: params.person.id)
 		}
 		else {
 			return [nameInstance: nameInstance]
@@ -48,7 +44,7 @@ class NameController {
 					nameInstance.errors.rejectValue("version", "default.optimistic.locking.failure", [
 						message(code: 'name.label', default: 'Name')]
 					as Object[], "Another user has updated this Name while you were editing")
-					render(view: "edit", model: [nameInstance: nameInstance])
+					redirect(controller: "person", action: "edit", id: params.person.id)
 					return
 				}
 			}
@@ -73,13 +69,12 @@ class NameController {
 		}
 		else {
 			flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'name.label', default: 'Name'), params.id])}"
-			redirect(action: "list")
+			redirect(controller: "person", action: "show", id: params.person.id)
 		}
 	}
 
 	def delete = {
 		def nameInstance = Name.get(params.id)
-		//		flash.put("person_id", nameInstance.person.id)
 		if (nameInstance) {
 			try {
 				def arg0 = "'" + nameInstance.lastName + ', ' + nameInstance.firstName + "'"

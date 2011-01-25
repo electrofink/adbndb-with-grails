@@ -1,4 +1,27 @@
-//TODO
+Dies ist ein Projekt zu einem Hauptseminar an der Universität zu Köln.
 
-- Search function: create Controller and View for search functionallity (hibernate: withCriteria)
-- Build interface for person instance (redirect or allInOne???) 
+Es handelt sich um einen unvollständigen Klon der ADB NDB.
+Für das Original siehe: http://www.deutsche-biographie.de/index.html
+
+Unsere Implementierung beschränkt sich auf folgende Datenfelder:
+Name, Geschlecht, Lebensdaten, Biographie, Konfession, Orte, Relationen und Werke.
+
+Hinweise zur Benutzung:
+
+Sofern Textfelder zur Eingabe von zeitlichen Daten vorhanden sind
+muss die Eingabe nach ISO 8601 (ohne Uhrzeitangaben) erfolgen. Ein Beispiel
+für den 7. Februar 1979 wäre: 1979-02-07. Es ist möglich den Monat und den Tag
+wegzulassen, sofern nicht genau bekannt. Wenn bei der Suche ein solches Feld leer
+bleibt wird angenommen, dass dies auf den Zeitpunkt "Jetzt" gesetzt wurde.
+Zeitliche Daten unterliegen weiteren Restriktionen, so muss z.B. das Sterbedatum
+nach dem Geburtsdatum liegen. Das Sterbedatum kann weggelassen werden, falls die
+Person noch lebt.
+
+Einfache Beziehungen unter Personen sind ebenfalls möglich. Wenn nicht
+Verwandschaft als Beziehung spezifiziert wird, wird als Beziehung Bekanntschaft
+angenommen.
+
+Für Konfessionen und Orte gilt, dass eine Liste mit bereits bestehenden Konfessionen
+und Orten beim der Verknüpfung mit einer Personnangeboten wird. Sofern dies
+der Fall ist, sollte der bereits vorhandene Datensatz benutzt werden.
+Mehrfachauswahl ist bei Konfessionen und Werken möglich.

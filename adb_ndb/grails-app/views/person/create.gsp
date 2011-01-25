@@ -1,4 +1,4 @@
-
+<%--
 
 <%@ page import="de.uni_koeln.hs.Person" %>
 <html>
@@ -75,3 +75,4 @@
         </div>
     </body>
 </html>
+--%>

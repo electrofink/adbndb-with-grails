@@ -47,7 +47,7 @@
                             
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="directRelation"><g:message code="relation.directRelation.label" default="Direkte Relation" /></label>
+                                    <label for="directRelation"><g:message code="relation.directRelation.label" default="Verwandschaft" /></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: relationInstance, field: 'directRelation', 'errors')}">
                                     <g:checkBox name="directRelation" value="${relationInstance?.directRelation}" />

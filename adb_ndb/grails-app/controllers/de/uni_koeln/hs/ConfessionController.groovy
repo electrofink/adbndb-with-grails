@@ -3,7 +3,7 @@ package de.uni_koeln.hs
 class ConfessionController {
 
 	static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
-
+	/*
 	def index = {
 		redirect(action: "list", params: params)
 	}
@@ -12,10 +12,12 @@ class ConfessionController {
 		params.max = Math.min(params.max ? params.int('max') : 10, 100)
 		[confessionInstanceList: Confession.list(params), confessionInstanceTotal: Confession.count()]
 	}
-
+	*/
 	def create = {
 		if(params.person != null)
 			flash.put("person_id", params.person.id)
+		else
+			redirect(uri:"/")
 		def confessionInstance = new Confession()
 		confessionInstance.properties = params
 		return [confessionInstance: confessionInstance]
@@ -27,13 +29,14 @@ class ConfessionController {
 		if (confessionInstance.save(flush: true)) {
 			person.confessions.add(confessionInstance)
 			flash.message = "${message(code: 'default.created.message', args: [message(code: 'confession.label', default: 'Confession'), "'"+confessionInstance.confessionType+"'"])}"
-			redirect(controller: "person", action: "edit", id: person.id)
+			redirect(controller: "person", action: "edit", id: flash.person_id)
 		}
 		else {
 			render(view: "create", model: [confessionInstance: confessionInstance])
 		}
 	}
 
+	/*
 	def edit = {
 		def confessionInstance = Confession.get(params.id)
 		if (!confessionInstance) {
@@ -92,4 +95,5 @@ class ConfessionController {
 			redirect(action: "list")
 		}
 	}
+	*/
 }

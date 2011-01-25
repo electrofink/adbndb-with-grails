@@ -5,7 +5,7 @@ import util.DateUtil
 class WorkController {
 
 	static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
-
+	/*
 	def index = {
 		redirect(action: "list", params: params)
 	}
@@ -14,14 +14,12 @@ class WorkController {
 		params.max = Math.min(params.max ? params.int('max') : 10, 100)
 		[workInstanceList: Work.list(params), workInstanceTotal: Work.count()]
 	}
-
+	*/
 	def create = {
 		if(params.person != null)
 			flash.put("person_id", params.person.id)
-		else {
-			// If no person.id is passed the create action redirects to "/"
+		else
 			redirect(uri:"/")
-		}
 		def workInstance = new Work()
 		workInstance.properties = params
 		return[workInstance: workInstance]
@@ -49,7 +47,8 @@ class WorkController {
 			if(person.save(flush: true)) {
 				flash.message = "${message(code: 'default.created.message', args: [message(code: 'work.label', default: 'Work'), workInstance.id])}"
 				redirect(controller: "person", action: "edit", id: flash.person_id)
-			}else {
+			}
+			else {
 				render(view: "create", model: [workInstance: workInstance])
 			}
 		}
@@ -57,7 +56,7 @@ class WorkController {
 			render(view: "create", model: [workInstance: workInstance])
 		}
 	}
-
+	/*
 	def show = {
 		def workInstance = Work.get(params.id)
 		if (!workInstance) {
@@ -143,4 +142,5 @@ class WorkController {
 			redirect(action: "list")
 		}
 	}
+	*/
 }

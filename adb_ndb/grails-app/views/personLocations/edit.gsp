@@ -57,7 +57,7 @@
                                     <g:select name="location.id" from="${de.uni_koeln.hs.Location.list()}" optionKey="id" value="${personLocationsInstance?.location?.id}"  />
                                 </td>
                             </tr>
-                        
+                        	<%--
                             <tr class="prop">
                                 <td valign="top" class="name">
                                   <label for="person"><g:message code="personLocations.person.label" default="Person" /></label>
@@ -66,7 +66,7 @@
                                     <g:select name="person.id" from="${de.uni_koeln.hs.Person.list()}" optionKey="id" value="${personLocationsInstance?.person?.id}"  />
                                 </td>
                             </tr>
-                        
+                        	--%>
                         </tbody>
                     </table>
                 </div>

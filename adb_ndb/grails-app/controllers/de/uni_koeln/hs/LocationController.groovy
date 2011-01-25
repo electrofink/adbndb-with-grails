@@ -48,6 +48,7 @@ class LocationController {
 		}
 	}
 
+	/*
 	def show = {
 		def locationInstance = Location.get(params.id)
 		if (!locationInstance) {
@@ -117,4 +118,5 @@ class LocationController {
 			redirect(action: "list")
 		}
 	}
+	*/
 }

@@ -6,6 +6,7 @@ class PersonLocationsController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
+	/*
     def index = {
         redirect(action: "list", params: params)
     }
@@ -21,16 +22,16 @@ class PersonLocationsController {
         return [personLocationsInstance: personLocationsInstance]
     }
 
-    def save = {
-        def personLocationsInstance = new PersonLocations(params)
-        if (personLocationsInstance.save(flush: true)) {
-            flash.message = "${message(code: 'default.created.message', args: [message(code: 'personLocations.label', default: 'PersonLocations'), personLocationsInstance.id])}"
-            redirect(action: "show", id: personLocationsInstance.id)
-        }
-        else {
-            render(view: "create", model: [personLocationsInstance: personLocationsInstance])
-        }
-    }
+	def save = {
+		def personLocationsInstance = new PersonLocations(params)
+		if (personLocationsInstance.save(flush: true)) {
+			flash.message = "${message(code: 'default.created.message', args: [message(code: 'personLocations.label', default: 'PersonLocations'), personLocationsInstance.id])}"
+			redirect(controller: "person", action: "show", id: personLocationsInstance.person.id)
+		}
+		else {
+			render(view: "create", model: [personLocationsInstance: personLocationsInstance])
+		}
+	}
 
     def show = {
         def personLocationsInstance = PersonLocations.get(params.id)
@@ -42,7 +43,9 @@ class PersonLocationsController {
             [personLocationsInstance: personLocationsInstance]
         }
     }
+	*/
 
+	
     def edit = {
 		def ps = PersonLocations.withCriteria {
 			eq('person.id', new Integer(params.person_id))
@@ -51,7 +54,7 @@ class PersonLocationsController {
         def personLocationsInstance = PersonLocations.get(ps.get(0).id)
         if (!personLocationsInstance) {
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'personLocations.label', default: 'PersonLocations'), params.id])}"
-            redirect(action: "list")
+            redirect(controller: "person", action: "show", id: personLocationsInstance.person.id)
         }
         else {
 			// If not null converted into String and placed in person.edit.gsp input field
@@ -128,7 +131,7 @@ class PersonLocationsController {
         }
         else {
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'personLocations.label', default: 'PersonLocations'), params.id])}"
-            redirect(action: "list")
+            redirect(controller: "person", action: "edit", id: personLocationsInstance.person.id)
         }
     }
 
@@ -138,16 +141,16 @@ class PersonLocationsController {
             try {
                 personLocationsInstance.delete(flush: true)
                 flash.message = "${message(code: 'default.deleted.message', args: [message(code: 'personLocations.label', default: 'PersonLocations'), params.id])}"
-                redirect(action: "list")
+                redirect(controller: "person", action: "edit", id: personLocationsInstance.person.id)
             }
             catch (org.springframework.dao.DataIntegrityViolationException e) {
                 flash.message = "${message(code: 'default.not.deleted.message', args: [message(code: 'personLocations.label', default: 'PersonLocations'), params.id])}"
-                redirect(action: "show", id: params.id)
+                redirect(controller: "person", action: "show", id: personLocationsInstance.person.id)
             }
         }
         else {
             flash.message = "${message(code: 'default.not.found.message', args: [message(code: 'personLocations.label', default: 'PersonLocations'), params.id])}"
-            redirect(action: "list")
+            redirect(controller: "person", action: "show", id: personLocationsInstance.person.id)
         }
     }
 }

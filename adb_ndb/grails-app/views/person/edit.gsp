@@ -96,7 +96,7 @@
 									<ul>
 										<g:each in="${personInstance?.relations?}" var="r">
 											<li>
-												<g:link controller="person" action="show" id="${r?.relatedPerson?.id}">
+												<g:link controller="relation" action="edit" id="${r?.id}">
 													${r?.encodeAsHTML()}
 												</g:link>
 											</li>
@@ -152,7 +152,7 @@
 										<g:each in="${personInstance?.locations?}" var="l">
 											<li>
 												<g:link controller="personLocations" action="edit" params="[person_id:personInstance?.id, location_id:l?.id]">
-													${l?.encodeAsHTML()}: <%-- ${personInstanceLocationsList.getAt(location_id - 1)} --%>
+													${l?.encodeAsHTML()}: ${personInstanceLocationsList.getAt(l?.id - 1)}
 												</g:link>
 											</li>
 										</g:each>
