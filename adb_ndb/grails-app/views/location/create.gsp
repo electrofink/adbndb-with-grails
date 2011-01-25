@@ -23,29 +23,12 @@
             <div class="errors">
                 <g:renderErrors bean="${locationInstance}" as="list" />
             </div>
-            </g:hasErrors>
+			</g:hasErrors>
             <g:form action="save" >
+				<g:select name="location" from="${de.uni_koeln.hs.Location.list(sort:'city')}" optionKey="id" value="${personInstance?.locations*.id}" noSelection="['':'']" />
                 <div class="dialog">
                     <table>
                         <tbody>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="longitude"><g:message code="location.longitude.label" default="Longitude" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'longitude', 'errors')}">
-                                    <g:textField name="longitude" value="${fieldValue(bean: locationInstance, field: 'longitude')}" />
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="latitude"><g:message code="location.latitude.label" default="Latitude" /></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'latitude', 'errors')}">
-                                    <g:textField name="latitude" value="${fieldValue(bean: locationInstance, field: 'latitude')}" />
-                                </td>
-                            </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
@@ -62,6 +45,24 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'country', 'errors')}">
                                     <g:textField name="country" value="${locationInstance?.country}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="longitude"><g:message code="location.longitude.label" default="Longitude" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'longitude', 'errors')}">
+                                    <g:textField name="longitude" value="${fieldValue(bean: locationInstance, field: 'longitude')}" />
+                                </td>
+                            </tr>
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="latitude"><g:message code="location.latitude.label" default="Latitude" /></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean: locationInstance, field: 'latitude', 'errors')}">
+                                    <g:textField name="latitude" value="${fieldValue(bean: locationInstance, field: 'latitude')}" />
                                 </td>
                             </tr>
                         

@@ -17,11 +17,17 @@ class LocationController {
 		def locationInstance = new Location()
 		locationInstance.properties = params
 		flash.put("person", Person.get(params.person.id))
-		return [locationInstance: locationInstance]
+		params.max = Math.min(params.max ? params.int('max') : 10, 100)
+		[locationInstance: locationInstance, locationInstanceList: Location.list(params), locationInstanceTotal: Location.count()]
 	}
 
 	def save = {
-		def locationInstance = new Location(params)
+		def locationInstance
+		if (params.location == "")
+			locationInstance = new Location(params)
+		else
+			locationInstance = Location.get(new Integer(params.location))
+		
 		if (locationInstance.save(flush: true)) {
 			flash.message = "${message(code: 'default.created.message', args: [message(code: 'location.label', default: 'Location'), locationInstance.id])}"
 

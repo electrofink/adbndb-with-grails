@@ -31,6 +31,9 @@ class PersonLocations {
 	
 	@Override
 	String toString() {
-		return "von ${DateFormat.getDateInstance().format(startDate)} bis ${DateFormat.getDateInstance().format(endDate)}"
+		if (startDate != null && endDate != null)
+			return "von ${DateFormat.getDateInstance().format(startDate)} bis ${DateFormat.getDateInstance().format(endDate)}"
+		else
+			return ""
 	}
 }
