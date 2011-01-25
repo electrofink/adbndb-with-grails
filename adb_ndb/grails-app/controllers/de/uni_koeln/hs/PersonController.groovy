@@ -2,9 +2,8 @@ package de.uni_koeln.hs
 
 import util.DateUtil
 
-/**
- * @author Mihail Atanassov <mail:saeko.bjagai@gmail.com>
- */
+
+
 class PersonController {
 
 	static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
