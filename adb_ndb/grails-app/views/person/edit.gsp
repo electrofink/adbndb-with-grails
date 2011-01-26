@@ -152,7 +152,7 @@
 										<g:each in="${personInstance?.locations?}" var="l">
 											<li>
 												<g:link controller="personLocations" action="edit" params="[person_id:personInstance?.id, location_id:l?.id]">
-													${l?.encodeAsHTML()}: ${personInstanceLocationsList.getAt(l?.id - 1)}
+													${l?.encodeAsHTML()}: <%=personInstanceLocationsList.find{ it.location.id == l?.id }%>
 												</g:link>
 											</li>
 										</g:each>
